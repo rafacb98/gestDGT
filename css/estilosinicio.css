@@ -1,0 +1,454 @@
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------*/
+
+/*-- CONTENIDO PARA MOVIL --*/
+/* Todo en general */
+*{
+  box-sizing:border-box; 
+  margin:0; 
+  padding:0;
+  font-family: 'Pathway Gothic One', sans-serif;
+}
+
+/* Encabezado */
+header{
+  display:flex;  
+  flex-flow:row nowrap;
+  background-color:#2A2A2C;
+  padding:1em;
+}
+
+
+/* Menu hamburguesa*/
+.sidebar{
+  position:absolute;/*fixed*/
+  top:0;
+  left:-250px;
+  background:#2A2A2C;
+  width:250px;
+  height:100%;
+  transition: .3s;
+  z-index:1;
+  box-shadow: 0 0 1em black;
+}
+
+.active{
+  left:0;
+}
+
+.sidebar ul{
+  margin:0;
+  padding:20px 0;
+}
+
+.sidebar ul li{
+  list-style:none;
+}
+
+.sidebar ul li:hover{
+  background-color:#08518C;
+}
+
+.sidebar ul li a{
+  padding:10px 20px;
+  color:white;
+  display:block;
+  text-decoration:none;
+  border-bottom: 1px solid rgba(0,0,0,.2);
+}
+
+/* Botón de menu */
+.sidebarBtn{
+  position:absolute;
+  top:0;
+  right:-50px;
+  width:50px;
+  height:50px;
+  box-sizing:border-box;
+  cursor:pointer;
+  border: none;
+  outline:none;
+  background-color:transparent;
+  margin-top:22%;
+  z-index:1;
+}
+
+/* Las 3 rayas del menu de hamburguesa */
+.sidebarBtn span{
+  display:block;
+  width:35px;
+  height:3px;
+  background:#FFF;
+  position: absolute;
+  top:24px;
+  transition:.3s; 
+  margin-left:65%;
+}
+
+.sidebarBtn span:before
+{
+  content:'';
+  position:absolute;
+  top:-10px;
+  left:0;
+  width:100%;
+  height:3px;
+  background:#FFF;
+  transition:.3s;
+}
+
+.sidebarBtn span:after
+{
+  content:'';
+  position:absolute;
+  top:10px;
+  left:0;
+  width:100%;
+  height:3px;
+  background:#FFF;
+  transition:.3s;
+}
+
+
+header img {
+  height:18vh;
+  margin: 0 auto;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+html {
+  min-height:100%;
+  position: relative;
+ 
+}
+
+h2 span{
+display:none;
+}
+
+.primero{
+  
+  display:flex;
+  flex-direction: row;
+  flex-basis:100%; 
+}
+
+.bienvenida{
+  font-size: 22px;
+  flex:1;
+  color:#11538C;
+}
+
+.cerrarsesion{
+  font-size: 22px;
+}
+
+#numeropuntos{
+  text-align: center;
+  color:black;
+  text-decoration: underline;
+  font-size: 25px;
+}
+
+
+
+/* Cuerpo */
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-height: 100vh;
+}
+ 
+main {
+  flex: 1;
+}
+
+h2{
+	text-align:center;
+	flex-basis:100%;
+	padding:1em;
+}
+
+h3{
+  text-align:center;
+	flex-basis:100%;
+}
+
+
+
+/* Articulos de página inicio, ventas y alquiler*/
+.especial{	
+	display:flex;
+	flex-wrap:wrap;
+	flex-basis:25%;
+  flex-flow:column;
+  padding:1em;
+  font-weight:bold;
+  margin-top:0.5em;
+  height:100%;
+}
+
+main section .especial img{
+  width:100%;
+  height:100%;
+  max-width: 100%;
+  max-height: 100%; 
+  padding:0.5em;
+  
+}
+
+main section .especial p{
+  padding:0.5em;
+  text-align:justify;
+}
+
+
+
+
+
+
+
+
+/* Aside con la publicidad y noticias */
+aside{
+  
+  padding:1em;
+  flex-basis:50%;
+ border:2px solid red;
+ margin-top:0.5em;
+
+}
+
+aside h2{
+  
+  color:#11538C;
+ 
+}
+
+
+
+/* Pie de página */
+footer{
+  padding:1em;
+  text-align:center;
+  font-weight:bold;
+  background-color:#2A2A2C;
+
+  color:white; 
+ 
+}
+
+
+
+
+
+footer ul{
+  list-style-type: none;
+  
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+footer ul li{
+  margin-left:1em;
+}
+
+footer ul li span{
+  display:none;
+}
+
+
+
+
+
+#instagram,#twitter,#facebook{
+  color:white;
+}
+
+#a{
+  margin-top:auto;
+  margin-bottom:auto;
+}
+
+
+.categorias{
+  background-color: #2A2A2C;
+  display:flex;
+  flex-flow:column;
+  align-items: center;
+ 
+}
+
+
+section{
+  padding:0.5em;
+}
+
+
+/* Botón de subir hacia arriba */
+.botonsubir {
+  display:none;
+}
+
+
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------*/
+
+/*-- CONTENIDO PARA TABLET --*/
+@media all and (min-width: 600px) {
+
+  section{
+    display:flex;
+    flex-wrap: wrap;
+  }
+
+  header img { 
+    margin: 0 auto; 
+  }
+
+
+  aside{
+    flex-grow:1.5;
+  }
+
+  .especial{  
+    flex-basis: 100%;
+    flex-direction: row;
+  }
+
+  .especial p{
+    flex-basis:50%;
+  }
+  .especial img{
+    flex-basis:50%;
+    order:1;
+  }
+
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*-- CONTENIDO PARA ESCRITORIO --*/
+@media all and (min-width: 1000px) {
+  /* Encabezado */
+  header img{
+    margin-left:5%;  
+    width: 10vw;
+    height:16vh;
+  }
+
+  header input, header label{
+    display:none
+  }
+
+ 
+  /* Menu horizontal grande */
+  .sidebar {
+    box-shadow: none;
+    margin-left:60%;
+    height:auto; 
+    background-color:#2A2A2C; 
+  }
+
+  .sidebar ul{
+    display:flex;
+    margin-top:0.9em; 
+  }
+
+ .sidebar ul li{
+   margin-right:5em;
+   padding-top:0.3em;
+   border-bottom:1px solid #11538C;
+   padding-bottom:0;
+ }
+
+ .sidebar ul li a{
+   border:none;
+ }
+
+ .sidebarBtn{
+   display:none;
+ }
+  
+.botonsubir {
+	display:none;
+	padding:20px;
+	background:#11538C;
+	font-size:20px;
+	color:#fff;
+	cursor:pointer;
+	position: fixed;
+	bottom:20px;
+  right:20px;
+  border-radius:2em;
+  z-index:1;
+}
+
+.bienvenida{
+  text-align: center;
+  font-size: 32px;
+}
+.cerrarsesion{
+  font-size: 32px;
+}
+.especial{
+ 
+  flex-basis:25%;
+  flex-direction: column;
+
+}
+
+.especial img{
+  order:-1;
+}
+
+#novedades{
+  width:50%;
+}
+
+aside{
+  order:1;
+ background-image:url("../img/logotipo3pngopacidad.png");
+ background-position: center;
+
+}
+
+h2 span{
+  display: inline;
+  margin-left:44.7%; 
+}
+
+  /* Footer */
+  footer ul{
+    justify-content: space-around;
+  }
+
+  footer ul li span{
+    display:inline;
+  }
+  
+
+  .fija { 
+    position: fixed; 
+    width: 100%;
+    z-index: 999; 
+    background-color:rgba(42,42,44,0.9);
+  
+  }
+
+  .fija2 { 
+    position: fixed; 
+    width: 50%; 
+    z-index: 999; 
+    background-color:rgba(42,42,44,0);
+   
+  
+  }
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------*/
