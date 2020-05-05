@@ -22,7 +22,7 @@
       <img class="logo" src='img/logotipo3png.png'/>
     </p>
  
-    <form class="login-form centro" method='post' action='prueba.php'>
+    <form class="login-form centro" method='post' action=''>
       <p id="test" class="usuario">
         <label for="usuario" class="labelusuclave centro">
           <i class="fas fa-user"></i>
