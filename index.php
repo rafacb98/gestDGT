@@ -24,17 +24,17 @@
  
     <form class="login-form centro" method='post' action=''>
       <p id="test" class="usuario">
-        <label for="usuario" class="labelusuclave centro">
+        <label for="usuariop" class="labelusuclave centro">
           <i class="fas fa-user"></i>
         </label>
-        <input id="usuario" placeholder="Usuario"  type="text">
+        <input id="usuariop" placeholder="Usuario"  type="text">
       </p>
 
       <p class="clave">
-        <label for="clave" class="labelusuclave centro">
+        <label for="clavep" class="labelusuclave centro">
           <i class="fas fa-lock"></i>
         </label>
-        <input id="clave" placeholder="Clave" type="password">
+        <input id="clavep" placeholder="Clave" type="password">
       </p>
       <button type='submit' id="btnentrar" class="centro">
         Entrar

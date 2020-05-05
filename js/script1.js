@@ -1,13 +1,13 @@
 $(document).ready(function(){
 
     $('#btnentrar').click(function(){
-        const username = $('#usuario').val();
-        const password = $('#clave').val();
-        if(!username){
-          $('.usuario').css({"border":"2px red solid", "border-radius":"5px"}).effect("shake", {distance:1});
+        const usu = $('#usuariop').val();
+        const clave = $('#clavep').val();
+        if(!usu){
+          $('.usuario').css({"border":"3px red solid", "border-radius":"5px"}).effect("shake", {distance:1});
           return;
-        } else if(!password){
-          $('.clave').css({"border":"2px red solid", "border-radius":"5px"}).effect("shake", {distance:1});;
+        } else if(!clave){
+          $('.clave').css({"border":"3px red solid", "border-radius":"5px"}).effect("shake", {distance:1});;
           return;
         }
         alert('Accediendo');
@@ -15,8 +15,8 @@ $(document).ready(function(){
       
       
     $('#usuario, #clave').focus(function(){
-        $('.usuario').css({"border":"2px solid transparent"});
-        $('.clave').css({"border":"2px solid transparent"});
+        $('.usuario').css({"border":"3px solid transparent"});
+        $('.clave').css({"border":"3px solid transparent"});
     })
     
 })
