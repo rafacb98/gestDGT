@@ -1,0 +1,144 @@
+*{
+  font-family: 'Pathway Gothic One', sans-serif;
+  margin:0;
+  padding:0;
+}
+
+.centro{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+  }
+  
+  body{
+    background: #fff;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-family: Arial;
+    min-height: 400px;
+   
+  }
+  
+  .login{
+    min-width: 20em;
+    min-height: 10em;
+    width: 20em;
+    border-radius: 10px;
+    padding-bottom: 5em;
+  }
+  
+  .logo{
+    position: relative;
+    color: #606060;
+    border-radius:40px;
+    height:120px;
+  }
+ 
+  
+  .login-form{
+    height: 60%; 
+  }
+  
+  .usuario,
+  .clave{
+    display: flex;
+    width: 100%;
+    max-width: 20em;
+    margin: 5px;
+    border: 2px solid transparent;
+  }
+  
+  .labelusuclave{
+    background:rgba(0,0,0,0.2);
+    color:#606060;
+    width: 4em;
+    border-radius: 5px 0px 0px 5px;
+    font-size: 1.5em;
+    align-items: center;
+  }
+  
+  input{
+    font-size:1em;
+    font-weight: bold;
+    color: #606060;
+    border: none;
+    border-radius:0px 5px 5px 0px;
+    background: rgba(0,0,0,0.1);
+    min-height:2em;
+    width: 100%;
+    padding: 10px;
+    transition: background 0.3s;
+  }
+  
+  input:hover,
+  input:focus{
+    background:rgba(0,0,0,0.15);
+    outline: none;
+  }
+  
+  ::placeholder{
+    color: darkgray;
+    font-size: 1em;
+    opacity: 1;
+  }
+  
+  #btnentrar{
+    background:#11538C;
+    color: #eee;
+    font-size: 1.5em;
+    font-weight: bold;
+    height: 2.3em;
+    width:100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.5s;
+    margin-top: 3%;
+    box-shadow: 0 0 1em black;
+  }
+  
+  #btnentrar:hover{
+    background: rgb(1, 57, 107);  
+  }
+  
+  #missing-input-message{
+    color:red; 
+    font-size: 0.9em;
+    transition:all 0.2s;
+  }
+
+@media all and (min-width: 1000px) {
+    img{
+        flex-basis: 100%; 
+    }
+
+    #btnentrar {
+        flex-basis: 100%; 
+        box-shadow: 0 0 1em black;
+        margin-left:19.6em;
+        margin-right:19.6em;
+    }
+
+   form{
+      flex-basis: 100%; 
+   }
+
+   .usuario,.clave{
+      flex-basis: 30%;    
+   }
+
+   label{
+    flex-basis:20%;
+   }
+   
+  .centro{
+    width:100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    }
+}
+  
