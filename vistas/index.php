@@ -43,19 +43,19 @@ if($intruso)
 	  <meta name="description" content="GestDGT+">
 	  <meta name="lang" content="es-ES" />
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <link rel='stylesheet' type="text/css" href='../css/estilosiniciosesion.css'>
-    <link rel="icon" type="image/png" href="../img/logotipo3png.png">
+    <link rel='stylesheet' type="text/css" href='css/estilosiniciosesion.css'>
+    <link rel="icon" type="image/png" href="img/logotipo3png.png">
     <link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/4a9d5317b6.js" crossorigin="anonymous"></script>
-    <script src='../js/jquery-3.1.1.js'></script>
-    <script src='../js/script1.js'></script>
+    <script src='js/jquery-3.1.1.js'></script>
+    <script src='js/script1.js'></script>
     <title>GestDGT+</title>
 </head>
 
 <body class="centro">
   <main class="login centro">
     <p>
-      <img class="logo" src='../img/logotipo3png.png'/>
+      <img class="logo" src='img/logotipo3png.png'/>
     </p>
  
     <form class="login-form centro" method='post' action=''>
@@ -63,16 +63,16 @@ if($intruso)
         <label for="usuariop" class="labelusuclave centro">
           <i class="fas fa-user"></i>
         </label>
-        <input id="usuariop" placeholder="Usuario"  type="text">
+        <input id="usuariop" placeholder="Usuario"  type="text" name="usuario">
       </p>
 
       <p class="clave">
         <label for="clavep" class="labelusuclave centro">
           <i class="fas fa-lock"></i>
         </label>
-        <input id="clavep" placeholder="Clave" type="password">
+        <input id="clavep" placeholder="Clave" type="password" name="clave">
       </p>
-      <button type='submit' id="btnentrar" class="centro">
+      <button type='submit' id="btnentrar" class="centro" name="btnentrar">
         Entrar
       </button>
     </form>
@@ -87,7 +87,7 @@ if($intruso)
 }
 else
 {
-    session_name("bd_tienda");
+    session_name("gestdgt+");
     session_start();
     session_unset();
     $_SESSION["restringida"]="";

@@ -11,7 +11,9 @@ $app = new \Slim\Slim();
 $app->contentType('application/json; charset=utf-8');
 
 
-
+$app->post('/login', function () {
+    echo json_encode(comprobarUsuario($_POST['usuario'],$_POST['clave']),JSON_FORCE_OBJECT);
+});
 
 $app->run();
 ?>

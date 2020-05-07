@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,11 +9,11 @@
 	<meta name="description" content="GestDGT+">
 	<meta name="lang" content="es-ES" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<link rel="stylesheet" type="text/css" href="../../css/estilosinicio.css">
+	<link rel="stylesheet" type="text/css" href="css/estilosinicio.css">
 	<script src="https://kit.fontawesome.com/4a9d5317b6.js" crossorigin="anonymous"></script>
-	<link rel="icon" href="../../img/logotipo3png.png">
+	<link rel="icon" href="img/logotipo3png.png">
 	<link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
-	<script src='../../js/jquery-3.1.1.js'></script>
+	<script src='js/jquery-3.1.1.js'></script>
 
 	
 
@@ -22,13 +24,13 @@
 	<header>
 		<div class="sidebar">
 			<ul>	
-				<li><a href="inicio.html">Inicio</a></li>
+				<li><a href="inicio.php">Inicio</a></li>
 				<li><a href="multas.html">Multas</a></li>
 			</ul>
 			<button class="sidebarBtn"><span></span></button>
 		</div>
 	
-		<img src="../../img/logotipo3png.png" alt="logo" />
+		<img src="img/logotipo3png.png" alt="logo" />
 	</header>
 
 	<main class="epico">
@@ -44,12 +46,12 @@
 			<h2 id='novedades'>·· ÚLTIMAS NOTICIAS ··<span>·· Nº PLACA ··</span></h2>
 			
 			<article class="especial">
-				<img src="../../img/novedades.PNG" alt="polo1"/>
+				<img src="img/novedades.PNG" alt="polo1"/>
 				<p>Lorem ipsum dolor sit amet consectetur adipiscing elit dapibus, ridiculus mattis montes condimentum eget nostra erat diam vulputate, convallis sagittis praesent scelerisque posuere elementum facilisis. Quisque nisi faucibus montes pellentesque tellus dictum fringilla tempor hendrerit, etiam integer quis vel orci vivamus duis nisl risus scelerisque, turpis tincidunt dictumst ridiculus dapibus non bibendum sollicitudin. Odio quam felis convallis aenean mi lacinia torquent curae donec cum, senectus sagittis molestie litora volutpat mattis euismod viverra pulvinar eget metus, fringilla orci nascetur eleifend pellentesque hac dapibus arcu aliquet.	
 			</article>
 			<article class="especial">
 				
-				<img src="../../img/novedades.PNG" alt="mercedes1"/>
+				<img src="img/novedades.PNG" alt="mercedes1"/>
 				<p>Lorem ipsum dolor sit amet consectetur adipiscing elit dapibus, ridiculus mattis montes condimentum eget nostra erat diam vulputate, convallis sagittis praesent scelerisque posuere elementum facilisis. Quisque nisi faucibus montes pellentesque tellus dictum fringilla tempor hendrerit, etiam integer quis vel orci vivamus duis nisl risus scelerisque, turpis tincidunt dictumst ridiculus dapibus non bibendum sollicitudin. Odio quam felis convallis aenean mi lacinia torquent curae donec cum, senectus sagittis molestie litora volutpat mattis euismod viverra pulvinar eget metus, fringilla orci nascetur eleifend pellentesque hac dapibus arcu aliquet.
 			</article>
 
@@ -65,6 +67,6 @@
 				<li><i id="instagram" class="fab fa-instagram"></i><span>&nbsp;&nbsp;&nbsp;&nbsp;/gestdgt+</span></li>
 			</ul>
 	</footer>
-	<script src='../../js/script.js'></script>
+	<script src='js/script.js'></script>
 </body>
 </html>

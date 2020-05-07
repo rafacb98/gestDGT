@@ -3,7 +3,8 @@
 session_name('gestdgt+');
 session_start();
 
-require "REST/funciones.php";
+//require "REST/funciones.php";
+require "funciones_servicios.php";
 
 if(isset($_SESSION["usuario"]) && isset($_SESSION["clave"]) && isset($_SESSION["ultimo_acceso"]))
 {	
@@ -23,7 +24,7 @@ if(isset($_SESSION["usuario"]) && isset($_SESSION["clave"]) && isset($_SESSION["
 		{
 			$_SESSION['ultimo_acceso']=time();
 			$logueado=true;
-			/*$datos_usu_log->tipo=="normal"*/
+			
             if($datos_usu_log["tipo"]=="conductor")
             {
                 include "vistas/conductor/inicio.php";
