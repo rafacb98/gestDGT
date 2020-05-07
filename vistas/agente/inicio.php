@@ -9,7 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<link rel="stylesheet" type="text/css" href="../../css/estilosinicio.css">
 	<script src="https://kit.fontawesome.com/4a9d5317b6.js" crossorigin="anonymous"></script>
-	<link rel="icon" href="img/logotipo3png.png">
+	<link rel="icon" href="../../img/logotipo3png.png">
 	<link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
 	<script src='../../js/jquery-3.1.1.js'></script>
 
@@ -23,8 +23,7 @@
 		<div class="sidebar">
 			<ul>	
 				<li><a href="inicio.html">Inicio</a></li>
-				<li><a href="perfil.html">Perfil</a></li>
-				<li><a href="vehiculos.html">Vehiculos</a></li>
+				<li><a href="multas.html">Multas</a></li>
 			</ul>
 			<button class="sidebarBtn"><span></span></button>
 		</div>
@@ -38,11 +37,11 @@
 			<p class='primero'><span class='bienvenida'>¡Hol@ Rafael!</span><span class='cerrarsesion'><i class="fas fa-sign-out-alt"></i></span></p>
 			
 			<aside id="a1">
-				<h2>Tus puntos actuales son</h2>
-				<p id='numeropuntos'>8</p>
+				<h2>Tu número de placa es</h2>
+				<p id='numeropuntos'>2423</p>
 			</aside>
 
-			<h2 id='novedades'>·· ÚLTIMAS NOTICIAS ··<span>·· PUNTOS ··</span></h2>
+			<h2 id='novedades'>·· ÚLTIMAS NOTICIAS ··<span>·· Nº PLACA ··</span></h2>
 			
 			<article class="especial">
 				<img src="../../img/novedades.PNG" alt="polo1"/>

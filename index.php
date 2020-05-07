@@ -1,48 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	  <meta name="author" content="Rafael Carrillo Bonilla">
-	  <meta name="description" content="GestDGT+">
-	  <meta name="lang" content="es-ES" />
-	  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <link rel='stylesheet' type="text/css" href='css/estilosiniciosesion.css'>
-    <link rel="icon" type="image/png" href="img/logotipo3png.png">
-    <link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/4a9d5317b6.js" crossorigin="anonymous"></script>
-    <script src='js/jquery-3.1.1.js'></script>
-    <script src='js/script1.js'></script>
-    <title>GestDGT+</title>
-</head>
+<?php
 
-<body class="centro">
-  <main class="login centro">
-    <p>
-      <img class="logo" src='img/logotipo3png.png'/>
-    </p>
- 
-    <form class="login-form centro" method='post' action=''>
-      <p id="test" class="usuario">
-        <label for="usuariop" class="labelusuclave centro">
-          <i class="fas fa-user"></i>
-        </label>
-        <input id="usuariop" placeholder="Usuario"  type="text">
-      </p>
+session_name('gestdgt+');
+session_start();
 
-      <p class="clave">
-        <label for="clavep" class="labelusuclave centro">
-          <i class="fas fa-lock"></i>
-        </label>
-        <input id="clavep" placeholder="Clave" type="password">
-      </p>
-      <button type='submit' id="btnentrar" class="centro">
-        Entrar
-      </button>
-    </form>
+require "REST/funciones.php";
 
-    
-</main> 
-
-</body> 
-</html>
+if(isset($_SESSION["usuario"]) && isset($_SESSION["clave"]) && isset($_SESSION["ultimo_acceso"]))
+{	
+	
+	if($datos_usu_log=obtener_usuario($_SESSION["usuario"],$_SESSION["clave"])){
+        
+       
+		$tiempo_trans=time()-$_SESSION["ultimo_acceso"];
+		if($tiempo_trans>60*MINUTOS)
+		{
+			session_unset();
+			$_SESSION["tiempo"]="";
+			header("Location:index.php");
+			exit;
+		}
+		else
+		{
+			$_SESSION['ultimo_acceso']=time();
+			$logueado=true;
+			/*$datos_usu_log->tipo=="normal"*/
+            if($datos_usu_log["tipo"]=="conductor")
+            {
+                include "vistas/conductor/inicio.php";
+            }
+            else
+            {
+                include "vistas/agente/inicio.php";
+            }
+			
+		}
+	}
+	else{
+		session_unset();
+		$_SESSION["restringida"]="";
+		header("Location:index.php");
+		exit;
+	}
+}
+else
+{
+	$intruso=true;
+	include "vistas/index.php";
+}
