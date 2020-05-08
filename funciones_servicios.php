@@ -51,6 +51,21 @@ function consumir_servicio_REST($url, $metodo, $datos = null)
     }
   }
 
+      function verpuntos($dni)
+      {
+        $obj=consumir_servicio_REST(ruta."puntos/".urlencode($dni),"GET");
+        if (isset($obj->mensaje_error))
+        {
+        die($obj->mensaje_error);
+        }
+        else
+        {
+              echo "<p id='numeropuntos'>".$obj->dni->puntos."</p>";
+             
+             
+        }
+     }
+
 
 
   

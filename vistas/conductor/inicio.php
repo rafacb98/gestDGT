@@ -39,7 +39,8 @@
 			
 			<aside id="a1">
 				<h2>Tus puntos actuales son</h2>
-				<p id='numeropuntos'>8</p>
+				<?php echo verpuntos($_SESSION['usuario']);?>
+			
 			</aside>
 
 			<h2 id='novedades'>·· ÚLTIMAS NOTICIAS ··<span>·· PUNTOS ··</span></h2>

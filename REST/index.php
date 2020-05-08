@@ -15,6 +15,10 @@ $app->post('/login', function () {
     echo json_encode(comprobarUsuario($_POST['usuario'],$_POST['clave']),JSON_FORCE_OBJECT);
 });
 
+$app->get('/puntos/:id',function($dni){
+    echo json_encode(puntos($dni),JSON_FORCE_OBJECT);
+});
+
 $app->run();
 ?>
 
