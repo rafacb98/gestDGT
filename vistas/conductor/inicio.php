@@ -22,7 +22,7 @@
 	<header>
 		<div class="sidebar">
 			<ul>	
-				<li><a href="inicio.php">Inicio</a></li>
+				<li><a href="index.php">Inicio</a></li>
 				<li><a href="perfil.html">Perfil</a></li>
 				<li><a href="vehiculos.html">Vehiculos</a></li>
 			</ul>
@@ -35,7 +35,7 @@
 	<main class="epico">
 		<span class="botonsubir"><i class="fas fa-arrow-up"></i></span>
 		<section>
-			<p class='primero'><span class='bienvenida'>¡Hol@ Rafael!</span><span class='cerrarsesion'><i class="fas fa-sign-out-alt"></i></span></p>
+			<p class='primero'><span class='bienvenida'>¡Hol@ <?php echo $_SESSION['usuario'];?>!</span><a  href='cerrarsesion.php' class='cerrarsesion'><i class="fas fa-sign-out-alt"></i></a></p>
 			
 			<aside id="a1">
 				<h2>Tus puntos actuales son</h2>
