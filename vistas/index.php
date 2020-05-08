@@ -53,24 +53,36 @@ if($intruso)
 </head>
 
 <body class="centro">
+<?php
+                if(isset($_SESSION['restringido']))
+                 echo "<p>Accediendo a zona restringida</p>";
+                if(isset($_SESSION['tiempo']))
+                 echo "<p>Tiempo agotado</p>";
+                if(isset($_SESSION['errorusuario']))
+                 echo "<p>Usuario no registrado en la BBDD</p>";
+
+                 session_unset();
+  ?>
   <main class="login centro">
     <p>
       <img class="logo" src='img/logotipo3png.png'/>
     </p>
  
-    <form class="login-form centro" method='post' action=''>
+    <form class="login-form centro" method='post' action='index.php'>
       <p id="test" class="usuario">
         <label for="usuariop" class="labelusuclave centro">
           <i class="fas fa-user"></i>
         </label>
-        <input id="usuariop" placeholder="Usuario"  type="text" name="usuario">
+        <input id="usuariop" placeholder="Usuario"  type="text" name="usuario" value='<?php if(isset($_POST['usuario'])) echo $_POST['usuario'];?>'>
+        <?php if(isset($_POST['btnentrar'])&&$_POST['usuario']=="") echo "Campo vacio";?>
       </p>
 
       <p class="clave">
         <label for="clavep" class="labelusuclave centro">
           <i class="fas fa-lock"></i>
         </label>
-        <input id="clavep" placeholder="Clave" type="password" name="clave">
+        <input id="clavep" placeholder="Clave" type="password" name="clave" value=''>
+        <?php if(isset($_POST['btnentrar'])&&$_POST['clave']=="") echo "Campo vacio";?>
       </p>
       <button type='submit' id="btnentrar" class="centro" name="btnentrar">
         Entrar

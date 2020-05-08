@@ -16,15 +16,15 @@ function consumir_servicio_REST($url, $metodo, $datos = null)
     curl_close($llamada);
     if (!$response)
         die("Error consumiendo el servicio Web: " . $url);
-    //$decodeText = substr($response, 3, strlen($response) - 1);
-    return json_decode($response);
+    $decodeText = substr($response, 3, strlen($response) - 1);
+    return json_decode($decodeText);
 }
 
   function obtener_usuario($dni,$clave)
 {
   
-    $datosPost=['dni'=>$dni,'clave'=>$clave];
-   
+    $datosPost=['usuario'=>$dni,'clave'=>$clave];
+ 
     $obj=consumir_servicio_REST(ruta."login","POST",$datosPost);
   
     if(isset($obj->mensaje_error))
@@ -46,12 +46,10 @@ function consumir_servicio_REST($url, $metodo, $datos = null)
         $datos["tipo"]=$obj->usuario->tipo;
         $datos["id_tipo_carne"]=$obj->usuario->id_tipo_carne;
 
-        var_dump($datos);
+       
         return $datos; 
     }
   }
-
-  
 
 
 
