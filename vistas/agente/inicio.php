@@ -36,11 +36,11 @@
 	<main class="epico">
 		<span class="botonsubir"><i class="fas fa-arrow-up"></i></span>
 		<section>
-			<p class='primero'><span class='bienvenida'>¡Hol@ <?php echo $_SESSION['usuario'];?>!</span><a  href='cerrarsesion.php' class='cerrarsesion'><i class="fas fa-sign-out-alt"></i></a></p>
+			<p class='primero'><span class='bienvenida'>¡Hol@ <span class='usuario'><?php echo $_SESSION['usuario'];?></span>!</span><a  href='cerrarsesion.php' class='cerrarsesion'><i class="fas fa-sign-out-alt"></i></a></p>
 			
 			<aside id="a1">
 				<h2>Tu número de placa es</h2>
-				<p id='numeropuntos'>2423</p>
+				<?php echo vernplaca($_SESSION['usuario']);?>
 			</aside>
 
 			<h2 id='novedades'>·· ÚLTIMAS NOTICIAS ··<span>·· Nº PLACA ··</span></h2>

@@ -35,7 +35,7 @@
 	<main class="epico">
 		<span class="botonsubir"><i class="fas fa-arrow-up"></i></span>
 		<section>
-			<p class='primero'><span class='bienvenida'>¡Hol@ <?php echo $_SESSION['usuario'];?>!</span><a  href='cerrarsesion.php' class='cerrarsesion'><i class="fas fa-sign-out-alt"></i></a></p>
+			<p class='primero'><span class='bienvenida'>¡Hol@ <span class='usuario'><?php echo $_SESSION['usuario'];?></span>!</span><a  href='cerrarsesion.php' class='cerrarsesion'><i class="fas fa-sign-out-alt"></i></a></p>
 			
 			<aside id="a1">
 				<h2>Tus puntos actuales son</h2>
@@ -64,7 +64,7 @@
 			<ul>
 				<li><i id="twitter" class="fab fa-twitter"></i><span>&nbsp;&nbsp;&nbsp;&nbsp;/gestdgt+</span></li>
 				<li><i id="facebook" class="fab fa-facebook-square"></i><span>&nbsp;&nbsp;&nbsp;&nbsp;/gestdgt+</span></li>
-				<li><i id="instagram" class="fab fa-instagram"></i><span>&nbsp;&nbsp;&nbsp;&nbsp;/gestdgt+</span></li>
+				<li><i id="instagram" class="fab fa-instagram"></i><span>&nbsp;&nbsp;&nbsp;&nbsp;/gestdgt+</span></li>		
 			</ul>
 	</footer>
 	<script src='js/script.js'></script>

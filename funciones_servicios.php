@@ -4,7 +4,6 @@ define('MINUTOS',1);
 
 function consumir_servicio_REST($url, $metodo, $datos = null)
 {
-
     $llamada = curl_init();
     curl_setopt($llamada, CURLOPT_URL, $url);
     curl_setopt($llamada, CURLOPT_RETURNTRANSFER, true);
@@ -20,9 +19,9 @@ function consumir_servicio_REST($url, $metodo, $datos = null)
     return json_decode($decodeText);
 }
 
-  function obtener_usuario($dni,$clave)
+
+function obtener_usuario($dni,$clave)
 {
-  
     $datosPost=['usuario'=>$dni,'clave'=>$clave];
  
     $obj=consumir_servicio_REST(ruta."login","POST",$datosPost);
@@ -46,25 +45,35 @@ function consumir_servicio_REST($url, $metodo, $datos = null)
         $datos["tipo"]=$obj->usuario->tipo;
         $datos["id_tipo_carne"]=$obj->usuario->id_tipo_carne;
 
-       
         return $datos; 
     }
-  }
+}
 
-      function verpuntos($dni)
-      {
-        $obj=consumir_servicio_REST(ruta."puntos/".urlencode($dni),"GET");
-        if (isset($obj->mensaje_error))
-        {
+function verpuntos($dni)
+{
+    $obj=consumir_servicio_REST(ruta."puntos/".urlencode($dni),"GET");
+    if (isset($obj->mensaje_error))
+    {
         die($obj->mensaje_error);
-        }
-        else
-        {
-              echo "<p id='numeropuntos'>".$obj->dni->puntos."</p>";
-             
-             
-        }
-     }
+    }
+    else
+    {
+        echo "<p id='numeropuntos'>".$obj->dni->puntos."</p>";        
+    }
+}
+
+function vernplaca($dni)
+{
+    $obj=consumir_servicio_REST(ruta."nplaca/".urlencode($dni),"GET");
+    if (isset($obj->mensaje_error))
+    {
+        die($obj->mensaje_error);
+    }
+    else
+    {
+        echo "<p id='numeropuntos'>".$obj->dni->n_placa."</p>";        
+    }
+}
 
 
 

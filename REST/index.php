@@ -19,6 +19,10 @@ $app->get('/puntos/:id',function($dni){
     echo json_encode(puntos($dni),JSON_FORCE_OBJECT);
 });
 
+$app->get('/nplaca/:id',function($dni){
+    echo json_encode(nplaca($dni),JSON_FORCE_OBJECT);
+});
+
 $app->run();
 ?>
 

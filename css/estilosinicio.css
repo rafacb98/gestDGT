@@ -140,6 +140,11 @@ display:none;
   color:#11538C;
 }
 
+.usuario{
+  color:red;
+  font-weight: bold;
+}
+
 .cerrarsesion{
   font-size: 22px;
 }
