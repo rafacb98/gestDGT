@@ -1,3 +1,6 @@
+<?php
+if (isset($_SESSION['usuario'])){
+	?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -70,3 +73,9 @@
 	<script src='js/script.js'></script>
 </body>
 </html>
+<?php
+    }else{	
+ 	 header('Location: ../error.php');
+	 die();
+	}
+	 ?>

@@ -1,0 +1,62 @@
+body
+{
+    font-family: 'Pathway Gothic One', sans-serif;
+    margin:0px;
+    background-color:#11538C;
+    color:white;
+}
+
+h1
+{
+  font-size:150px; 
+  text-shadow:-5px 0px 6px rgba(255,255,255,0.6),-5px 0px rgba(0,0,0,0.6);
+  letter-spacing:8px;
+  text-align:center;
+}
+
+h1 span
+{
+    /* Webkit para Chrome, Safari y Opera */
+    -webkit-animation-name: animRotar;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 1s;
+    -webkit-animation-direction:normal;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-play-state: running;
+    /* Original */
+    animation-name: animRotar;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    animation-direction:normal;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+
+@keyframes animRotar
+{
+  to{
+    transform:rotate3d(0,1,0,360deg);
+  }
+}
+
+@-webkit-keyframes animRotar
+{
+  to{
+    transform:rotate3d(0,1,0,360deg);
+  }
+}
+
+div
+{
+  width:100%;
+  text-align:center;  
+  position:relative;
+  font-size:20px;
+  margin-left:10px;
+  letter-spacing:8px;
+  top:-130px;
+}
+
