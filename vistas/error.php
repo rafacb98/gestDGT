@@ -14,7 +14,7 @@
     <script src='../js/jquery-3.1.1.js'></script>
 	<script type="text/javascript"> 
         function redireccionar(){ 
-            window.location.assign("index.php"); 
+            window.location="index.php"; 
         } 
         setTimeout ("redireccionar()", 3500); 
     </script>

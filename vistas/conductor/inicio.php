@@ -1,4 +1,5 @@
 <?php
+
 if (isset($_SESSION['usuario'])){
 	?>
 <!DOCTYPE html>
@@ -26,7 +27,7 @@ if (isset($_SESSION['usuario'])){
 		<div class="sidebar">
 			<ul>	
 				<li><a href="index.php">Inicio</a></li>
-				<li><a href="perfil.html">Perfil</a></li>
+				<li><a href="vistas/conductor/perfil.php">Perfil</a></li>
 				<li><a href="vehiculos.html">Vehiculos</a></li>
 			</ul>
 			<button class="sidebarBtn"><span></span></button>
