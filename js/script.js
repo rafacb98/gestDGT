@@ -58,6 +58,28 @@ $(document).ready(function () {
     }
   });
 
+ // De nuevo con ayuda de una variable booleana controlamos cuando hizo click
+ var y=false;
+ // Cuando haga click en los "mas info" apareceran los distintos tipos de carne
+ $('#masinfo').click(function () {
+   if(y)
+   {
+     y=false;
+     $(this).css({"background-color":"#11538C"});
+     $(this).html("Más información");
+     $(".tiposdecarne p").fadeOut();
+   }
+   // Cuando haga otro click desaparecerá
+   else
+   {
+     y=true;
+     $(this).css({"background-color":"red","color":"white"});
+     $(this).html("Menos información");
+     $(".tiposdecarne p").fadeIn();
+   }
+   
+ })
+
  
  
 });
