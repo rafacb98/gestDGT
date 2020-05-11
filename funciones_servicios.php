@@ -1,6 +1,6 @@
 <?php
 define("ruta","http://localhost/gestDGT/REST/");
-define('MINUTOS',1);
+define('MINUTOS',20);
 
 function consumir_servicio_REST($url, $metodo, $datos = null)
 {
@@ -74,6 +74,29 @@ function vernplaca($dni)
         echo "<p id='numeropuntos'>".$obj->dni->n_placa."</p>";        
     }
 }
+
+
+function verperfil($dni)
+{
+    $obj=consumir_servicio_REST(ruta."perfil/".urlencode($dni),"GET");
+    if (isset($obj->mensaje_error))
+    {
+        die($obj->mensaje_error);
+    }
+    else
+    { 
+        echo "<p>Nombre:<span class='datos'> ".$obj->dni->nombre."</span></p>";
+        echo "<p>Apellidos:<span class='datos'> ".$obj->dni->apellidos."</span></p>";
+        echo "<p>DNI:<span class='datos'> ".$obj->dni->dni."</span></p>";
+        echo "<p>Dirección:<span class='datos'> ".$obj->dni->direccion."</span></p>";
+        echo "<p>Teléfono:<span class='datos'> ".$obj->dni->telefono."</span></p>";
+        echo "<p>Nº de carné:<span class='datos'> ".$obj->dni->n_carne."</span></p>";
+        echo "<p class='espe'>Año expedición de carné:<span class='datos'> ".$obj->dni->anio_exp_carne."</span></p>";
+        echo "<p class='espe'>Tipo de carné:<span class='datos'> ".$obj->dni->descripcion."</span></p>";   
+    }
+}
+
+
 
 
 

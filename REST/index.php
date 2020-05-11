@@ -23,6 +23,10 @@ $app->get('/nplaca/:id',function($dni){
     echo json_encode(nplaca($dni),JSON_FORCE_OBJECT);
 });
 
+$app->get('/perfil/:id',function($id){
+    echo json_encode(perfil($id),JSON_FORCE_OBJECT);
+});
+
 $app->run();
 ?>
 
