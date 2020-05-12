@@ -46,6 +46,7 @@ if (isset($_SESSION['usuario'])){
 			<article>
 				<?php
 					verperfil($_SESSION['usuario']);
+					vercarnes($_SESSION['usuario']);
 				?>
 			</article>
 

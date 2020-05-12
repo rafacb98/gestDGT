@@ -43,7 +43,7 @@ function obtener_usuario($dni,$clave)
         $datos["telefono"]=$obj->usuario->telefono;
         $datos["n_placa"]=$obj->usuario->n_placa;
         $datos["tipo"]=$obj->usuario->tipo;
-        $datos["id_tipo_carne"]=$obj->usuario->id_tipo_carne;
+        
 
         return $datos; 
     }
@@ -92,9 +92,32 @@ function verperfil($dni)
         echo "<p>Teléfono:<span class='datos'> ".$obj->dni->telefono."</span></p>";
         echo "<p>Nº de carné:<span class='datos'> ".$obj->dni->n_carne."</span></p>";
         echo "<p class='espe'>Año expedición de carné:<span class='datos'> ".$obj->dni->anio_exp_carne."</span></p>";
-        echo "<p class='espe'>Tipo de carné:<span class='datos'> ".$obj->dni->descripcion."</span></p>";   
+        //echo "<p class='espe'>Tipo de carné:<span class='datos'> ".$obj->dni->descripcion."</span></p>";
+        
+           
     }
 }
+
+function vercarnes($dni)
+{
+    $obj=consumir_servicio_REST(ruta."carnes/".urlencode($dni),"GET");
+    if (isset($obj->mensaje_error))
+    {
+        die($obj->mensaje_error);
+    }
+    else
+    { 
+        echo "<p class='espe'>Tipo de carné:";
+        foreach($obj->dni as $fila)
+        {
+            echo "<span class='datos'> | ".$fila->descripcion." | </span>";
+        
+        }
+        echo "</p>";      
+    }
+}
+
+
 
 
 

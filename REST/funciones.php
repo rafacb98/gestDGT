@@ -114,7 +114,7 @@ function perfil($dni)
     else
     {
         mysqli_set_charset($con,"utf8");
-        $consulta="select * from usuario join tipo_carne on usuario.id_tipo_carne=tipo_carne.id where dni='".$dni."'";
+        $consulta="select * from usuario where usuario.dni='".$dni."'";
         $resultado=mysqli_query($con,$consulta);
 
         if(!$resultado)
@@ -142,6 +142,47 @@ function perfil($dni)
         }
     }
 }
+
+function carnes($dni)
+{
+    $con=conectar();
+
+    if (!$con)
+    {
+    return array("mensaje_error"=>"Imposible conectar. Error ".mysqli_connect_errno());
+    }
+    else
+    {
+        mysqli_set_charset($con,"utf8");
+        $consulta="select descripcion from usuario join detalle_tipo_carne on detalle_tipo_carne.dni_conductor=usuario.dni join tipo_carne on detalle_tipo_carne.id_tipo_carne=tipo_carne.id  where usuario.dni='".$dni."'";
+        $resultado=mysqli_query($con,$consulta);
+
+        if(!$resultado)
+        {
+            $mensaje="Imposisble realizar la consulta. Error ".mysqli_errno($con);
+            mysqli_close($con);
+            return array("mensaje_error"=>$mensaje);
+        }
+        else
+        {
+            $dni=Array();
+            while ($fila=mysqli_fetch_assoc($resultado))
+            {
+                $dni[]=$fila;
+            }
+
+            mysqli_free_result($resultado);
+            mysqli_close($con);
+            return array("dni"=>$dni);
+        }
+    }
+}
+
+
+
+
+
+
 
 
 ?>

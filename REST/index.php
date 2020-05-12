@@ -27,6 +27,10 @@ $app->get('/perfil/:id',function($id){
     echo json_encode(perfil($id),JSON_FORCE_OBJECT);
 });
 
+$app->get('/carnes/:id',function($id){
+    echo json_encode(carnes($id),JSON_FORCE_OBJECT);
+});
+
 $app->run();
 ?>
 
