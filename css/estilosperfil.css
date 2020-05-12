@@ -30,6 +30,7 @@ header{
   transition: .3s;
   z-index:1;
   box-shadow: 0 0 1em black;
+  
 }
 
 .active{
@@ -71,6 +72,7 @@ header{
   background-color:transparent;
   margin-top:22%;
   z-index:1;
+
 }
 
 /* Las 3 rayas del menu de hamburguesa */
@@ -81,6 +83,7 @@ header{
   background:#FFF;
   position: absolute;
   top:24px;
+  left:70px;
   transition:.3s; 
   margin-left:65%;
 }
@@ -109,6 +112,10 @@ header{
   transition:.3s;
 }
 
+#seleccionado {
+  background-color: #11538C;
+  color: white !important;
+}
 
 header img {
   height:18vh;
@@ -305,7 +312,7 @@ section{
    width: 50%;
    margin-top:0.5em;
  }
-  
+ 
 
 
 
@@ -357,6 +364,11 @@ section{
    display:none;
  }
   
+ #seleccionado {
+  background-color: transparent;
+  color: white !important;
+}
+
 .botonsubir {
 	display:none;
 	padding:20px;

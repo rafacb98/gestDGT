@@ -24,14 +24,15 @@ if (isset($_SESSION['usuario'])){
 <body>
 
 	<header>
-		<div class="sidebar">
+	
+		<nav class="sidebar">
 			<ul>	
-				<li><a href="index.php">Inicio</a></li>
+				<li><a id='seleccionado' href="index.php">Inicio</a></li>
 				<li><a href="vistas/conductor/perfil.php">Perfil</a></li>
 				<li><a href="vehiculos.html">Vehiculos</a></li>
 			</ul>
 			<button class="sidebarBtn"><span></span></button>
-		</div>
+		</nav>
 	
 		<img src="img/logotipo3png.png" alt="logo" />
 	</header>

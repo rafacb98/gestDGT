@@ -10,7 +10,7 @@ $(document).ready(function(){
           $('.clave').css({"border":"3px red solid", "border-radius":"5px"}).effect("shake", {distance:1});;
           return;
         }
-        alert('Accediendo');
+        
     });
       
       

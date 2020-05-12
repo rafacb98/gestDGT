@@ -3,6 +3,7 @@
 
 /*-- CONTENIDO PARA MOVIL --*/
 /* Todo en general */
+
 *{
   box-sizing:border-box; 
   margin:0; 
@@ -39,6 +40,7 @@ header{
 .sidebar ul{
   margin:0;
   padding:20px 0;
+  
 }
 
 .sidebar ul li{
@@ -46,7 +48,8 @@ header{
 }
 
 .sidebar ul li:hover{
-  background-color:#08518C;
+  background-color:#11538C;
+  
 }
 
 .sidebar ul li a{
@@ -55,15 +58,16 @@ header{
   display:block;
   text-decoration:none;
   border-bottom: 1px solid rgba(0,0,0,.2);
+
 }
 
 /* Botón de menu */
 .sidebarBtn{
   position:absolute;
-  top:0;
+  top:5px;
   right:-50px;
-  width:50px;
-  height:50px;
+  width:0px;
+  height:0px;
   box-sizing:border-box;
   cursor:pointer;
   border: none;
@@ -107,6 +111,11 @@ header{
   height:3px;
   background:#FFF;
   transition:.3s;
+}
+
+#seleccionado {
+  background-color: #11538C;
+  color: white !important;
 }
 
 
@@ -378,6 +387,11 @@ section{
  .sidebarBtn{
    display:none;
  }
+
+ #seleccionado {
+  background-color: transparent;
+  color: white !important;
+}
   
 .botonsubir {
 	display:none;

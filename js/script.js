@@ -46,7 +46,8 @@ $(document).ready(function () {
       x = false;
       $("main").css({ "filter": "blur(0)", "transform": "translate(0)", "transition-duration": "1s" });
       $("footer").css("filter", "blur(0)");
-      $(".sidebarBtn span").css({ "transform": "rotate(0deg)", "transition-duration": "1s" });
+      $(".sidebarBtn span").css({"transform": "rotate(0deg)", "transition-duration": "1s" });
+     
     }
     // En caso de que le hayamos dado click, le añadimos el blur que dara eun efecto de opacidad a los elementos y los movemos
     // hacia la derecha
@@ -54,7 +55,8 @@ $(document).ready(function () {
       x = true;
       $("main").css({ "filter": "blur(0.3em)", "transform": "translate(250px)", "transition-duration": "1s" });
       $("footer").css("filter", "blur(0.3em)");
-      $(".sidebarBtn span").css({ "transform": "rotate(90deg)", "transition-duration": "1s" });
+      $(".sidebarBtn span").css({"transform": "rotate(90deg)", "transition-duration": "1s" });
+      
     }
   });
 
