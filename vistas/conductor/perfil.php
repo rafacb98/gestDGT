@@ -30,7 +30,7 @@ if (isset($_SESSION['usuario'])){
 			<ul>	
 				<li><a href="../..">Inicio</a></li>
 				<li><a id='seleccionado' href="perfil.php">Perfil</a></li>
-				<li><a href="vehiculos.html">Vehiculos</a></li>
+				<li><a href="../conductor/vehiculos.php">Vehiculos</a></li>
 			</ul>
 			<button class="sidebarBtn"><span></span></button>
 		</nav>

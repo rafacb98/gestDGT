@@ -117,6 +117,20 @@ function vercarnes($dni)
     }
 }
 
+function vertotalvehiculos($dni)
+{
+    $obj=consumir_servicio_REST(ruta."totalvehiculos/".urlencode($dni),"GET");
+    if (isset($obj->mensaje_error))
+    {
+        die($obj->mensaje_error);
+    }
+    else
+    { 
+        echo "<h3>Total(<span class='datos'>".$obj->dni->total."</span>)</h3>";
+     
+    }
+}
+
 
 
 
