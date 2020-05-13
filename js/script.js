@@ -10,11 +10,11 @@ $(document).ready(function () {
     if ($(document).scrollTop() > 30) {
       // Estas clases tienen la propiedad de menos opacidad
       $('header').addClass('fija');
-      $('.sidebar').addClass('fija2');
+      $('ul#menu').addClass('fija2');
     }
     else {
       $('header').removeClass('fija');
-      $('.sidebar').removeClass('fija2');
+      $('ul#menu').removeClass('fija2');
     }
   });
 
@@ -37,16 +37,17 @@ $(document).ready(function () {
   // Con ayuda de una variable booleana controlamos cuando abre y cierra el menu
   var x = false;
   // Cuando haga click desplegamos el menu
-  $(".sidebarBtn").click(function () {
+  $("#hamburguesa").click(function () {
 
-    $(".sidebar").toggleClass('active');
+    $("ul#menu").toggleClass('active');
 
     // Si no le hemos tendra su efecto original
     if (x) {
       x = false;
       $("main").css({ "filter": "blur(0)", "transform": "translate(0)", "transition-duration": "1s" });
-      $("footer").css("filter", "blur(0)");
-      $(".sidebarBtn span").css({"transform": "rotate(0deg)", "transition-duration": "1s" });
+      $("footer").css({"filter": "blur(0)","transform":"translate(0)"});
+      $("ul#menu li").css("display", "none");
+      
      
     }
     // En caso de que le hayamos dado click, le añadimos el blur que dara eun efecto de opacidad a los elementos y los movemos
@@ -54,8 +55,9 @@ $(document).ready(function () {
     else {
       x = true;
       $("main").css({ "filter": "blur(0.3em)", "transform": "translate(250px)", "transition-duration": "1s" });
-      $("footer").css("filter", "blur(0.3em)");
-      $(".sidebarBtn span").css({"transform": "rotate(90deg)", "transition-duration": "1s" });
+      $("footer").css({"filter": "blur(0.3em)","transform":"translate(250px)"});
+      $("ul#menu li").css("display", "block");
+      
       
     }
   });

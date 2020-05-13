@@ -26,14 +26,17 @@ if (isset($_SESSION['usuario'])){
 <body>
 
 	<header>
-		<nav class="sidebar">
-			<ul>	
-				<li><a href="../..">Inicio</a></li>
+	   <input type="checkbox" id="ham"/>
+       <label for="ham" id="hamburguesa">
+               <span></span>
+               <span></span>
+               <span></span>     
+       </label>    
+       <ul id="menu">
+	   			<li><a href="../..">Inicio</a></li>
 				<li><a href="perfil.php">Perfil</a></li>
 				<li><a id='seleccionado' href="vehiculos.php">Vehiculos</a></li>
-			</ul>
-			<button class="sidebarBtn"><span></span></button>
-		</nav>
+       </ul>
 	
 		<img src="../../img/logotipo3png.png" alt="logo" />
 	</header>

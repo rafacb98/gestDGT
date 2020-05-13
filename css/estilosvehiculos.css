@@ -20,98 +20,97 @@ header{
 }
 
 
-/* Menu hamburguesa*/
-.sidebar{
-  position:absolute;/*fixed*/
-  top:0;
-  left:-250px;
-  background:#2A2A2C;
-  width:250px;
-  height:100%;
-  transition: .3s;
-  z-index:1;
-  box-shadow: 0 0 1em black;
-}
-
-.active{
-  left:0;
-}
-
-.sidebar ul{
-  margin:0;
-  padding:20px 0;
-  
-}
-
-.sidebar ul li{
-  list-style:none;
-}
-
-.sidebar ul li:hover{
-  background-color:#11538C;
-  
-}
-
-.sidebar ul li a{
-  padding:10px 20px;
-  color:white;
-  display:block;
-  text-decoration:none;
-  border-bottom: 1px solid rgba(0,0,0,.2);
-
-}
-
-/* Botón de menu */
-.sidebarBtn{
-  position:absolute;
-  top:5px;
-  right:-50px;
-  width:0px;
-  height:0px;
-  box-sizing:border-box;
+/* Menu hamburguesa */
+header label#hamburguesa{
+  position:relative;
+  margin-left: auto;
   cursor:pointer;
-  border: none;
-  outline:none;
-  background-color:transparent;
-  margin-top:22%;
-  z-index:1;
+  align-self: center;
+  width:3em;
+  height: 2.5em;
 }
 
-/* Las 3 rayas del menu de hamburguesa */
-.sidebarBtn span{
+header label#hamburguesa span{
+  position:absolute;
+  left:-5em;
   display:block;
-  width:35px;
-  height:3px;
-  background:#FFF;
-  position: absolute;
-  top:24px;
-  transition:.3s; 
-  margin-left:65%;
+  width:3em;
+  height: 0.5em;
+  background-color: white;
+  transition: 1s;
 }
 
-.sidebarBtn span:before
-{
-  content:'';
-  position:absolute;
-  top:-10px;
-  left:0;
-  width:100%;
-  height:3px;
-  background:#FFF;
-  transition:.3s;
+header label#hamburguesa span:nth-child(1){
+top:0;
 }
 
-.sidebarBtn span:after
-{
-  content:'';
-  position:absolute;
-  top:10px;
-  left:0;
-  width:100%;
-  height:3px;
-  background:#FFF;
-  transition:.3s;
+header label#hamburguesa span:nth-child(2){
+  top:1em;
+ 
 }
+header label#hamburguesa span:nth-child(3){
+      top:2em;     
+}
+
+#ham{
+   display:none;
+}
+
+#ham:checked + #hamburguesa span:nth-child(1){
+    transform: rotate(45deg);
+    top:1em;
+}
+
+#ham:checked + #hamburguesa span:nth-child(2){
+   transform:rotate(180deg);
+   opacity:0;
+}
+
+   
+#ham:checked + #hamburguesa span:nth-child(3){
+  transform:rotate(-45deg);
+  top:1em;
+}
+
+  .active{
+    left:0;
+  }
+  
+  ul#menu{ 
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    margin:0;
+    padding:20px 0;
+    position:absolute;
+    top:9.2em;
+    background-color:#2A2A2C;
+    z-index:1;
+  }
+  
+  ul#menu li{
+    list-style:none;
+    display:none;
+  }
+  
+  ul#menu li a:hover{
+    background-color:#08518C;
+  }
+  
+  ul#menu a{
+    padding:10px 20px;
+    color:white;
+    display:block;
+    text-decoration:none;
+    
+  }
+  
+
+#ham:checked + #hamburguesa + ul#menu{
+      width:250px;
+
+}
+
 
 #seleccionado {
   background-color: #11538C;
@@ -120,10 +119,10 @@ header{
 
 
 header img {
-  height:18vh;
-  margin: 0 auto;
-  margin-left:auto;
-  margin-right:auto;
+  width: 8em;
+  height: 18vh;
+  z-index: 1;
+  margin-right: auto; 
 }
 
 html {
@@ -219,15 +218,8 @@ main section .especial p{
 }
 
 
-
-
-
-
-
-
-/* Aside con la publicidad y noticias */
+/* Aside  */
 aside{
-  
   padding:1em;
   flex-basis:50%;
  border:2px solid red;
@@ -236,9 +228,7 @@ aside{
 }
 
 aside h2{
-  
   color:#11538C;
- 
 }
 
 
@@ -249,22 +239,18 @@ footer{
   text-align:center;
   font-weight:bold;
   background-color:#2A2A2C;
-
   color:white; 
- 
 }
-
-
-
 
 
 footer ul{
   list-style-type: none;
-  
   display:flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+
+
 footer ul li{
   margin-left:1em;
 }
@@ -272,9 +258,6 @@ footer ul li{
 footer ul li span{
   display:none;
 }
-
-
-
 
 
 #instagram,#twitter,#facebook{
@@ -318,10 +301,10 @@ section{
     flex-wrap: wrap;
   }
 
-  header img { 
-    margin: 0 auto; 
-  }
 
+  header label#hamburguesa span{
+    left:-14em;
+  }
 
   aside{
     flex-grow:1.5;
@@ -351,42 +334,39 @@ section{
   /* Encabezado */
   header img{
     margin-left:5%;  
-    width: 10vw;
+    width: 8vw;
     height:16vh;
   }
 
-  header input, header label{
-    display:none
+  /* Encabezado */
+  header img{
+    margin-left:5%;  
+    width: 8vw;
+    height:16vh;
   }
 
- 
-  /* Menu horizontal grande */
-  .sidebar {
-    box-shadow: none;
-    margin-left:60%;
-    height:auto; 
-    background-color:#2A2A2C; 
-  }
+  header label#hamburguesa{
+    display:none;
+}
 
-  .sidebar ul{
+header ul#menu li{
+  margin-bottom: 0.5em;
+  display:block;
+  margin-left:6em;
+  margin-right:6em;
+}
+
+header  ul#menu{
+    width: 100vw !important;
+    height: 7vh;
     display:flex;
-    margin-top:0.9em; 
-  }
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    top:2em;
+    left:-6em; 
+}
 
- .sidebar ul li{
-   margin-right:5em;
-   padding-top:0.3em;
-   border-bottom:1px solid #11538C;
-   padding-bottom:0;
- }
-
- .sidebar ul li a{
-   border:none;
- }
-
- .sidebarBtn{
-   display:none;
- }
 
  #seleccionado {
   background-color: transparent;
@@ -456,7 +436,6 @@ h2 span{
     width: 100%;
     z-index: 999; 
     background-color:rgba(42,42,44,0.9);
-  
   }
 
   .fija2 { 
@@ -464,8 +443,6 @@ h2 span{
     width: 50%; 
     z-index: 999; 
     background-color:rgba(42,42,44,0);
-   
-  
   }
 }
 

@@ -24,13 +24,16 @@ if (isset($_SESSION['usuario'])){
 	<body>
 	
 		<header>
-			<div class="sidebar">
-				<ul>	
+			<input type="checkbox" id="ham"/>
+			<label for="ham" id="hamburguesa">
+					<span></span>
+					<span></span>
+					<span></span>     
+			</label>    
+			<ul id="menu">
 					<li><a href="index.php">Inicio</a></li>
 					<li><a href="multas.html">Multas</a></li>
-				</ul>
-				<button class="sidebarBtn"><span></span></button>
-			</div>
+			</ul>
 		
 			<img src="img/logotipo3png.png" alt="logo" />
 		</header>
