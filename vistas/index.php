@@ -53,6 +53,7 @@ if($intruso)
 </head>
 
 <body class="centro">
+
 <?php
                 if(isset($_SESSION['restringido']))
                  echo "<p>Accediendo a zona restringida</p>";
@@ -64,6 +65,7 @@ if($intruso)
                  session_unset();
   ?>
   <main class="login centro">
+
     <p>
       <img class="logo" src='img/logotipo3png.png'/>
     </p>

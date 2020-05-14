@@ -35,7 +35,7 @@ header label#hamburguesa span{
   left:-5em;
   display:block;
   width:3em;
-  height: 0.5em;
+  height: 0.3em;
   background-color: white;
   transition: 1s;
 }
@@ -79,7 +79,6 @@ header label#hamburguesa span:nth-child(3){
   ul#menu{ 
     left: 0;
     bottom: 0;
-    height: 100%;
     margin:0;
     padding:20px 0;
     position:absolute;
@@ -365,6 +364,7 @@ header  ul#menu{
     justify-content: flex-end;
     top:2em;
     left:-6em; 
+    background-color:rgba(42,42,44,0);
 }
 
 
