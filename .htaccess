@@ -1,0 +1,3 @@
+Options -Indexes
+ErrorDocument 404 /gestDGT/error404.php
+ErrorDocument 403 /gestDGT/error403.php 

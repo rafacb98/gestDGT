@@ -31,8 +31,6 @@ if($intruso)
     else
     {
 
-    
-
     ?>
     <!DOCTYPE html>
 <html lang="en">
@@ -54,18 +52,17 @@ if($intruso)
 
 <body class="centro">
 
-<?php
+  <main class="login centro">
+  <?php
                 if(isset($_SESSION['restringido']))
-                 echo "<p>Accediendo a zona restringida</p>";
+                 echo "<p class='errorsesion'>Estás tratando de acceder a una zona restringida.</p>";
                 if(isset($_SESSION['tiempo']))
-                 echo "<p>Tiempo agotado</p>";
+                 echo "<p class='errorsesion'>Ha expirado la sesión. Por favor, vuelva a identificarse.</p>";
                 if(isset($_SESSION['errorusuario']))
-                 echo "<p>Usuario no registrado en la BBDD</p>";
+                 echo "<p class='errorsesion'>El usuario y/o contraseña no son válidos.</p>";
 
                  session_unset();
   ?>
-  <main class="login centro">
-
     <p>
       <img class="logo" src='img/logotipo3png.png'/>
     </p>
@@ -76,7 +73,7 @@ if($intruso)
           <i class="fas fa-user"></i>
         </label>
         <input id="usuariop" placeholder="Usuario"  type="text" name="usuario" value='<?php if(isset($_POST['usuario'])) echo $_POST['usuario'];?>'>
-        <?php if(isset($_POST['btnentrar'])&&$_POST['usuario']=="") echo "Campo vacio";?>
+        <?php if(isset($_POST['btnentrar'])&&$_POST['usuario']=="") echo "<p class='errorvacio'>Rellene el campo</p>";?>
       </p>
 
       <p class="clave">
@@ -84,10 +81,10 @@ if($intruso)
           <i class="fas fa-lock"></i>
         </label>
         <input id="clavep" placeholder="Clave" type="password" name="clave" value=''>
-        <?php if(isset($_POST['btnentrar'])&&$_POST['clave']=="") echo "Campo vacio";?>
+        <?php if(isset($_POST['btnentrar'])&&$_POST['clave']=="") echo "<p class='errorvacio'>Rellene el campo</p>";?>
       </p>
       <button type='submit' id="btnentrar" class="centro" name="btnentrar">
-        Entrar
+        Acceder
       </button>
     </form>
 

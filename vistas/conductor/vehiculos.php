@@ -66,7 +66,7 @@ if (isset($_SESSION['usuario'])){
 </html>
 <?php
 }else{	
- 	 header('Location: ../error.php');
+	header('Location: ../../error403.php');
 	 die();
 }
 	 ?>

@@ -13,7 +13,7 @@
   }
   
   body{
-    background: #fff;
+    background: aqua;
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
@@ -30,6 +30,7 @@
     border-radius: 10px;
     box-shadow: 0 0 1em black;
     padding:1em;
+    background: white;
   }
   
   .logo{
@@ -37,6 +38,7 @@
     color: #606060;
     border-radius:40px;
     height:120px;
+    margin-bottom:1em;
   }
  
   
@@ -87,6 +89,20 @@
     opacity: 1;
   }
   
+  .errorvacio{
+    color:red;
+  }
+
+  .errorsesion{
+    color:white;
+    flex-basis:100%;
+    text-align: center;
+    background-color:red;
+    padding:1em;
+    margin-bottom:1em;
+    font-weight: bold;
+  }
+
   #btnentrar{
     background:#11538C;
     color: #eee;
@@ -111,7 +127,7 @@
     transition:all 0.2s;
   }
 
-@media all and (min-width: 1000px) {
+@media all and (min-width: 1274px) {
     img{
         flex-basis: 100%; 
     }
@@ -119,12 +135,13 @@
     #btnentrar {
         flex-basis: 100%; 
         box-shadow: 0 0 1em black;
-        margin-left:19.6em;
-        margin-right:19.6em;
+        margin-left:6.9em;
+        margin-right:6.9em;
     }
 
     .login{
-      box-shadow: 0 0 0 black;
+      margin-left:22em;
+      margin-right:22em;
     }
 
    form{
@@ -136,9 +153,10 @@
    }
 
    label{
-    flex-basis:20%;
+    flex-basis:30%;
+ 
    }
-   
+
   .centro{
     width:100%;
     flex-wrap: wrap;
