@@ -18,7 +18,5 @@ $(document).ready(function(){
         $('.usuario').css({"border":"3px solid transparent"});
         $('.clave').css({"border":"3px solid transparent"});
     })
-
- 
     
 })

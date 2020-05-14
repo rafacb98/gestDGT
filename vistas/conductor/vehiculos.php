@@ -46,14 +46,11 @@ if (isset($_SESSION['usuario'])){
 		<section>
 			<p class='primero'><span class='bienvenida'>¡Hol@ <span class='usuario'><?php echo $_SESSION['usuario'];?></span>!</span><a  href='../../cerrarsesion.php' class='cerrarsesion'><i class="fas fa-sign-out-alt"></i></a></p>
 			<h2>·· VEHÍCULOS ··</h2>
-			<article>
-				<?php
-					
-				?>
-			</article>
-
-			<?php vertotalvehiculos($_SESSION['usuario']); ?>
-				
+			<?php 
+				vertotalvehiculos($_SESSION['usuario']); 
+				vercadavehiculo($_SESSION['usuario']);
+			?>
+		
 		</section>	
 	</main>
 	

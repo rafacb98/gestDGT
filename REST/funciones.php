@@ -219,7 +219,40 @@ function totalvehiculos($dni)
 }
 
 
+function vehiculosusu($dni)
+{
+    $con=conectar();
 
+    if (!$con)
+    {
+    return array("mensaje_error"=>"Imposible conectar. Error ".mysqli_connect_errno());
+    }
+    else
+    {
+        mysqli_set_charset($con,"utf8");
+        $consulta="select * from vehiculo where dni_conductor='".$dni."'";
+        $resultado=mysqli_query($con,$consulta);
+
+        if(!$resultado)
+        {
+            $mensaje="Imposisble realizar la consulta. Error ".mysqli_errno($con);
+            mysqli_close($con);
+            return array("mensaje_error"=>$mensaje);
+        }
+        else
+        {
+            $vehiculos=Array();
+            while ($fila=mysqli_fetch_assoc($resultado))
+            {
+                $vehiculos[]=$fila;
+            }
+
+            mysqli_free_result($resultado);
+            mysqli_close($con);
+            return array("vehiculos"=>$vehiculos);
+        }
+    }
+}
 
 
 

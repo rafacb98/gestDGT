@@ -35,6 +35,10 @@ $app->get('/totalvehiculos/:id',function($id){
     echo json_encode(totalvehiculos($id),JSON_FORCE_OBJECT);
 });
 
+$app->get('/vehiculosusu/:id',function($id){
+    echo json_encode(vehiculosusu($id),JSON_FORCE_OBJECT);
+});
+
 $app->run();
 ?>
 

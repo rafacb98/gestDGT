@@ -48,7 +48,7 @@ if($intruso)
     <link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/4a9d5317b6.js" crossorigin="anonymous"></script>
     <script src='js/jquery-3.1.1.js'></script>
-    <script src='js/script1.js'></script>
+    <script src='js/scriptiniciosesion.js'></script>
     <title>GestDGT+</title>
 </head>
 

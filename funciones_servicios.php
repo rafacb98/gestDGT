@@ -131,6 +131,30 @@ function vertotalvehiculos($dni)
     }
 }
 
+function vercadavehiculo($dni)
+{
+    $obj=consumir_servicio_REST(ruta."vehiculosusu/".urlencode($dni),"GET");
+    if (isset($obj->mensaje_error))
+    {
+        die($obj->mensaje_error);
+    }
+    else
+    { 
+        
+        foreach($obj->vehiculos as $fila)
+        {
+            echo "<article>";
+                echo "<p><span class='detalle'>Matricula: </span>".$fila->matricula." </p>";
+                echo "<p><span class='detalle'>Bastidor: </span>".$fila->bastidor. "</p>";
+                echo "<p><span class='detalle'>Marca: </span>".$fila->marca. "</p>";
+                echo "<p><span class='detalle'>Modelo: </span>".$fila->modelo. "</p>";
+                echo "<p><span class='detalle'>Año: </span>".$fila->anio. "</p>";
+                echo "<p><span class='detalle'>Tipo: </span>".$fila->tipo. "</p>";
+            echo "</article>";
+        }
+          
+    }
+}
 
 
 

@@ -1,8 +1,4 @@
-
 $(document).ready(function () {
-
-  // Cuando pasemos el raton por encima del logo rotará 180 grados, cuando lo dejemos, volverá a su estado original
- 
 
   // Cuando hagamos scroll, añadimos la clase fija al encabezado y menu para que se queden fijos, y cuando volvamos
   // se la quitamos para que vuelvan a como estaban
@@ -33,6 +29,7 @@ $(document).ready(function () {
       $('.botonsubir').slideUp(300);
     }
   });
+
 
   // Con ayuda de una variable booleana controlamos cuando abre y cierra el menu
   var x = false;
@@ -84,7 +81,6 @@ $(document).ready(function () {
    
  })
 
- 
  
 });
 

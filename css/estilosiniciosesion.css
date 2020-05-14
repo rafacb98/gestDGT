@@ -28,7 +28,8 @@
     min-height: 10em;
     width: 20em;
     border-radius: 10px;
-    padding-bottom: 5em;
+    box-shadow: 0 0 1em black;
+    padding:1em;
   }
   
   .logo{
@@ -120,6 +121,10 @@
         box-shadow: 0 0 1em black;
         margin-left:19.6em;
         margin-right:19.6em;
+    }
+
+    .login{
+      box-shadow: 0 0 0 black;
     }
 
    form{
