@@ -17,9 +17,6 @@ if (isset($_SESSION['usuario'])){
 	<link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
 	<script src='js/jquery-3.1.1.js'></script>
 
-	
-
-
 </head>
 <body>
 
@@ -80,7 +77,7 @@ if (isset($_SESSION['usuario'])){
 </html>
 <?php
     }else{	
- 	 header('Location: ../../error403.php');
+		header('Location: ../../index.php');
 	 die();
 	}
 	 ?>

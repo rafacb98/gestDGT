@@ -229,8 +229,13 @@ button{
 }
 
 button:hover{
-  cursor:pointer;
   background-color: rgb(16, 74, 126);
+}
+
+button:active{
+  cursor:pointer;
+  position:relative;
+  top:1px;
 }
 
 /* Pie de página */

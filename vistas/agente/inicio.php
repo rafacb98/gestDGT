@@ -31,8 +31,8 @@ if (isset($_SESSION['usuario'])){
 					<span></span>     
 			</label>    
 			<ul id="menu">
-					<li><a href="index.php">Inicio</a></li>
-					<li><a href="multas.html">Multas</a></li>
+					<li><a id='seleccionado' href="index.php">Inicio</a></li>
+					<li><a href="vistas/agente/multas.php">Multas</a></li>
 			</ul>
 		
 			<img src="img/logotipo3png.png" alt="logo" />
@@ -78,7 +78,7 @@ if (isset($_SESSION['usuario'])){
 	<?php
     }else{
 		
-		header('Location: ../../error403.php');
+		header('Location: ../../index.php');
 	 die();
 	}
 	 ?>

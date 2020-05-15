@@ -10,13 +10,13 @@ if (isset($_SESSION['usuario'])){
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<title>Vehículos | GestDGT+</title>
+	<title>Multas | GestDGT+</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="author" content="Rafael Carrillo Bonilla">
 	<meta name="description" content="GestDGT+">
 	<meta name="lang" content="es-ES" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<link rel="stylesheet" type="text/css" href="../../css/estilosvehiculos.css">
+	<link rel="stylesheet" type="text/css" href="../../css/estilosmultas.css">
 	<script src="https://kit.fontawesome.com/4a9d5317b6.js" crossorigin="anonymous"></script>
 	<link rel="icon" href="../../img/logotipo3png.png">
 	<link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
@@ -26,7 +26,7 @@ if (isset($_SESSION['usuario'])){
 <body>
 
 	<header>
-	   <input type="checkbox" id="ham"/>
+	<input type="checkbox" id="ham"/>
        <label for="ham" id="hamburguesa">
                <span></span>
                <span></span>
@@ -34,10 +34,9 @@ if (isset($_SESSION['usuario'])){
        </label>    
        <ul id="menu">
 	   			<li><a href="../..">Inicio</a></li>
-				<li><a href="perfil.php">Perfil</a></li>
-				<li><a id='seleccionado' href="vehiculos.php">Vehiculos</a></li>
+				<li><a id='seleccionado' href="multas.php">Multas</a></li>
        </ul>
-	
+		
 		<img src="../../img/logotipo3png.png" alt="logo" />
 	</header>
 
@@ -45,12 +44,15 @@ if (isset($_SESSION['usuario'])){
 		<span class="botonsubir"><i class="fas fa-arrow-up"></i></span>
 		<section>
 			<p class='primero'><span class='bienvenida'>¡Hol@ <span class='usuario'><?php echo $_SESSION['usuario'];?></span>!</span><a  href='../../cerrarsesion.php' class='cerrarsesion'><i class="fas fa-sign-out-alt"></i></a></p>
-			<h2>·· VEHÍCULOS ··</h2>
-			<?php 
-				vertotalvehiculos($_SESSION['usuario']); 
-				vercadavehiculo($_SESSION['usuario']);
-			?>
-		
+			<h2>·· GESTIÓN DE MULTAS ··</h2>
+			<article>
+				<?php
+					
+				?>
+			</article>
+
+			
+				
 		</section>	
 	</main>
 	
