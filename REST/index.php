@@ -39,6 +39,10 @@ $app->get('/vehiculosusu/:id',function($id){
     echo json_encode(vehiculosusu($id),JSON_FORCE_OBJECT);
 });
 
+$app->get('/multas', function ()  {
+    echo json_encode(multas(),JSON_FORCE_OBJECT);
+});
+
 $app->run();
 ?>
 

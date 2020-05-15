@@ -177,6 +177,24 @@ h2{
 }
 
 
+table,th,tr,td{
+  border:1px solid black;
+  border-collapse: collapse;
+  padding:0.5em;
+}
+
+th{
+  background-color:rgb(165, 163, 163);
+}
+
+td,th{
+  text-align: center;
+}
+
+table img{
+  height:80px;
+}
+
 
 button{
   margin-top:0.5em;

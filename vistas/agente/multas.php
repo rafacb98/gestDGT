@@ -22,6 +22,7 @@ if (isset($_SESSION['usuario'])){
 	<link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
 	<script src='../../js/jquery-3.1.1.js'></script>
 
+
 </head>
 <body>
 
@@ -45,11 +46,8 @@ if (isset($_SESSION['usuario'])){
 		<section>
 			<p class='primero'><span class='bienvenida'>¡Hol@ <span class='usuario'><?php echo $_SESSION['usuario'];?></span>!</span><a  href='../../cerrarsesion.php' class='cerrarsesion'><i class="fas fa-sign-out-alt"></i></a></p>
 			<h2>·· GESTIÓN DE MULTAS ··</h2>
-			<article>
-				<?php
-					
-				?>
-			</article>
+			<div id="mensaje"></div>
+			<div id="multas"></div>
 
 			
 				

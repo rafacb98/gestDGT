@@ -254,6 +254,41 @@ function vehiculosusu($dni)
     }
 }
 
+function multas()
+{
+    $con=conectar();
+
+    if (!$con)
+    {
+        return array("mensaje_error"=>"Imposible conectar. Error ".mysqli_connect_errno());
+    }
+    else
+    {
+        mysqli_set_charset($con,"utf8");
+        $consulta="select * from multa";
+        $resultado=mysqli_query($con,$consulta);
+
+        if(!$resultado)
+        {
+            $mensaje="Imposisble realizar la consulta. Error ".mysqli_errno($con);
+            mysqli_close($con);
+            return array("mensaje_error"=>$consulta);
+        }
+        else
+        {
+            $multas=Array();
+            while ($fila=mysqli_fetch_assoc($resultado))
+            {
+                $multas[]=$fila;
+            }
+
+            mysqli_free_result($resultado);
+            mysqli_close($con);
+            return array("multas"=>$multas);
+        }
+    }
+}
+
 
 
 
