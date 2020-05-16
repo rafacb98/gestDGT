@@ -156,7 +156,36 @@ function vercadavehiculo($dni)
     }
 }
 
-
+function todasmultas(){
+    $obj=consumir_servicio_REST(ruta."multas","GET");
+    if (isset($obj->mensaje_error))
+    {
+        die($obj->mensaje_error);
+    }
+    else
+    { 
+        echo "<table id='multas'>";
+        echo "<thead>";
+            echo "<tr><th>Fecha/Hora</th><th>DNI</th><th>Matrícula</th><th>Precio</th><th>Estado</th><th>Observaciones</th><th>Foto</th></tr>";
+        echo "</thead>";
+        echo "<tbody>";
+      
+        foreach($obj->multas as $fila)
+        {
+            echo "<tr>";
+            echo "<td>". $fila->fecha_y_hora . "</td>"; 
+            echo "<td>". $fila->dni_conductor . "</td>"; 
+            echo "<td>". $fila->matricula_vehiculo . "</td>"; 
+            echo "<td>". $fila->precio . "</td>"; 
+            echo "<td>". $fila->estado . "</td>"; 
+            echo "<td>". $fila->observaciones . "</td>"; 
+            echo "<td><img src='../../img/".$fila->foto."' /></td>"; 
+                  echo  '</tr>';
+        }
+          echo "</tbody>";
+          echo "</table>";
+    }
+}
 
 
 

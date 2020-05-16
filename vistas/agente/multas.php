@@ -17,11 +17,15 @@ if (isset($_SESSION['usuario'])){
 	<meta name="lang" content="es-ES" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<link rel="stylesheet" type="text/css" href="../../css/estilosmultas.css">
+	<link rel="stylesheet" type="text/css" href="../../css/basictable.css">
 	<script src="https://kit.fontawesome.com/4a9d5317b6.js" crossorigin="anonymous"></script>
 	<link rel="icon" href="../../img/logotipo3png.png">
 	<link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
 	<script src='../../js/jquery-3.1.1.js'></script>
+	<script src='../../js/jquery.basictable.min.js'></script>
 
+	
+		
 
 </head>
 <body>
@@ -43,13 +47,13 @@ if (isset($_SESSION['usuario'])){
 
 	<main class="epico">
 		<span class="botonsubir"><i class="fas fa-arrow-up"></i></span>
-		<section>
+		<section id="a">
 			<p class='primero'><span class='bienvenida'>¡Hol@ <span class='usuario'><?php echo $_SESSION['usuario'];?></span>!</span><a  href='../../cerrarsesion.php' class='cerrarsesion'><i class="fas fa-sign-out-alt"></i></a></p>
 			<h2>·· GESTIÓN DE MULTAS ··</h2>
-			<div id="mensaje"></div>
-			<div id="multas"></div>
-
 			
+
+			<?php todasmultas(); ?>
+  
 				
 		</section>	
 	</main>

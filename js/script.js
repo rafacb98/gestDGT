@@ -81,46 +81,13 @@ $(document).ready(function () {
      $(".tiposdecarne p").fadeIn();
    }
    
+
  })
 
- multas();
-
- // Función que hace una llamada AJAX para mostrar todas las multas
- function multas() {
-  $.getJSON(url + "multas")
-      .done(function (data) {
-          if (data.multas) {
-              var output = "<table>";
-              output += "<tr><th>Fecha/Hora</th><th>DNI</th><th>Matrícula</th><th>Precio</th><th>Estado</th><th>Observaciones</th><th>Foto</th></tr>";
-              // Cada multa
-              $.each(data.multas, function (key, value) {
-                  output += '<tr>';
-                  // Los valores de cada multa
-                  var foto="<img src='../../img/"+ value['foto'] +"' />";
-                  
-                  output += '<td>' + value['fecha_y_hora'] + '</td>'; 
-                  output += '<td>' + value['dni_conductor'] + '</td>'; 
-                  output += '<td>' + value['matricula_vehiculo'] + '</td>'; 
-                  output += '<td>' + value['precio'] + '€</td>'; 
-                  output += '<td>' + value['estado'] + '</td>'; 
-                  output += '<td>' + value['observaciones'] + '</td>'; 
-                  output += '<td>'+foto+'</td>'; 
-                  output += '</tr>';
-              });
-              output += '</table>';
-              $("#multas").html(output);
-          }
-          else
-          {
-              $("#mensaje").html(data.mensaje_error);
-          }
-      })
-      .fail(function (jqXHR, textStatus, errorThrown) {
-          if (console && console.log) {
-              console.log("La solicitud a fallado: " + textStatus);
-          }
-      });
-}
+ $('#multas').basictable({
+  breakpoint: 1000,
+});
+ 
 
 
 });
