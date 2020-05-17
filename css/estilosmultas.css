@@ -183,6 +183,7 @@ table {
   border-collapse: collapse;
   margin: 1.25em 0 0;
   width: 100%;
+  box-shadow: 0 0 1em black;
 }
 
 table img{
@@ -196,6 +197,7 @@ table td {
   border-bottom: 1px solid #e4ebeb;
   font-family: 'Lato', sans-serif;
   font-size: .875rem;
+ 
 }
 
 table th,
@@ -226,6 +228,7 @@ table.bt tbody td {
   font-size: .8125rem;
   padding: 0;
 }
+
 
 table.bt tfoot th:before,
 table.bt tfoot td:before,
@@ -263,24 +266,35 @@ table.bt tbody td:last-of-type .bt-content {
   padding-bottom: 10px;
 }
 
+#opciones{
+  background-color:red;
+}
 
-button{
+#nuevam{
+  display:none;
+}
+
+form{
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.btnnueva{
+  box-shadow: 0 0 1em black;
   margin-top:0.5em;
-  width: 40%;
-  margin-left: 30%;
-  margin-right: 30%;
   padding:0.5em;
-  border-radius: 0.2em;
+  border-radius: 0.8em;
   font-size: 20px;
   background-color:#11538C;
   color:white;
 }
 
-button:hover{
+.btnnueva:hover{
   background-color: rgb(16, 74, 126);
 }
 
-button:active{
+.btnnueva:active{
   cursor:pointer;
   position:relative;
   top:1px;
@@ -316,6 +330,9 @@ footer ul li span{
 }
 
 section{
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   padding:2em;
 }
 
@@ -386,6 +403,10 @@ header  ul#menu{
  #seleccionado {
   background-color: transparent;
   color: white !important;
+}
+
+#nuevam{
+  display:inline;
 }
 
 .botonsubir {

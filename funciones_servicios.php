@@ -166,7 +166,7 @@ function todasmultas(){
     { 
         echo "<table id='multas'>";
         echo "<thead>";
-            echo "<tr><th>Fecha/Hora</th><th>DNI</th><th>Matrícula</th><th>Precio</th><th>Estado</th><th>Observaciones</th><th>Foto</th></tr>";
+            echo "<tr><th>Fecha/Hora</th><th>DNI</th><th>Matrícula</th><th>Precio</th><th>Estado</th><th>Observaciones</th><th>Foto</th><th id='opciones'>Opciones</th></tr>";
         echo "</thead>";
         echo "<tbody>";
       
@@ -180,6 +180,7 @@ function todasmultas(){
             echo "<td>". $fila->estado . "</td>"; 
             echo "<td>". $fila->observaciones . "</td>"; 
             echo "<td><img src='../../img/".$fila->foto."' /></td>"; 
+            echo "<td><form action='' method='post'><button class='btnnueva' name='btneditar'><i class='fas fa-user-edit'></i></button></form></td>"; 
                   echo  '</tr>';
         }
           echo "</tbody>";

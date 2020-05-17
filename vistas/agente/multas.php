@@ -51,10 +51,13 @@ if (isset($_SESSION['usuario'])){
 			<p class='primero'><span class='bienvenida'>¡Hol@ <span class='usuario'><?php echo $_SESSION['usuario'];?></span>!</span><a  href='../../cerrarsesion.php' class='cerrarsesion'><i class="fas fa-sign-out-alt"></i></a></p>
 			<h2>·· GESTIÓN DE MULTAS ··</h2>
 			
+			<form action='' method='post'>
+				<button class='btnnueva' name='btnnuevamulta'><i class="fas fa-plus-circle"></i></button><span id='nuevam'>&nbsp;&nbsp;&nbsp;&nbsp;NUEVA MULTA</span>
+			</form>	
 
 			<?php todasmultas(); ?>
   
-				
+			
 		</section>	
 	</main>
 	
