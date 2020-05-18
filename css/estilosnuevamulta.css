@@ -1,0 +1,473 @@
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------*/
+
+/*-- CONTENIDO PARA MOVIL --*/
+/* Todo en general */
+*{
+  box-sizing:border-box; 
+  margin:0; 
+  padding:0;
+  font-family: 'Pathway Gothic One', sans-serif;
+}
+
+/* Encabezado */
+header{
+  display:flex;  
+  flex-flow:row nowrap;
+  background-color:#2A2A2C;
+  padding:1em;
+}
+
+
+/* Menu hamburguesa */
+header label#hamburguesa{
+  position:relative;
+  margin-left: auto;
+  cursor:pointer;
+  align-self: center;
+  width:3em;
+  height: 2.5em;
+}
+
+header label#hamburguesa span{
+  position:absolute;
+  left:-5em;
+  display:block;
+  width:3em;
+  height: 0.3em;
+  background-color: white;
+  transition: 1s;
+}
+
+header label#hamburguesa span:nth-child(1){
+top:0;
+}
+
+header label#hamburguesa span:nth-child(2){
+  top:1em;
+ 
+}
+header label#hamburguesa span:nth-child(3){
+      top:2em;     
+}
+
+#ham{
+   display:none;
+}
+
+#ham:checked + #hamburguesa span:nth-child(1){
+    transform: rotate(45deg);
+    top:1em;
+}
+
+#ham:checked + #hamburguesa span:nth-child(2){
+   transform:rotate(180deg);
+   opacity:0;
+}
+
+   
+#ham:checked + #hamburguesa span:nth-child(3){
+  transform:rotate(-45deg);
+  top:1em;
+}
+
+  .active{
+    left:0;
+  }
+  
+  ul#menu{ 
+    left: 0;
+    bottom: 0;
+    margin:0;
+    padding:20px 0;
+    position:absolute;
+    top:9.2em;
+    background-color:#2A2A2C;
+    z-index:1;
+  }
+  
+  ul#menu li{
+    list-style:none;
+    display:none;
+  }
+  
+  ul#menu li a:hover{
+    background-color:#08518C;
+  }
+  
+  ul#menu a{
+    padding:10px 20px;
+    color:white;
+    display:block;
+    text-decoration:none;
+    
+  }
+  
+
+#ham:checked + #hamburguesa + ul#menu{
+      width:250px;
+
+}
+
+
+#seleccionado {
+  background-color: #11538C;
+  color: white !important;
+}
+
+header img {
+  width: 8em;
+  height: 18vh;
+  z-index: 1;
+  margin-right: auto; 
+}
+
+html {
+  min-height:100%;
+  position: relative;
+ 
+}
+
+h2 span{
+display:none;
+}
+
+.primero{
+  
+  display:flex;
+  flex-direction: row;
+  flex-basis:100%; 
+}
+
+.bienvenida{
+  font-size: 22px;
+  flex:1;
+  color:#11538C;
+}
+
+.usuario{
+  color:red;
+  font-weight: bold;
+}
+
+.cerrarsesion{
+  font-size: 22px;
+}
+
+
+
+
+
+/* Cuerpo */
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-height: 100vh;
+}
+ 
+main {
+  flex: 1;
+}
+
+h2{
+	text-align:center;
+	flex-basis:100%;
+  padding:1em;
+}
+
+
+
+table {
+  background: white;
+  border-collapse: collapse;
+  margin: 1.25em 0 0;
+  width: 100%;
+  box-shadow: 0 0 1em black;
+}
+
+table img{
+  height:90px;
+}
+
+table tr,
+table th,
+table td {
+  border: none;
+  border-bottom: 1px solid #e4ebeb;
+  font-family: 'Lato', sans-serif;
+  font-size: .875rem;
+ 
+}
+
+table th,
+table td {
+  padding: 10px 12px;
+  text-align: center;
+  font-size:15px;
+}
+
+table th {
+  background: #11538C;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+table tr td {
+  background: #eaf3f5;
+  color: #999999;
+}
+
+table tr:nth-of-type(2n+2) td {
+  background: #ffffff;
+}
+
+table.bt tfoot th,
+table.bt tfoot td,
+table.bt tbody td {
+  font-size: .8125rem;
+  padding: 0;
+}
+
+
+table.bt tfoot th:before,
+table.bt tfoot td:before,
+table.bt tbody td:before {
+  background: #11538C;
+  color: white;
+  margin-right: 10px;
+  padding: 2px 10px;
+  font-size:15px;
+}
+
+table.bt tfoot th .bt-content,
+table.bt tfoot td .bt-content,
+table.bt tbody td .bt-content {
+  display: inline-block;
+  padding: 2px 5px;
+  font-size:18px;
+}
+
+table.bt tfoot th:first-of-type:before,
+table.bt tfoot th:first-of-type .bt-content,
+table.bt tfoot td:first-of-type:before,
+table.bt tfoot td:first-of-type .bt-content,
+table.bt tbody td:first-of-type:before,
+table.bt tbody td:first-of-type .bt-content {
+  padding-top: 10px;
+}
+
+table.bt tfoot th:last-of-type:before,
+table.bt tfoot th:last-of-type .bt-content,
+table.bt tfoot td:last-of-type:before,
+table.bt tfoot td:last-of-type .bt-content,
+table.bt tbody td:last-of-type:before,
+table.bt tbody td:last-of-type .bt-content {
+  padding-bottom: 10px;
+}
+
+#opciones{
+  background-color:red;
+}
+
+#nuevam{
+  display:none;
+}
+
+form{
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.btnnueva2{
+  box-shadow: 0 0 1em black;
+  margin-top:0.5em;
+  padding:0.5em;
+  border-radius: 0.8em;
+  font-size: 20px;
+  background-color:red;
+  color:white;
+
+}
+
+.btnnueva{
+  box-shadow: 0 0 1em black;
+  margin-top:0.5em;
+  padding:0.5em;
+  border-radius: 0.8em;
+  font-size: 20px;
+  background-color:#11538C;
+  color:white;
+}
+
+.btnnueva:hover{
+  background-color: rgb(16, 74, 126);
+}
+
+.btnnueva:active{
+  cursor:pointer;
+  position:relative;
+  top:1px;
+}
+
+/* Pie de página */
+footer{
+  padding:1em;
+  text-align:center;
+  font-weight:bold;
+  background-color:#2A2A2C;
+
+  color:white; 
+ 
+}
+
+footer ul{
+  list-style-type: none;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+footer ul li{
+  margin-left:1em;
+}
+
+footer ul li span{
+  display:none;
+}
+
+#instagram,#twitter,#facebook{
+  color:white;
+}
+
+section{
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding:2em;
+}
+
+
+/* Botón de subir hacia arriba */
+.botonsubir {
+  display:none;
+}
+
+
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------*/
+
+/*-- CONTENIDO PARA TABLET --*/
+@media all and (min-width: 600px) {
+
+  section{
+    display:flex;
+    flex-wrap: wrap;
+  }
+
+
+  header label#hamburguesa span{
+    left:-14em;
+  }
+
+  
+ 
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*-- CONTENIDO PARA ESCRITORIO --*/
+@media all and (min-width: 1000px) {
+  /* Encabezado */
+  header img{
+    margin-left:5%;  
+    width: 8vw;
+    height:16vh;
+  }
+
+  header label#hamburguesa{
+    display:none;
+}
+
+header ul#menu li{
+  margin-bottom: 0.5em;
+  display:block;
+  margin-left:6em;
+  margin-right:6em;
+}
+
+header  ul#menu{
+    width: 100vw !important;
+    height: 7vh;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    top:2em;
+    left:-6em; 
+    background-color:rgba(42,42,44,0);
+}
+
+
+ #seleccionado {
+  background-color: transparent;
+  color: white !important;
+}
+
+#nuevam{
+  display:inline;
+}
+
+.botonsubir {
+	display:none;
+	padding:20px;
+	background:#11538C;
+	font-size:20px;
+	color:#fff;
+	cursor:pointer;
+	position: fixed;
+	bottom:20px;
+  right:20px;
+  border-radius:2em;
+  z-index:1;
+}
+
+.bienvenida{
+  text-align: center;
+  font-size: 32px;
+}
+.cerrarsesion{
+  font-size: 32px;
+}
+
+
+
+  /* Footer */
+  footer ul{
+    justify-content: space-around;
+  }
+
+  footer ul li span{
+    display:inline;
+  }
+  
+
+  .fija { 
+    position: fixed; 
+    width: 100%;
+    z-index: 999; 
+    background-color:rgba(42,42,44,0.9);
+  }
+
+  .fija2 { 
+    position: fixed; 
+    width: 50%; 
+    z-index: 999; 
+    background-color:rgba(42,42,44,0);
+  }
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------*/

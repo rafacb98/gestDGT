@@ -10,13 +10,13 @@ if (isset($_SESSION['usuario'])){
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<title>Multas | GestDGT+</title>
+	<title>Nueva multa | GestDGT+</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="author" content="Rafael Carrillo Bonilla">
 	<meta name="description" content="GestDGT+">
 	<meta name="lang" content="es-ES" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<link rel="stylesheet" type="text/css" href="../../css/estilosmultas.css">
+	<link rel="stylesheet" type="text/css" href="../../css/estilosnuevamulta.css">
 	<link rel="stylesheet" type="text/css" href="../../css/basictable.css">
 	<script src="https://kit.fontawesome.com/4a9d5317b6.js" crossorigin="anonymous"></script>
 	<link rel="icon" href="../../img/logotipo3png.png">
@@ -49,13 +49,14 @@ if (isset($_SESSION['usuario'])){
 		<span class="botonsubir"><i class="fas fa-arrow-up"></i></span>
 		<section id="a">
 			<p class='primero'><span class='bienvenida'>¡Hol@ <span class='usuario'><?php echo $_SESSION['usuario'];?></span>!</span><a  href='../../cerrarsesion.php' class='cerrarsesion'><i class="fas fa-sign-out-alt"></i></a></p>
-			<h2>·· GESTIÓN DE MULTAS ··</h2>
+			<h2>·· Nueva multa ··</h2>
 			
-			<form action='nuevamulta.php' method='post'>
-				<button class='btnnueva' name='btnnuevamulta'><i class="fas fa-plus-circle"></i></button><span id='nuevam'>&nbsp;&nbsp;&nbsp;&nbsp;NUEVA MULTA</span>
+			<form action='#' method='post'>
+				<button class='btnnueva' name='btnaniadirnuevamulta'>Añadir</button>
+				<button class='btnnueva2' name='btncancelarnuevamulta' formaction='multas.php'>Cancelar</button>
 			</form>	
 
-			<?php todasmultas(); ?>
+			
   
 			
 		</section>	
