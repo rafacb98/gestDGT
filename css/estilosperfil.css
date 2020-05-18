@@ -18,7 +18,6 @@ header{
   padding:1em;
 }
 
-
 /* Menu hamburguesa */
 header label#hamburguesa{
   position:relative;
@@ -36,7 +35,7 @@ header label#hamburguesa span{
   width:3em;
   height: 0.3em;
   background-color: white;
-  transition: 1s;
+  transition-duration: 0.3s;
 }
 
 header label#hamburguesa span:nth-child(1){
@@ -115,8 +114,9 @@ header label#hamburguesa span:nth-child(3){
   color: white !important;
 }
 
+
 header img {
-  width: 8em;
+  width: auto;
   height: 18vh;
   z-index: 1;
   margin-right: auto; 
@@ -290,8 +290,12 @@ section{
   }
 
 
+  header img{
+    width: auto;
+  }
+
   header label#hamburguesa span{
-    left:-14em;
+    left:-13em;
   }
 
   article{
