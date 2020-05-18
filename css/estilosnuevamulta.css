@@ -288,6 +288,9 @@ form{
   font-size: 20px;
   background-color:red;
   color:white;
+  width:100%;
+  border-radius: 20px;
+	transition: 0.3s all ease;
 
 }
 
@@ -298,7 +301,9 @@ form{
   border-radius: 0.8em;
   font-size: 20px;
   background-color:#11538C;
-  color:white;
+  color:white;width:100%;
+  border-radius: 20px;
+	transition: 0.3s all ease;
 }
 
 .btnnueva:hover{
@@ -328,6 +333,8 @@ footer ul{
   flex-wrap: wrap;
   justify-content: center;
 }
+
+
 footer ul li{
   margin-left:1em;
 }
@@ -353,6 +360,54 @@ section{
   display:none;
 }
 
+form {
+	background: linear-gradient(to left top, rgb(198, 199, 201), #0DFF82);
+	background-repeat: no-repeat;
+	border-radius: 20px;
+	-webkit-box-shadow: 5px 5px 20px 0px rgba(173,173,173,1);
+	-moz-box-shadow: 5px 5px 20px 0px rgba(173,173,173,1);
+	box-shadow: 5px 5px 20px 0px rgba(173,173,173,1);
+	padding: 2.5em; 
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+input, select {
+	padding: 10px 16px;
+	width: 100%;
+	outline: 0;
+	margin-bottom: 20px;
+	border-radius: 20px;
+	border: 0;
+	background-color: #ededed;
+	font-size: 14px;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	appearance:none;
+}
+
+.textarea {
+	width: 100%;
+}
+
+textarea {
+	padding: 10px;
+	width: 100%;
+	outline: 0;
+	margin-bottom: 20px;
+	border-radius: 20px;
+	border: 0;
+	background-color: #ededed;
+	font-size: 14px;
+  height: 100px;
+  resize:none;
+}
+
+
+
 
 /*--------------------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------------------*/
@@ -370,9 +425,32 @@ section{
     left:-14em;
   }
 
+  .contenidolargo {
+		display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+	}
+	
+	.contenidocorto {
+		width: 45%;
+  }
+
+  #contenidocortoespecial {
+		width: 100%;
+  }
+ 
+  
+  .btnnueva,.btnnueva2{
+    width:49%;
+  }
   
  
 }
+
+
+
+
+
 
 /*--------------------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------------------*/

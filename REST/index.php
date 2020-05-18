@@ -43,6 +43,7 @@ $app->get('/multas', function ()  {
     echo json_encode(multas(),JSON_FORCE_OBJECT);
 });
 
+
 $app->run();
 ?>
 

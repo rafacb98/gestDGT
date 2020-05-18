@@ -52,12 +52,45 @@ if (isset($_SESSION['usuario'])){
 			<h2>·· Nueva multa ··</h2>
 			
 			<form action='#' method='post'>
-				<button class='btnnueva' name='btnaniadirnuevamulta'>Añadir</button>
-				<button class='btnnueva2' name='btncancelarnuevamulta' formaction='multas.php'>Cancelar</button>
+				<div class="contenidolargo">
+					<div class="contenidocorto">
+						<label for="matricula">Matricula</label>
+						<input id="matricula" type="text" name="matricula"/>
+					</div>
+					<div class="contenidocorto">
+						<label for="dniconductor">DNI Conductor</label>
+						<input for="dniconductor" type="text" name="dniconductor"/>
+					</div>
+					<div class="contenidocorto">
+						<label for="fechahora">Fecha/Hora</label>
+						<input for="fechahora" type="text" name="fechahora"/>
+					</div>
+					<div class="contenidocorto">
+						<label for="precio">Precio</label>
+						<input for="precio" type="number" name="precio"/>
+					</div>
+					<div class="contenidocorto">
+						<label for="estado">Estado</label>
+						<select name="estado" id="estado">
+							<option value="">En trámite</option>
+							<option value="">Tramitada</option>
+							<option value="">Pagada</option>
+							<option value="">Finalizada</option>
+						</select>
+					</div>
+					<div class="textarea">
+						<label for="obs">Observaciones</label>
+						<textarea id="obs" type="text" name="obs"></textarea>
+					</div>	
+					<div id=contenidocortoespecial>
+						<label for="foto">Foto</label>
+						<input for="foto" type="file" name="foto"/>
+					</div>
+					<button class='btnnueva' name='btnaniadirnuevamulta' type="submit" >Añadir</button>
+					<button class='btnnueva2' name='btncancelarnuevamulta' type="submit" formaction='multas.php'>Cancelar</button>
+				</div>
 			</form>	
 
-			
-  
 			
 		</section>	
 	</main>
