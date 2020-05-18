@@ -55,7 +55,18 @@ if (isset($_SESSION['usuario'])){
 				<button class='btnnueva' name='btnnuevamulta'><i class="fas fa-plus-circle"></i></button><span id='nuevam'>&nbsp;&nbsp;&nbsp;&nbsp;NUEVA MULTA</span>
 			</form>	
 
-			<?php todasmultas(); ?>
+			<?php 
+			/*if(isset($_SESSION['mensajito']))
+			{
+				if($_SESSION['mensajito']=="insertado")
+				{
+					echo "<p class='exito'>Multa añadida correctamente</p>";
+				}	
+			}*/
+		
+			todasmultas(); 
+			
+			?>
   
 			
 		</section>	

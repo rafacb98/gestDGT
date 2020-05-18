@@ -188,6 +188,31 @@ function todasmultas(){
     }
 }
 
+function multasinfoto($fechayhora,$precio,$estado,$observaciones,$dniconductor,$matriculavehiculo)
+{
+    $datosMulta['fechahora']=$fechayhora;
+    $datosMulta['precio']=$precio;
+    $datosMulta['estado']=$estado;
+    $datosMulta['obs']=$observaciones;
+    $datosMulta['dniconductor']=$dniconductor;
+    $datosMulta['matricula']=$matriculavehiculo;
+
+    $obj=consumir_servicio_REST(ruta."nuevamultasinfoto","POST",$datosMulta);
+    
+    if (isset($obj->mensaje_error))
+    {
+        die($obj->mensaje_error);
+    }
+
+    else
+    {
+        $_SESSION['mensajito']="insertado";
+        header("Location: ../agente/multas.php");
+        exit;
+    }
+
+}
+
 
 
 

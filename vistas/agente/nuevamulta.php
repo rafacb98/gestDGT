@@ -3,8 +3,38 @@ session_name('gestdgt+');
 session_start();
 require "../../funciones_servicios.php";
 
-if (isset($_SESSION['usuario'])){
 
+	
+	$errorfechayhora=true;
+    $errorprecio=true;    
+    $estado=true;
+    $observaciones=true;
+	$dniconductor=true;
+	$matriculavehiculo=true;
+    
+
+	if(isset($_POST['btnaniadirnuevamulta']))
+	{
+	
+		$errorfechayhora=$_POST['fechahora']=="";
+		$errorprecio=$_POST['precio']=="";
+		$estado=$_POST['estado']=="";
+		$observaciones=$_POST['obs']=="";
+		$dniconductor=$_POST['dniconductor']=="";
+		$matriculavehiculo=$_POST['matricula']=="";
+	
+
+		$errorTotal=(!$errorfechayhora && !$errorprecio && !$estado && !$observaciones && !$dniconductor && !$matriculavehiculo);
+
+		if($errorTotal)
+		{
+			
+			multasinfoto($_POST['fechahora'],$_POST['precio'],$_POST['estado'],$_POST['obs'],$_POST['dniconductor'],$_POST['matricula']);
+					
+		}
+					
+                
+	}
 	?>
 
 <!DOCTYPE html>
@@ -51,42 +81,62 @@ if (isset($_SESSION['usuario'])){
 			<p class='primero'><span class='bienvenida'>¡Hol@ <span class='usuario'><?php echo $_SESSION['usuario'];?></span>!</span><a  href='../../cerrarsesion.php' class='cerrarsesion'><i class="fas fa-sign-out-alt"></i></a></p>
 			<h2>·· Nueva multa ··</h2>
 			
-			<form action='#' method='post'>
+			<form action='nuevamulta.php' method='post'>
 				<div class="contenidolargo">
 					<div class="contenidocorto">
 						<label for="matricula">Matricula</label>
 						<input id="matricula" type="text" name="matricula"/>
+						<?php
+						
+                        if(isset($_POST["btnaniadirnuevamulta"]) && $_POST["matricula"]=="") echo "** Campo vacio **";
+					?>
 					</div>
 					<div class="contenidocorto">
 						<label for="dniconductor">DNI Conductor</label>
 						<input for="dniconductor" type="text" name="dniconductor"/>
+						<?php
+						
+                        if(isset($_POST["btnaniadirnuevamulta"]) && $_POST["dniconductor"]=="") echo "** Campo vacio **";
+					?>
 					</div>
 					<div class="contenidocorto">
 						<label for="fechahora">Fecha/Hora</label>
-						<input for="fechahora" type="text" name="fechahora"/>
+						<input for="fechahora" type="datetime-local" name="fechahora"/>
+						<?php
+						
+                        if(isset($_POST["btnaniadirnuevamulta"]) && $_POST["fechahora"]=="") echo "** Campo vacio **";
+					?>
 					</div>
 					<div class="contenidocorto">
 						<label for="precio">Precio</label>
 						<input for="precio" type="number" name="precio"/>
+						<?php
+						
+                        if(isset($_POST["btnaniadirnuevamulta"]) && $_POST["precio"]=="") echo "** Campo vacio **";
+					?>
 					</div>
 					<div class="contenidocorto">
 						<label for="estado">Estado</label>
 						<select name="estado" id="estado">
-							<option value="">En trámite</option>
-							<option value="">Tramitada</option>
-							<option value="">Pagada</option>
-							<option value="">Finalizada</option>
+							<option value="en tramite">En trámite</option>
+							<option value="tramitada">Tramitada</option>
+							<option value="pagada">Pagada</option>
+							<option value="finalizada">Finalizada</option>
 						</select>
 					</div>
 					<div class="textarea">
 						<label for="obs">Observaciones</label>
 						<textarea id="obs" type="text" name="obs"></textarea>
+						<?php
+						
+                        if(isset($_POST["btnaniadirnuevamulta"]) && $_POST["obs"]=="") echo "** Campo vacio **";
+					?>
 					</div>	
 					<div id=contenidocortoespecial>
 						<label for="foto">Foto</label>
 						<input for="foto" type="file" name="foto"/>
 					</div>
-					<button class='btnnueva' name='btnaniadirnuevamulta' type="submit" >Añadir</button>
+					<button class='btnnueva' name='btnaniadirnuevamulta' type="submit">Añadir</button>
 					<button class='btnnueva2' name='btncancelarnuevamulta' type="submit" formaction='multas.php'>Cancelar</button>
 				</div>
 			</form>	
@@ -106,8 +156,5 @@ if (isset($_SESSION['usuario'])){
 </body>
 </html>
 <?php
-}else{	
-	header('Location: ../../index.php');
-	 die();
-}
+
 	 ?>
