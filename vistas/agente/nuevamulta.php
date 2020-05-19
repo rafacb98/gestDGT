@@ -85,34 +85,34 @@ require "../../funciones_servicios.php";
 				<div class="contenidolargo">
 					<div class="contenidocorto">
 						<label for="matricula">Matricula</label>
-						<input id="matricula" type="text" name="matricula"/>
+						<input id="matricula" type="text" name="matricula" value="<?php if(isset($_POST["matricula"])) echo $_POST["matricula"];?>"/>
 						<?php
 						
-                        if(isset($_POST["btnaniadirnuevamulta"]) && $_POST["matricula"]=="") echo "** Campo vacio **";
+                        if(isset($_POST["btnaniadirnuevamulta"]) && $_POST["matricula"]=="") echo "<p class='erroraniadir'>Por favor, rellene el campo</p>";
 					?>
 					</div>
 					<div class="contenidocorto">
 						<label for="dniconductor">DNI Conductor</label>
-						<input for="dniconductor" type="text" name="dniconductor"/>
+						<input for="dniconductor" type="text" name="dniconductor" value="<?php if(isset($_POST["dniconductor"])) echo $_POST["dniconductor"];?>"/>
 						<?php
 						
-                        if(isset($_POST["btnaniadirnuevamulta"]) && $_POST["dniconductor"]=="") echo "** Campo vacio **";
+                        if(isset($_POST["btnaniadirnuevamulta"]) && $_POST["dniconductor"]=="") echo "<p class='erroraniadir'>Por favor, rellene el campo</p>";
 					?>
 					</div>
 					<div class="contenidocorto">
 						<label for="fechahora">Fecha/Hora</label>
-						<input for="fechahora" type="datetime-local" name="fechahora"/>
+						<input for="fechahora" type="datetime-local" name="fechahora" value="<?php if(isset($_POST["fechahora"])) echo $_POST["fechahora"];?>"/>
 						<?php
 						
-                        if(isset($_POST["btnaniadirnuevamulta"]) && $_POST["fechahora"]=="") echo "** Campo vacio **";
+                        if(isset($_POST["btnaniadirnuevamulta"]) && $_POST["fechahora"]=="") echo "<p class='erroraniadir'>Por favor, rellene el campo</p>";
 					?>
 					</div>
 					<div class="contenidocorto">
 						<label for="precio">Precio</label>
-						<input for="precio" type="number" name="precio"/>
+						<input for="precio" type="number" name="precio" value="<?php if(isset($_POST["precio"])) echo $_POST["precio"];?>"/>
 						<?php
 						
-                        if(isset($_POST["btnaniadirnuevamulta"]) && $_POST["precio"]=="") echo "** Campo vacio **";
+                        if(isset($_POST["btnaniadirnuevamulta"]) && $_POST["precio"]=="") echo "<p><p class='erroraniadir'>Por favor, rellene el campo</p></p>";
 					?>
 					</div>
 					<div class="contenidocorto">
@@ -126,10 +126,10 @@ require "../../funciones_servicios.php";
 					</div>
 					<div class="textarea">
 						<label for="obs">Observaciones</label>
-						<textarea id="obs" type="text" name="obs"></textarea>
+						<textarea id="obs" type="text" name="obs"><?php if(isset($_POST["obs"])) echo $_POST["obs"];?></textarea>
 						<?php
 						
-                        if(isset($_POST["btnaniadirnuevamulta"]) && $_POST["obs"]=="") echo "** Campo vacio **";
+                        if(isset($_POST["btnaniadirnuevamulta"]) && $_POST["obs"]=="") echo "<p class='erroraniadir'>Por favor, rellene el campo</p>";
 					?>
 					</div>	
 					<div id=contenidocortoespecial>

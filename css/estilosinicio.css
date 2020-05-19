@@ -133,10 +133,10 @@ display:none;
 }
 
 .primero{
-  
   display:flex;
   flex-direction: row;
   flex-basis:100%; 
+  order:-2;
 }
 
 .bienvenida{
@@ -221,8 +221,11 @@ aside{
   padding:1em;
   flex-basis:50%;
   border:2px solid red;
-  margin-top:0.5em;
+  margin-top:8%;
+  order:-1;
 }
+
+
 
 aside h2{
   color:#11538C;
@@ -278,6 +281,9 @@ footer ul li span{
 
 section{
   padding:2em;
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 
@@ -308,7 +314,14 @@ section{
 
   aside{
     flex-grow:1.5;
+    order:-1;
+    margin-top:4%;
   }
+ 
+    
+    .primero{
+      order:-2;
+    }
 
   .especial{  
     flex-basis: 100%;
@@ -391,31 +404,37 @@ header  ul#menu{
   font-size: 32px;
 }
 
+section{
+  display:flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+}
 
 .especial{
   flex-basis:25%;
   flex-direction: column;
+
 }
 
 .especial img{
   order:-1;
 }
 
-#novedades{
-  width:50%;
-}
+
 
 aside{
-order:1;
+ order:-1;
  background-image:url("../img/logotipo3pngopacidad.png");
  background-position: center;
+ margin-top:3%;
 
 }
 
-h2 span{
-  display: inline;
-  margin-left:44.7%; 
+.primero{
+  order:-2;
 }
+
+
 
   /* Footer */
   footer ul{

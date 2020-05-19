@@ -23,6 +23,7 @@ if (isset($_SESSION['usuario'])){
 	<link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
 	<script src='../../js/jquery-3.1.1.js'></script>
 	<script src='../../js/jquery.basictable.min.js'></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 	
 		
@@ -56,13 +57,18 @@ if (isset($_SESSION['usuario'])){
 			</form>	
 
 			<?php 
-			/*if(isset($_SESSION['mensajito']))
+			if(isset($_SESSION['mensajito']))
 			{
 				if($_SESSION['mensajito']=="insertado")
 				{
-					echo "<p class='exito'>Multa añadida correctamente</p>";
+					echo "<script>swal('¡Bien!', 'Multa añadida con éxito', 'success')</script>";
+					
 				}	
-			}*/
+				unset($_SESSION['mensajito']);
+			}
+			
+				
+
 		
 			todasmultas(); 
 			
