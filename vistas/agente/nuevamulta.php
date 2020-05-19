@@ -79,7 +79,10 @@ require "../../funciones_servicios.php";
 	<main class="epico">
 		<span class="botonsubir"><i class="fas fa-arrow-up"></i></span>
 		<section id="a">
-			<p class='primero'><span class='bienvenida'>¡Hola <span class='usuario'><?php echo $_SESSION['usuario'];?></span>!</span><a  href='../../cerrarsesion.php' class='cerrarsesion'><i class="fas fa-sign-out-alt"></i></a></p>
+			<?php
+				$saludo=obtener_usuario($_SESSION['usuario'],$_SESSION['clave']);
+			?>
+			<p class='primero'><span class='bienvenida'>¡Hola <span class='usuario'><?php echo $saludo['nombre'];?></span>!</span><a  href='../../cerrarsesion.php' class='cerrarsesion'><i class="fas fa-sign-out-alt"></i></a></p>
 			<h2>·· Nueva multa ··</h2>
 			
 			<form action='nuevamulta.php' method='post'>

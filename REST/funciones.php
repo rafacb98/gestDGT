@@ -322,4 +322,5 @@ function nuevamultasinfoto($fechayhora,$precio,$estado,$observaciones,$dniconduc
 
 
 
+
 ?>

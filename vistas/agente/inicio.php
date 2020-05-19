@@ -2,6 +2,10 @@
 <?php
 if (isset($_SESSION['usuario'])){
 	?>
+
+					
+
+			
 	<!DOCTYPE html>
 	<html lang="es">
 	<head>
@@ -41,7 +45,10 @@ if (isset($_SESSION['usuario'])){
 		<main class="epico">
 			<span class="botonsubir"><i class="fas fa-arrow-up"></i></span>
 			<section>
-				<p class='primero'><span class='bienvenida'>¡Hol@ <span class='usuario'><?php echo $_SESSION['usuario'];?></span>!</span><a  href='cerrarsesion.php' class='cerrarsesion'><i class="fas fa-sign-out-alt"></i></a></p>
+				<?php
+					$saludo=obtener_usuario($_SESSION['usuario'],$_SESSION['clave']);
+				?>
+				<p class='primero'><span class='bienvenida'>¡Hola <span class='usuario'><?php echo $saludo['nombre'];?></span>!</span><a  href='cerrarsesion.php' class='cerrarsesion'><i class="fas fa-sign-out-alt"></i></a></p>
 				
 				<aside id="a1">
 					<h2>Tu número de placa es</h2>
