@@ -27,7 +27,7 @@ table.bt tbody td {
 table.bt tfoot th::before,
 table.bt tfoot td::before,
 table.bt tbody td::before {
-  content: attr(data-th) ": ";
+  content: attr(data-th) " ";
   display: inline-block;
   -webkit-flex-shrink: 0;
   -ms-flex-shrink: 0;

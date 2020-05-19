@@ -25,7 +25,7 @@ if (isset($_SESSION['usuario'])){
 	<script src='../../js/jquery.basictable.js'></script>
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<script src='../../js/scriptmultas.js'></script>
-	<script src='../../js/scriptgeneral.js'></script>
+	<script src='../../js/scriptgeneral2.js'></script>
 		
 
 </head>
@@ -51,7 +51,7 @@ if (isset($_SESSION['usuario'])){
 		<section id="a">
 			<p class='primero'><span class='bienvenida'>¡Hol@ <span class='usuario'><?php echo $_SESSION['usuario'];?></span>!</span><a  href='../../cerrarsesion.php' class='cerrarsesion'><i class="fas fa-sign-out-alt"></i></a></p>
 			<h2>·· GESTIÓN DE MULTAS ··</h2>
-			
+		
 			<form action='nuevamulta.php' method='post'>
 				<button class='btnnueva' name='btnnuevamulta'><i class="fas fa-plus-circle"></i></button><span id='nuevam'>&nbsp;&nbsp;&nbsp;&nbsp;NUEVA MULTA</span>
 			</form>	

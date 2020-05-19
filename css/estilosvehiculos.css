@@ -6,7 +6,7 @@
 
 *{
   box-sizing:border-box; 
-  margin:0; 
+  margin:0;
   padding:0;
   font-family: 'Pathway Gothic One', sans-serif;
 }
@@ -207,8 +207,9 @@ article{
    flex-direction: column;
    flex-wrap: wrap;
    flex-basis:100%;
-   margin-top:0.8em;
+ margin-top:1em;
    background-color: rgb(221, 221, 221);
+  
  }
 
  article p{
@@ -248,10 +249,6 @@ footer ul li span{
   color:white;
 }
 
-#a{
-  margin-top:auto;
-  margin-bottom:auto;
-}
 
 
 
@@ -282,10 +279,6 @@ section{
     width: auto;
   }
 
-  header label#hamburguesa span{
-    left:-13em;
-  }
-
   article{
     flex-direction: row;
   }
@@ -296,6 +289,8 @@ section{
    margin-top:0.5em;
  }
 
+  
+
 }
 
 /*--------------------------------------------------------------------------------------------------------------------------*/
@@ -304,12 +299,6 @@ section{
 
 /*-- CONTENIDO PARA ESCRITORIO --*/
 @media all and (min-width: 1000px) {
-  /* Encabezado */
-  header img{
-    margin-left:5%;  
-    width: 8vw;
-    height:16vh;
-  }
 
   /* Encabezado */
   header img{
@@ -317,6 +306,8 @@ section{
     width: 8vw;
     height:16vh;
   }
+
+ 
 
   header label#hamburguesa{
     display:none;
@@ -372,13 +363,15 @@ header  ul#menu{
 
 
 article p{
- margin:0;
+ 
  width: 33%;
  text-align: center;
  margin-top:0.5em;
 }
 
   /* Footer */
+
+ 
   footer ul{
     justify-content: space-around;
   }
@@ -389,18 +382,22 @@ article p{
   
 
   .fija { 
-    position: fixed; 
+   position:fixed;
     width: 100%;
     z-index: 999; 
-    background-color:rgba(42,42,44,0.9);
+    background-color:rgba(42,42,44,0.8);
+    height:5.5em;
   }
 
   .fija2 { 
-    position: fixed; 
-    width: 50%; 
-    z-index: 999; 
-    background-color:rgba(42,42,44,0);
+    width:auto;
+    height:4em;
   }
+
+  .fija3{
+    margin-top:-1.5em;
+  }
+
 }
 
 /*--------------------------------------------------------------------------------------------------------------------------*/

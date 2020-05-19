@@ -21,7 +21,7 @@ if (isset($_SESSION['usuario'])){
 	<link rel="icon" href="../../img/logotipo3png.png">
 	<link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
 	<script src='../../js/jquery-3.1.1.js'></script>
-	<script src='../../js/scriptgeneral.js'></script>
+	<script src='../../js/scriptgeneral2.js'></script>
 </head>
 <body>
 
@@ -41,7 +41,7 @@ if (isset($_SESSION['usuario'])){
 		<img src="../../img/logotipo3png.png" alt="logo" />
 	</header>
 
-	<main class="epico">
+	<main>
 		<span class="botonsubir"><i class="fas fa-arrow-up"></i></span>
 		<section>
 			<p class='primero'><span class='bienvenida'>¡Hol@ <span class='usuario'><?php echo $_SESSION['usuario'];?></span>!</span><a  href='../../cerrarsesion.php' class='cerrarsesion'><i class="fas fa-sign-out-alt"></i></a></p>

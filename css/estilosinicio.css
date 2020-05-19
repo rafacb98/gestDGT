@@ -450,15 +450,20 @@ aside{
     position: fixed; 
     width: 100%;
     z-index: 999; 
-    background-color:rgba(42,42,44,0.9);
+    background-color:rgba(42,42,44,0.8);
+    height:5.5em;
   }
 
   .fija2 { 
-    position: fixed; 
-    width: 50%; 
-    z-index: 999; 
-    background-color:rgba(42,42,44,0);
+    width:auto;
+    height:4em;
   }
+
+  .fija3{
+    margin-top:-1.5em;
+  }
+
+ 
 }
 
 /*--------------------------------------------------------------------------------------------------------------------------*/

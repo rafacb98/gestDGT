@@ -12,13 +12,14 @@ $(document).ready(function () {
       $('header ul#menu li a').addClass('fija3');
     }
     else {
+      
       $('header').removeClass('fija');
       $('header img').removeClass('fija2');
-      $('header ul#menu li a').removeClass('fija3');
+     $('header ul#menu li a').removeClass('fija3');
      
     }
   });
-
+  
   
 
   // Cuando haga click en el boton de subir hacia arriba, el body y html lo subimos hasta arriba
