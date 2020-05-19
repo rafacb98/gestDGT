@@ -1,7 +1,7 @@
 var url = "http://localhost/gestDGT/REST/";
 
 $(document).ready(function () {
-
+  
   // Cuando hagamos scroll, añadimos la clase fija al encabezado y menu para que se queden fijos, y cuando volvamos
   // se la quitamos para que vuelvan a como estaban
   $(window).scroll(function () {

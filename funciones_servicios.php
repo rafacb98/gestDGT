@@ -213,6 +213,32 @@ function multasinfoto($fechayhora,$precio,$estado,$observaciones,$dniconductor,$
 
 }
 
+function multaconfoto($fechayhora,$precio,$estado,$observaciones,$foto,$dniconductor,$matriculavehiculo)
+{
+    $datosMulta['fechahora']=$fechayhora;
+    $datosMulta['precio']=$precio;
+    $datosMulta['estado']=$estado;
+    $datosMulta['obs']=$observaciones;
+    $datosMulta['foto']=$foto;
+    $datosMulta['dniconductor']=$dniconductor;
+    $datosMulta['matricula']=$matriculavehiculo;
+
+    $obj=consumir_servicio_REST(ruta."nuevamultaconfoto","POST",$datosMulta);
+    
+    if (isset($obj->mensaje_error))
+    {
+        die($obj->mensaje_error);
+    }
+
+    else
+    {
+        $_SESSION['mensajito']="insertado";
+        header("Location: ../agente/multas.php");
+        exit;
+    }
+
+}
+
 
 
 

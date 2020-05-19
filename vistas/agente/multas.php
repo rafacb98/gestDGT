@@ -23,10 +23,9 @@ if (isset($_SESSION['usuario'])){
 	<link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
 	<script src='../../js/jquery-3.1.1.js'></script>
 	<script src='../../js/jquery.basictable.js'></script>
-	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-	<script src='../../js/scriptmultas.js'></script>
+	<script src="../../js/sweetalert.min.js"></script>
 	<script src='../../js/scriptgeneral2.js'></script>
-		
+	<script src='../../js/scriptmultas.js'></script>	
 
 </head>
 <body>

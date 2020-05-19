@@ -22,16 +22,25 @@ require "../../funciones_servicios.php";
 		$observaciones=$_POST['obs']=="";
 		$dniconductor=$_POST['dniconductor']=="";
 		$matriculavehiculo=$_POST['matricula']=="";
-	
+		
 
 		$errorTotal=(!$errorfechayhora && !$errorprecio && !$estado && !$observaciones && !$dniconductor && !$matriculavehiculo);
 
 		if($errorTotal)
 		{
-			
-			multasinfoto($_POST['fechahora'],$_POST['precio'],$_POST['estado'],$_POST['obs'],$_POST['dniconductor'],$_POST['matricula']);
-					
+			if($_FILES['foto']['name']=="") 
+			{
+				multasinfoto($_POST['fechahora'],$_POST['precio'],$_POST['estado'],$_POST['obs'],$_POST['dniconductor'],$_POST['matricula']);
+				
+			}
+			else
+			{
+				multaconfoto($_POST['fechahora'],$_POST['precio'],$_POST['estado'],$_POST['obs'],$_FILES['foto']['name'],$_POST['dniconductor'],$_POST['matricula']);
+				
+			}
 		}
+	
+		
 					
                 
 	}
@@ -47,13 +56,14 @@ require "../../funciones_servicios.php";
 	<meta name="lang" content="es-ES" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<link rel="stylesheet" type="text/css" href="../../css/estilosnuevamulta.css">
-	<link rel="stylesheet" type="text/css" href="../../css/basictable.css">
 	<script src="https://kit.fontawesome.com/4a9d5317b6.js" crossorigin="anonymous"></script>
 	<link rel="icon" href="../../img/logotipo3png.png">
 	<link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
 	<script src='../../js/jquery-3.1.1.js'></script>
+	<script src='../../js/jquery-input-file-text.js'></script>
 	<script src='../../js/scriptgeneral.js'></script>
-	<script src='../../js/jquery.basictable.min.js'></script>
+	<script src='../../js/scriptnuevamulta.js'></script>
+
 
 	
 		
@@ -85,7 +95,7 @@ require "../../funciones_servicios.php";
 			<p class='primero'><span class='bienvenida'>¡Hola <span class='usuario'><?php echo $saludo['nombre'];?></span>!</span><a  href='../../cerrarsesion.php' class='cerrarsesion'><i class="fas fa-sign-out-alt"></i></a></p>
 			<h2>·· Nueva multa ··</h2>
 			
-			<form action='nuevamulta.php' method='post'>
+			<form action='nuevamulta.php' method='post' enctype="multipart/form-data">
 				<div class="contenidolargo">
 					<div class="contenidocorto">
 						<label for="matricula">Matricula</label>
@@ -138,7 +148,7 @@ require "../../funciones_servicios.php";
 					</div>	
 					<div id=contenidocortoespecial>
 						<label for="foto">Foto</label>
-						<input for="foto" type="file" name="foto"/>
+						<input for="foto" type="file" name="foto" />
 					</div>
 					<button class='btnnueva' name='btnaniadirnuevamulta' type="submit">Añadir</button>
 					<button class='btnnueva2' name='btncancelarnuevamulta' type="submit" formaction='multas.php'>Cancelar</button>

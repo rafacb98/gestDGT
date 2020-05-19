@@ -48,6 +48,10 @@ $app->post('/nuevamultasinfoto', function () {
     echo json_encode(nuevamultasinfoto($_POST['fechahora'],$_POST['precio'],$_POST['estado'],$_POST['obs'],$_POST['dniconductor'],$_POST['matricula']),JSON_FORCE_OBJECT);
 });
 
+$app->post('/nuevamultaconfoto', function () {
+    echo json_encode(nuevamultaconfoto($_POST['fechahora'],$_POST['precio'],$_POST['estado'],$_POST['obs'],$_FILES['foto']['name'],$_POST['dniconductor'],$_POST['matricula']),JSON_FORCE_OBJECT);
+});
+
 $app->run();
 ?>
 
