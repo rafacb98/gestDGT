@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
     $('#btnentrar').click(function(){
         const usu = $('#usuariop').val();
         const clave = $('#clavep').val();
@@ -12,11 +11,9 @@ $(document).ready(function(){
         }
         
     });
-      
-      
+         
     $('#usuario, #clave').focus(function(){
         $('.usuario').css({"border":"3px solid transparent"});
         $('.clave').css({"border":"3px solid transparent"});
-    })
-    
+    })   
 })

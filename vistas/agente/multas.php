@@ -22,10 +22,10 @@ if (isset($_SESSION['usuario'])){
 	<link rel="icon" href="../../img/logotipo3png.png">
 	<link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
 	<script src='../../js/jquery-3.1.1.js'></script>
-	<script src='../../js/jquery.basictable.min.js'></script>
+	<script src='../../js/jquery.basictable.js'></script>
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-	
+	<script src='../../js/scriptmultas.js'></script>
+	<script src='../../js/scriptgeneral.js'></script>
 		
 
 </head>
@@ -85,7 +85,7 @@ if (isset($_SESSION['usuario'])){
 				<li><i id="instagram" class="fab fa-instagram"></i><span>&nbsp;&nbsp;&nbsp;&nbsp;/gestdgt+</span></li>		
 			</ul>
 	</footer>
-	<script src='../../js/script.js'></script>
+
 </body>
 </html>
 <?php

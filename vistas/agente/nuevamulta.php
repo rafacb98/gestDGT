@@ -52,6 +52,7 @@ require "../../funciones_servicios.php";
 	<link rel="icon" href="../../img/logotipo3png.png">
 	<link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
 	<script src='../../js/jquery-3.1.1.js'></script>
+	<script src='../../js/scriptgeneral.js'></script>
 	<script src='../../js/jquery.basictable.min.js'></script>
 
 	
@@ -78,7 +79,7 @@ require "../../funciones_servicios.php";
 	<main class="epico">
 		<span class="botonsubir"><i class="fas fa-arrow-up"></i></span>
 		<section id="a">
-			<p class='primero'><span class='bienvenida'>¡Hol@ <span class='usuario'><?php echo $_SESSION['usuario'];?></span>!</span><a  href='../../cerrarsesion.php' class='cerrarsesion'><i class="fas fa-sign-out-alt"></i></a></p>
+			<p class='primero'><span class='bienvenida'>¡Hola <span class='usuario'><?php echo $_SESSION['usuario'];?></span>!</span><a  href='../../cerrarsesion.php' class='cerrarsesion'><i class="fas fa-sign-out-alt"></i></a></p>
 			<h2>·· Nueva multa ··</h2>
 			
 			<form action='nuevamulta.php' method='post'>
@@ -152,7 +153,7 @@ require "../../funciones_servicios.php";
 				<li><i id="instagram" class="fab fa-instagram"></i><span>&nbsp;&nbsp;&nbsp;&nbsp;/gestdgt+</span></li>		
 			</ul>
 	</footer>
-	<script src='../../js/script.js'></script>
+
 </body>
 </html>
 <?php
