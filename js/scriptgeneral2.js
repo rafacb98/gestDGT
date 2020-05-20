@@ -4,6 +4,8 @@ $(document).ready(function () {
 
   // Cuando hagamos scroll, añadimos la clase fija al encabezado y menu para que se queden fijos, y cuando volvamos
   // se la quitamos para que vuelvan a como estaban
+ 
+
   $(window).scroll(function () {
     if ($(document).scrollTop() > 30) {
       // Estas clases tienen la propiedad de menos opacidad
@@ -12,10 +14,9 @@ $(document).ready(function () {
       $('header ul#menu li a').addClass('fija3');
     }
     else {
-      
       $('header').removeClass('fija');
       $('header img').removeClass('fija2');
-     $('header ul#menu li a').removeClass('fija3');
+      $('header ul#menu li a').removeClass('fija3');
      
     }
   });

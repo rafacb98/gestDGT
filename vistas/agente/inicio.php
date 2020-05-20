@@ -17,7 +17,7 @@ if (isset($_SESSION['usuario'])){
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 		<link rel="stylesheet" type="text/css" href="css/estilosinicio.css">
 		<script src="https://kit.fontawesome.com/4a9d5317b6.js" crossorigin="anonymous"></script>
-		<link rel="icon" href="img/logotipo3png.png">
+		<link rel="icon" href="img/logotipo.png">
 		<link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
 		<script src='js/jquery-3.1.1.js'></script>
 		<script src='js/scriptgeneral.js'></script>
@@ -39,7 +39,7 @@ if (isset($_SESSION['usuario'])){
 					<li><a href="vistas/agente/multas.php">Multas</a></li>
 			</ul>
 		
-			<img src="img/logotipo3png.png" alt="logo" />
+			<img src="img/logotipo.png" alt="logo" />
 		</header>
 	
 		<main class="epico">

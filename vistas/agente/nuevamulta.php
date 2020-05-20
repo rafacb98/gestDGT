@@ -32,9 +32,10 @@ require "../../funciones_servicios.php";
 			{
 				$arr=explode(".",$_FILES['foto']['name']);
 				$extension=end($arr);
-				$nombre_unico=$_POST['dniconductor']."_".$_POST['matricula']."_".$_POST['precio'];
+				$fechahora=str_replace(":","_",$_POST['fechahora']);
+				$nombre_unico=$_POST['dniconductor']."_".$_POST['matricula']."_".$fechahora;
 				$nombrecompleto=$nombre_unico.".".$extension;
-				@$var=move_uploaded_file($_FILES['foto']['tmp_name'],"../../img/".$nombre_unico.".".$extension);
+				@$var=move_uploaded_file($_FILES['foto']['tmp_name'],"../../img/fotos_multa/".$nombrecompleto);
 				
 				multaconfoto($_POST['fechahora'],$_POST['precio'],$_POST['estado'],$_POST['obs'],$nombrecompleto,$_POST['dniconductor'],$_POST['matricula']);
 				
@@ -67,7 +68,7 @@ require "../../funciones_servicios.php";
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<link rel="stylesheet" type="text/css" href="../../css/estilosnuevamulta.css">
 	<script src="https://kit.fontawesome.com/4a9d5317b6.js" crossorigin="anonymous"></script>
-	<link rel="icon" href="../../img/logotipo3png.png">
+	<link rel="icon" href="../../img/logotipo.png">
 	<link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
 	<script src='../../js/jquery-3.1.1.js'></script>
 	<script src='../../js/jquery-input-file-text.js'></script>
@@ -93,7 +94,7 @@ require "../../funciones_servicios.php";
 				<li><a id='seleccionado' href="multas.php">Multas</a></li>
        </ul>
 		
-		<img src="../../img/logotipo3png.png" alt="logo" />
+		<img src="../../img/logotipo.png" alt="logo" />
 	</header>
 
 	<main class="epico">

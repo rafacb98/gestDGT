@@ -179,7 +179,7 @@ function todasmultas(){
             echo "<td>". $fila->precio . "</td>"; 
             echo "<td>". $fila->estado . "</td>"; 
             echo "<td>". $fila->observaciones . "</td>"; 
-            echo "<td><img src='../../img/".$fila->foto."' /></td>"; 
+            echo "<td><img src='../../img/fotos_multa/".$fila->foto."' /></td>"; 
             echo "<td><form action='' method='post'><button class='btnnueva' name='btneditar'><i class='fas fa-user-edit'></i></button></form></td>"; 
             echo  '</tr>';
         }
