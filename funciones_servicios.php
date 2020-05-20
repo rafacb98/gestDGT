@@ -224,7 +224,7 @@ function multaconfoto($fechayhora,$precio,$estado,$observaciones,$foto,$dnicondu
     $datosMulta['matricula']=$matriculavehiculo;
 
     $obj=consumir_servicio_REST(ruta."nuevamultaconfoto","POST",$datosMulta);
-    
+   
     if (isset($obj->mensaje_error))
     {
         die($obj->mensaje_error);

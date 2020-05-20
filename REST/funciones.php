@@ -331,9 +331,9 @@ function nuevamultaconfoto($fechayhora,$precio,$estado,$observaciones,$foto,$dni
     {
         mysqli_set_charset($con,"utf8");
         $consulta="insert into multa (fecha_y_hora,precio,estado,observaciones,foto,dni_conductor,matricula_vehiculo) values ('".$fechayhora."','".$precio."','".$estado."','".$observaciones."','".$foto."','".$dniconductor."','".$matriculavehiculo."')";
-
+ 
         $resultado=mysqli_query($con,$consulta);
-
+     
         if(!$resultado)
         {
             $mensaje="Imposible realizar la consulta. Error ".mysqli_error($con);
@@ -343,6 +343,9 @@ function nuevamultaconfoto($fechayhora,$precio,$estado,$observaciones,$foto,$dni
         else
         {
             mysqli_close($con);
+
+            
+            
             return array("mensaje"=>"Se ha insertado ".$fechayhora. " correctamente");
         }
     }

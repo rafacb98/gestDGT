@@ -28,14 +28,24 @@ require "../../funciones_servicios.php";
 
 		if($errorTotal)
 		{
-			if($_FILES['foto']['name']=="") 
+			if(isset($_FILES['foto']['name']) && $_FILES['foto']['name']!="") 
 			{
-				multasinfoto($_POST['fechahora'],$_POST['precio'],$_POST['estado'],$_POST['obs'],$_POST['dniconductor'],$_POST['matricula']);
+				$arr=explode(".",$_FILES['foto']['name']);
+				$extension=end($arr);
+				$nombre_unico=$_POST['dniconductor']."_".$_POST['matricula']."_".$_POST['precio'];
+				$nombrecompleto=$nombre_unico.".".$extension;
+				@$var=move_uploaded_file($_FILES['foto']['tmp_name'],"../../img/".$nombre_unico.".".$extension);
+				
+				multaconfoto($_POST['fechahora'],$_POST['precio'],$_POST['estado'],$_POST['obs'],$nombrecompleto,$_POST['dniconductor'],$_POST['matricula']);
+				
+			
+				
 				
 			}
 			else
 			{
-				multaconfoto($_POST['fechahora'],$_POST['precio'],$_POST['estado'],$_POST['obs'],$_FILES['foto']['name'],$_POST['dniconductor'],$_POST['matricula']);
+				
+				multasinfoto($_POST['fechahora'],$_POST['precio'],$_POST['estado'],$_POST['obs'],$_POST['dniconductor'],$_POST['matricula']);
 				
 			}
 		}

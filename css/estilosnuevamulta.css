@@ -280,7 +280,8 @@ form {
 	-webkit-box-shadow: 5px 5px 20px 0px rgba(173,173,173,1);
 	-moz-box-shadow: 5px 5px 20px 0px rgba(173,173,173,1);
 	box-shadow: 5px 5px 20px 0px rgba(173,173,173,1);
-	padding: 2.5em; 
+  padding: 2.5em; 
+  width:90%;
 }
 
 label {
