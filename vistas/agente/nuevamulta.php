@@ -7,10 +7,10 @@ require "../../funciones_servicios.php";
 	
 	$errorfechayhora=true;
     $errorprecio=true;    
-    $estado=true;
-    $observaciones=true;
-	$dniconductor=true;
-	$matriculavehiculo=true;
+    $errorestado=true;
+    $errorobservaciones=true;
+	$errordniconductor=true;
+	$errormatriculavehiculo=true;
     
 
 	if(isset($_POST['btnaniadirnuevamulta']))
@@ -18,13 +18,12 @@ require "../../funciones_servicios.php";
 	
 		$errorfechayhora=$_POST['fechahora']=="";
 		$errorprecio=$_POST['precio']=="";
-		$estado=$_POST['estado']=="";
-		$observaciones=$_POST['obs']=="";
-		$dniconductor=$_POST['dniconductor']=="";
-		$matriculavehiculo=$_POST['matricula']=="";
+		$errorobservaciones=$_POST['obs']=="";
+		$errordniconductor=($_POST['dniconductor']=="" || !validardni($_POST['dniconductor']));
+		$errormatriculavehiculo=$_POST['matricula']=="";
 		
 
-		$errorTotal=(!$errorfechayhora && !$errorprecio && !$estado && !$observaciones && !$dniconductor && !$matriculavehiculo);
+		$errorTotal=(!$errorfechayhora && !$errorprecio && !$errorobservaciones && !$errordniconductor && !$errormatriculavehiculo);
 
 		if($errorTotal)
 		{
@@ -120,8 +119,14 @@ require "../../funciones_servicios.php";
 						<label for="dniconductor">DNI Conductor</label>
 						<input for="dniconductor" type="text" name="dniconductor" value="<?php if(isset($_POST["dniconductor"])) echo $_POST["dniconductor"];?>"/>
 						<?php
-						
-                        if(isset($_POST["btnaniadirnuevamulta"]) && $_POST["dniconductor"]=="") echo "<p class='erroraniadir'>Por favor, rellene el campo</p>";
+						if(isset($_POST["btnaniadirnuevamulta"]) && $errordniconductor) 
+						{
+							if ($_POST["dniconductor"]=="")
+								echo "<p class='erroraniadir'>Por favor, rellene el campo</p>";
+							else
+								echo "<p class='erroraniadir'>Por favor, introduzca un DNI válido</p>";	
+						}
+				
 					?>
 					</div>
 					<div class="contenidocorto">
