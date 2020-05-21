@@ -180,11 +180,12 @@ function todasmultas(){
             echo "<td>". $fila->estado . "</td>"; 
             echo "<td>". $fila->observaciones . "</td>"; 
             echo "<td><img src='../../img/fotos_multa/".$fila->foto."' /></td>"; 
-            echo "<td><form action='' method='post'><button class='btnnueva' name='btneditar'><i class='fas fa-user-edit'></i></button></form></td>"; 
+            echo "<td><form method='post' action='#'><button class='edita btnnueva' name='btneditar' value='".$fila->fecha_y_hora."-".$fila->dni_conductor."-".$fila->matricula_vehiculo."'><i class='fas fa-user-edit'></i></button></form></td>"; 
             echo  '</tr>';
         }
           echo "</tbody>";
           echo "</table>";
+          
     }
 }
 
@@ -252,7 +253,30 @@ function validardni ($dni)
 	return $resp;
 }
 
+function verinfomulta($fechahora,$dni,$matricula)
+{
+    $obj=consumir_servicio_REST(ruta."infomulta/".urlencode($fechahora)."/".urlencode($dni)."/".urlencode($matricula),"GET");	
+ 
+    if(isset($obj->mensaje_error))
+    {
+        die($obj->mensaje_error);
+    }
+          
+      else if(isset($obj->mensaje))
+      {
+        return false;
+      }
+          
+      else 
+      {
 
-  
+        return $obj->multa;
+      }
+    
+        
+    
+}
+
+ 
 ?>
 

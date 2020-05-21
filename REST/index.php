@@ -52,6 +52,11 @@ $app->post('/nuevamultaconfoto', function () {
     echo json_encode(nuevamultaconfoto($_POST['fechahora'],$_POST['precio'],$_POST['estado'],$_POST['obs'],$_POST['foto'],$_POST['dniconductor'],$_POST['matricula']),JSON_FORCE_OBJECT);
 });
 
+$app->get('/infomulta/:fechahora/:dni/:matricula',function($fechahora,$dni,$matricula){
+    echo json_encode(infomulta($fechahora,$dni,$matricula),JSON_FORCE_OBJECT);
+});
+
+
 $app->run();
 ?>
 

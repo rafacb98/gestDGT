@@ -26,7 +26,8 @@ if (isset($_SESSION['usuario'])){
 	<script src="../../js/sweetalert.min.js"></script>
 	<script src='../../js/scriptgeneral2.js'></script>
 	<script src='../../js/scriptmultas.js'></script>	
-
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -73,9 +74,42 @@ if (isset($_SESSION['usuario'])){
 
 		
 			todasmultas(); 
-			
+
 			?>
-  
+			
+			<?php
+			if(isset($_POST['btneditar']))
+			{
+				//echo $_POST['btneditar']."<br/>";
+				$fechahora= substr($_POST['btneditar'],0,19);
+				$dni= substr($_POST['btneditar'],20,9);
+				$matricula= substr($_POST['btneditar'],30,7);
+				
+				$obj=verinfomulta($fechahora,$dni,$matricula);
+				
+				
+			?>
+
+
+
+				<div class="fondo">
+					<span class="helper"></span>
+					<div>
+						<div class="popupcerrar">&times;</div>
+						<h2>Modificar multa</h2>
+						<form action='#' method='post'>
+						<p><?php echo "Estado:" .$obj->estado;?></p>
+						<button name='btnmodificar'>Modificar</button>
+						</form>
+					</div>
+				</div>
+
+<?php
+
+				
+			}
+			?>
+			
 			
 		</section>	
 	</main>

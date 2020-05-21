@@ -352,6 +352,27 @@ function nuevamultaconfoto($fechayhora,$precio,$estado,$observaciones,$foto,$dni
 
 }
 
+function infomulta($fechahora,$dni,$matricula)
+	{
+		$con = conectar();
+
+    if (!$con) {
+        return array("mensaje_error" => "Imposible conectar. Error " . mysqli_connect_errno());
+    } else {
+        mysqli_set_charset($con, "utf8");
+        $consulta = "select * from multa where fecha_y_hora='" . $fechahora . "' and dni_conductor='" . $dni . "' and matricula_vehiculo='".$matricula."'";
+
+        $resultado = mysqli_query($con, $consulta);
+
+        if ($fila = mysqli_fetch_assoc($resultado)) {
+            mysqli_close($con);
+            return array("multa" => $fila);
+        } else {
+            mysqli_close($con);
+            return array("mensaje" => false);
+        }
+    }
+	}
 
 
 
