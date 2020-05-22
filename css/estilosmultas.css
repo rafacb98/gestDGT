@@ -333,7 +333,7 @@ form{
 }
 .popupcerrar {
   background-color: #fff;
-  border: 3px solid #999;
+  border: 2px solid black;
   border-radius: 50px;
   cursor: pointer;
   display: inline-block;
@@ -343,13 +343,12 @@ form{
   top: -20px;
   right: -20px;
   font-size: 25px;
-  line-height: 30px;
   width: 30px;
   height: 30px;
   text-align: center;
 }
 .popupcerrar:hover {
-  background-color: #ccc;
+  background-color: red;
 }
 .edita {
   cursor: pointer;
@@ -357,6 +356,20 @@ form{
   margin: 20px;
   display: inline-block;
   font-weight: bold;
+}
+
+.btneditarestado{
+  box-shadow: 0 0 1em black;
+  margin-top:0.5em;
+  padding:0.5em;
+  border-radius: 0.5em;
+  font-size: 20px;
+  background-color:red;
+  color:white;
+}
+
+button:disabled{
+  background-color:rgb(129, 113, 113);
 }
 
 

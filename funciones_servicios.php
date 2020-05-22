@@ -180,7 +180,7 @@ function todasmultas(){
             echo "<td>". $fila->estado . "</td>"; 
             echo "<td>". $fila->observaciones . "</td>"; 
             echo "<td><img src='../../img/fotos_multa/".$fila->foto."' /></td>"; 
-            echo "<td><form method='post' action='#'><button class='edita btnnueva' name='btneditar' value='".$fila->fecha_y_hora."-".$fila->dni_conductor."-".$fila->matricula_vehiculo."'><i class='fas fa-user-edit'></i></button></form></td>"; 
+            echo "<td><form method='post' action='#botonpavereditar'><button class='edita btnnueva' name='btneditar' value='".$fila->fecha_y_hora."-".$fila->dni_conductor."-".$fila->matricula_vehiculo."'><i class='fas fa-user-edit'></i></button></form></td>"; 
             echo  '</tr>';
         }
           echo "</tbody>";
@@ -277,6 +277,96 @@ function verinfomulta($fechahora,$dni,$matricula)
     
 }
 
+
+function selectestadoeditar($estado){
+    $obj=consumir_servicio_REST(ruta."estadosmulta","GET");
+    if (isset($obj->mensaje_error))
+    {
+        die($obj->mensaje_error);
+    }
+    else
+    { 
+        echo "<select name='emultas'>";
+        
+      
+        foreach($obj->multas as $fila)
+        {
+           if($fila->estado==$estado)
+           {
+            echo "<option value='".$fila->estado."' selected>". $fila->estado . "</option>";
+           }
+           else
+           {
+            echo "<option value='".$fila->estado."'>". $fila->estado . "</option>";
+           }
+             
+            
+        }
+          echo "</select>";
+          
+          
+    }
+}
+
+function multatramitada($fechahora,$dni,$matricula,$estado)
+{
+    $datosMulta['estado']=$estado;
+        
+
+    $obj=consumir_servicio_REST(ruta."actualizartramitada/".urlencode($fechahora)."/".urlencode($dni)."/".urlencode($matricula),"PUT",$datosMulta);
+    if (isset($obj->mensaje_error))
+    {
+        die($obj->mensaje_error);
+    }
+    else
+    {
+        $_SESSION['mensajito']="actualizado";
+        header("Location: ../agente/multas.php");
+        exit;
+
+                
+    } 
+}
+
+function multapagada($fechahora,$dni,$matricula,$estado)
+{
+    $datosMulta['estado']=$estado;
+        
+
+    $obj=consumir_servicio_REST(ruta."actualizarpagada/".urlencode($fechahora)."/".urlencode($dni)."/".urlencode($matricula),"PUT",$datosMulta);
+    if (isset($obj->mensaje_error))
+    {
+        die($obj->mensaje_error);
+    }
+    else
+    {
+        $_SESSION['mensajito']="actualizado";
+        header("Location: ../agente/multas.php");
+        exit;
+
+                
+    } 
+}
+
+function multafinalizada($fechahora,$dni,$matricula,$estado)
+{
+    $datosMulta['estado']=$estado;
+        
+
+    $obj=consumir_servicio_REST(ruta."actualizarfinalizada/".urlencode($fechahora)."/".urlencode($dni)."/".urlencode($matricula),"PUT",$datosMulta);
+    if (isset($obj->mensaje_error))
+    {
+        die($obj->mensaje_error);
+    }
+    else
+    {
+        $_SESSION['mensajito']="actualizado";
+        header("Location: ../agente/multas.php");
+        exit;
+
+                
+    } 
+}
  
 ?>
 

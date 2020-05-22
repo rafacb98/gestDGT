@@ -5,6 +5,27 @@ require "../../funciones_servicios.php";
 
 if (isset($_SESSION['usuario'])){
 
+	if(isset($_POST['btntramitada']))
+	{
+		$fechahora_t= substr($_POST['btntramitada'],0,19);
+		$dni_t= substr($_POST['btntramitada'],20,9);
+		$matricula_t= substr($_POST['btntramitada'],30,7);
+			multatramitada($fechahora_t,$dni_t,$matricula_t,"tramitada");
+	}
+	if(isset($_POST['btnpagada']))
+	{
+		$fechahora_p= substr($_POST['btnpagada'],0,19);
+		$dni_p= substr($_POST['btnpagada'],20,9);
+		$matricula_p= substr($_POST['btnpagada'],30,7);
+			multatramitada($fechahora_p,$dni_p,$matricula_p,"pagada");
+	}
+	if(isset($_POST['btnfinalizada']))
+	{
+		$fechahora_f= substr($_POST['btnfinalizada'],0,19);
+		$dni_f= substr($_POST['btnfinalizada'],20,9);
+		$matricula_f= substr($_POST['btnfinalizada'],30,7);
+			multatramitada($fechahora_f,$dni_f,$matricula_f,"finalizada");
+	}
 	?>
 
 <!DOCTYPE html>
@@ -26,8 +47,7 @@ if (isset($_SESSION['usuario'])){
 	<script src="../../js/sweetalert.min.js"></script>
 	<script src='../../js/scriptgeneral2.js'></script>
 	<script src='../../js/scriptmultas.js'></script>	
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 
@@ -67,6 +87,11 @@ if (isset($_SESSION['usuario'])){
 					echo "<script>swal('¡Bien!', 'Multa añadida con éxito', 'success')</script>";
 					
 				}	
+				if($_SESSION['mensajito']=="actualizado")
+				{
+					echo "<script>swal('¡Bien!', 'Se ha actualizado el estado de la multa', 'success')</script>";
+					
+				}	
 				unset($_SESSION['mensajito']);
 			}
 			
@@ -86,25 +111,28 @@ if (isset($_SESSION['usuario'])){
 				$matricula= substr($_POST['btneditar'],30,7);
 				
 				$obj=verinfomulta($fechahora,$dni,$matricula);
-				
-				
+					
 			?>
-
-
-
+	
+					
 				<div class="fondo">
 					<span class="helper"></span>
 					<div>
-						<div class="popupcerrar">&times;</div>
+					<div class="popupcerrar">&times;</div>
 						<h2>Modificar multa</h2>
-						<form action='#' method='post'>
-						<p><?php echo "Estado:" .$obj->estado;?></p>
-						<button name='btnmodificar'>Modificar</button>
+						<form action='#editaryasi' method='post'>
+						<p>Fecha/Hora: <?php echo $obj->fecha_y_hora;?></p>
+						<p>DNI: <?php echo $obj->dni_conductor;?></p>
+						<p>Matricula: <?php echo $obj->matricula_vehiculo;?></p>
+						<button class='btneditarestado' name='btntramitada' value='<?php echo $_POST['btneditar'];?>' <?php if($obj->estado=="tramitada") echo "disabled";?>>Tramitada</button>
+						<button class='btneditarestado' name='btnpagada' value='<?php echo $_POST['btneditar'];?>' <?php if($obj->estado=="pagada") echo "disabled";?>>Pagada</button>
+						<button class='btneditarestado' name='btnfinalizada' value='<?php echo $_POST['btneditar'];?>' <?php if($obj->estado=="finalizada") echo "disabled";?>>Finalizada</button>
+						
 						</form>
-					</div>
+						</div>
 				</div>
 
-<?php
+			<?php
 
 				
 			}
