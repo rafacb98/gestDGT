@@ -60,9 +60,9 @@ if($intruso)
                 if(isset($_SESSION['restringido']))
                  echo "<p class='errorsesion'>Estás tratando de acceder a una zona restringida.</p>";
                 if(isset($_SESSION['tiempo']))
-                 echo "<p class='errorsesion'>Ha expirado la sesión. Por favor, vuelva a identificarse.</p>";
+                 echo "<p class='errorsesion'><i class='fas fa-clock'></i>&nbsp;&nbsp;&nbsp;&nbsp;Ha expirado la sesión. Por favor, vuelva a identificarse.</p>";
                 if(isset($_SESSION['errorusuario']))
-                 echo "<p class='errorsesion'>El usuario y/o contraseña no son válidos.</p>";
+                 echo "<p class='errorsesion'><i class='fas fa-ban'></i>&nbsp;&nbsp;&nbsp;&nbsp;El usuario y/o contraseña no son válidos.</p>";
 
                  session_unset();
   ?>
@@ -76,7 +76,7 @@ if($intruso)
           <i class="fas fa-user"></i>
         </label>
         <input id="usuariop" placeholder="DNI"  type="text" name="usuario" value='<?php if(isset($_POST['usuario'])) echo $_POST['usuario'];?>'>
-        <?php if(isset($_POST['btnentrar'])&&$_POST['usuario']=="") echo "<p class='errorvacio'>Rellene el campo</p>";?>
+        <?php if(isset($_POST['btnentrar'])&&$_POST['usuario']=="") echo "<p class='errorvacio'><i class='fas fa-exclamation-triangle'></i>&nbsp;&nbsp;&nbsp;&nbsp;Rellene el campo</p>";?>
       </p>
 
       <p class="clave">
@@ -85,7 +85,7 @@ if($intruso)
         </label>
         <input id="clavep" placeholder="Clave" type="password" name="clave" value=''>
         
-        <?php if(isset($_POST['btnentrar'])&&$_POST['clave']=="") echo "<p class='errorvacio'>Rellene el campo</p>";?>
+        <?php if(isset($_POST['btnentrar'])&&$_POST['clave']=="") echo "<p class='errorvacio'><i class='fas fa-exclamation-triangle'></i>&nbsp;&nbsp;&nbsp;&nbsp;Rellene el campo</p>";?>
       </p>
       <button type='submit' id="btnentrar" class="centro" name="btnentrar">
         Acceder

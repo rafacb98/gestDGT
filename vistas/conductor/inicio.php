@@ -19,7 +19,7 @@ if (isset($_SESSION['usuario'])){
 	<script src='js/scriptgeneral.js'></script>
 	<script type="text/javascript" language="Javascript">
       document.oncontextmenu = function(){return false}
-    </script>
+	</script>
 </head>
 <body>
 
@@ -42,6 +42,7 @@ if (isset($_SESSION['usuario'])){
 	</header>
 
 	<main class="epico">
+
 		<span class="botonsubir"><i class="fas fa-arrow-up"></i></span>
 		<section>
 			<?php
