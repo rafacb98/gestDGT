@@ -16,4 +16,19 @@ $(document).ready(function(){
         $('.usuario').css({"border":"3px solid transparent"});
         $('.clave').css({"border":"3px solid transparent"});
     })   
+
+    // Cuando le de al boton de mostrar, quitamos el atributo type y le cambiamos el icono y luego al reves igual
+    $('#mostrar').click(function(){
+      if($(this).hasClass('fa-eye'))
+      {
+        $('#clavep').removeAttr('type');
+        $('#mostrar').addClass('fa-eye-slash').removeClass('fa-eye');
+      }
+ 
+      else
+      {
+        $('#clavep').attr('type','password');
+        $('#mostrar').addClass('fa-eye').removeClass('fa-eye-slash');
+      }
+       });
 })

@@ -47,6 +47,9 @@ if($intruso)
     <script src="https://kit.fontawesome.com/4a9d5317b6.js" crossorigin="anonymous"></script>
     <script src='js/jquery-3.1.1.js'></script>
     <script src='js/scriptiniciosesion.js'></script>
+    <script type="text/javascript" language="Javascript">
+      document.oncontextmenu = function(){return false}
+    </script>
     <title>GestDGT+</title>
 </head>
 
@@ -72,15 +75,16 @@ if($intruso)
         <label for="usuariop" class="labelusuclave centro">
           <i class="fas fa-user"></i>
         </label>
-        <input id="usuariop" placeholder="Usuario"  type="text" name="usuario" value='<?php if(isset($_POST['usuario'])) echo $_POST['usuario'];?>'>
+        <input id="usuariop" placeholder="DNI"  type="text" name="usuario" value='<?php if(isset($_POST['usuario'])) echo $_POST['usuario'];?>'>
         <?php if(isset($_POST['btnentrar'])&&$_POST['usuario']=="") echo "<p class='errorvacio'>Rellene el campo</p>";?>
       </p>
 
       <p class="clave">
         <label for="clavep" class="labelusuclave centro">
-          <i class="fas fa-lock"></i>
+          <i class="fas fa-lock"></i><span><i class="fa fa-eye" id="mostrar"></i></span>
         </label>
         <input id="clavep" placeholder="Clave" type="password" name="clave" value=''>
+        
         <?php if(isset($_POST['btnentrar'])&&$_POST['clave']=="") echo "<p class='errorvacio'>Rellene el campo</p>";?>
       </p>
       <button type='submit' id="btnentrar" class="centro" name="btnentrar">

@@ -89,6 +89,19 @@
     opacity: 1;
   }
   
+  .clave{
+    position:relative;
+  }
+  .clave span {
+    position: absolute;
+    right: 5px;
+    top: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 2px 10px;
+    background:rgba(0,0,0,0);
+}
+
   .errorvacio{
     color:red;
   }

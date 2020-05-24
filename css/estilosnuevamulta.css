@@ -289,7 +289,7 @@ label {
 	margin-bottom: 5px;
 }
 
-input, select {
+input{
 	padding: 10px 16px;
 	width: 100%;
 	outline: 0;
@@ -301,6 +301,22 @@ input, select {
 	-webkit-appearance:none;
 	-moz-appearance:none;
 	appearance:none;
+}
+
+select {
+  appearance: none;
+  padding: 10px 16px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  border-radius: 150px;
+  border: 0;
+  background-color: #104A7F;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+select:focus {
+  outline: none;
 }
 
 .textarea {

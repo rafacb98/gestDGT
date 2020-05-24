@@ -73,7 +73,9 @@ require "../../funciones_servicios.php";
 	<script src='../../js/jquery-input-file-text.js'></script>
 	<script src='../../js/scriptgeneral.js'></script>
 	<script src='../../js/scriptnuevamulta.js'></script>
-
+	<script type="text/javascript" language="Javascript">
+      document.oncontextmenu = function(){return false}
+    </script>
 
 	
 		

@@ -17,7 +17,9 @@
         function redireccionar(){ 
             window.location="../gestDGT/index.php"; 
         } 
-        setTimeout ("redireccionar()", 3500); 
+		setTimeout ("redireccionar()", 3500); 
+		
+		document.oncontextmenu = function(){return false}
     </script>
 </head>
 <body>

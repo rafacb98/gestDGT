@@ -202,13 +202,13 @@ article{
   border-bottom-right-radius: 0.5em;
   border-left:4px solid #11538C;
   padding: 1em;
-   box-shadow: 0 0 1em black;
-   display:flex;
-   flex-direction: column;
-   flex-wrap: wrap;
-   flex-basis:100%;
- margin-top:1em;
-   background-color: rgb(221, 221, 221);
+  box-shadow: 0 0 1em black;
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-basis:100%;
+margin-top:1em;
+  background-color: rgb(221, 221, 221);
   
  }
 
@@ -382,7 +382,7 @@ article p{
   
 
   .fija { 
-   position:fixed;
+    position:fixed;
     width: 100%;
     z-index: 999; 
     background-color:rgba(42,42,44,0.8);

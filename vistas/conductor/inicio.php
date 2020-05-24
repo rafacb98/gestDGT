@@ -17,6 +17,9 @@ if (isset($_SESSION['usuario'])){
 	<link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
 	<script src='js/jquery-3.1.1.js'></script>
 	<script src='js/scriptgeneral.js'></script>
+	<script type="text/javascript" language="Javascript">
+      document.oncontextmenu = function(){return false}
+    </script>
 </head>
 <body>
 

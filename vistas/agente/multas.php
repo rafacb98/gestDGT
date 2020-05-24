@@ -47,7 +47,9 @@ if (isset($_SESSION['usuario'])){
 	<script src="../../js/sweetalert.min.js"></script>
 	<script src='../../js/scriptgeneral2.js'></script>
 	<script src='../../js/scriptmultas.js'></script>	
-
+	<script type="text/javascript" language="Javascript">
+      document.oncontextmenu = function(){return false}
+    </script>
 </head>
 <body>
 
