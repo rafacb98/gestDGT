@@ -56,9 +56,6 @@ $app->get('/infomulta/:fechahora/:dni/:matricula',function($fechahora,$dni,$matr
     echo json_encode(infomulta($fechahora,$dni,$matricula),JSON_FORCE_OBJECT);
 });
 
-$app->get('/estadosmulta',function(){
-    echo json_encode(estadosmulta(),JSON_FORCE_OBJECT);
-});
 
 $app->put('/actualizartramitada/:fechahora/:dni/:matricula',function ($fechahora,$dni,$matricula) use ($app){
     $datosMulta=$app->request->put();

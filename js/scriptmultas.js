@@ -12,13 +12,15 @@ $(document).ready(function() {
 		});
 	});
 
+	$(document).keydown(function(e) { 
+		if (e.keyCode == 27) { 
+			$(".fondo").fadeOut(500);
+		} 
+ 	});
+
 
 	$('#multas').basictable({
 		breakpoint: 1000,
 	  });
-
-	  
-		                      
-	
 	  
 });

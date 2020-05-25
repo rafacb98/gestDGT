@@ -278,35 +278,6 @@ function verinfomulta($fechahora,$dni,$matricula)
 }
 
 
-function selectestadoeditar($estado){
-    $obj=consumir_servicio_REST(ruta."estadosmulta","GET");
-    if (isset($obj->mensaje_error))
-    {
-        die($obj->mensaje_error);
-    }
-    else
-    { 
-        echo "<select name='emultas'>";
-        
-      
-        foreach($obj->multas as $fila)
-        {
-           if($fila->estado==$estado)
-           {
-            echo "<option value='".$fila->estado."' selected>". $fila->estado . "</option>";
-           }
-           else
-           {
-            echo "<option value='".$fila->estado."'>". $fila->estado . "</option>";
-           }
-             
-            
-        }
-          echo "</select>";
-          
-          
-    }
-}
 
 function multatramitada($fechahora,$dni,$matricula,$estado)
 {
