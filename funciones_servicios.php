@@ -150,11 +150,13 @@ function vercadavehiculo($dni)
                 echo "<p><span class='detalle'>Modelo: </span>".$fila->modelo. "</p>";
                 echo "<p><span class='detalle'>Año: </span>".$fila->anio. "</p>";
                 echo "<p><span class='detalle'>Tipo: </span>".$fila->tipo. "</p>";
+                echo "<form action='#verborrar' method='post'><button class='btneliminar' name='btneliminar' value='$fila->matricula' onclick='return confirm(\"¿Quieres quitar el vehículo con matricula: ".$fila->matricula."?\");'><i class='fas fa-minus-circle'></i>&nbsp;&nbsp;&nbsp;&nbsp;Quitar vehículo</button></form>";
             echo "</article>";
         }
           
     }
 }
+
 
 function todasmultas(){
     $obj=consumir_servicio_REST(ruta."multas","GET");
@@ -336,6 +338,22 @@ function multafinalizada($fechahora,$dni,$matricula,$estado)
         exit;
 
                 
+    } 
+}
+
+function quitarvehiculo($matricula)
+{
+    $obj=consumir_servicio_REST(ruta."borrarvehiculo/".urlencode($matricula),"DELETE");
+    if (isset($obj->mensaje_error))
+    {
+        die($obj->mensaje_error);
+    }
+    else
+    {
+        $_SESSION['mensajito']="eliminado";
+        header("Location: ../conductor/vehiculos.php");
+        exit;
+           
     } 
 }
  

@@ -72,6 +72,10 @@ $app->put('/actualizarfinalizada/:fechahora/:dni/:matricula',function ($fechahor
     echo json_encode(actualizarfinalizada($fechahora,$dni,$matricula,$datosMulta['estado']),JSON_FORCE_OBJECT);
 });
 
+$app->delete('/borrarvehiculo/:matricula',function($matricula){
+    echo json_encode(borrarvehiculo($matricula),JSON_FORCE_OBJECT);
+});
+
 $app->run();
 ?>
 

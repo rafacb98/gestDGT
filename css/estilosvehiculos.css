@@ -218,6 +218,21 @@ margin-top:1em;
   margin-top:0.5em;
 }
 
+form{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btneliminar{
+  box-shadow: 0 0 1em black;
+  margin-top:0.5em;
+  padding:0.5em;
+  border-radius: 0.8em;
+  font-size: 20px;
+  background-color:red;
+  color:white;
+}
+
 /* Pie de página */
 footer{
   padding:1em;

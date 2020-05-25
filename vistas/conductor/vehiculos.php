@@ -5,6 +5,12 @@ require "../../funciones_servicios.php";
 
 if (isset($_SESSION['usuario'])){
 
+		if(isset($_POST['btneliminar']))
+			
+				quitarvehiculo($_POST['btneliminar']);
+						
+				
+			
 	?>
 
 <!DOCTYPE html>
@@ -21,10 +27,12 @@ if (isset($_SESSION['usuario'])){
 	<link rel="icon" href="../../img/logotipo.png">
 	<link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
 	<script src='../../js/jquery-3.1.1.js'></script>
+	<script src="../../js/sweetalert.min.js"></script>
 	<script src='../../js/scriptgeneral2.js'></script>
 	<script type="text/javascript" language="Javascript">
       document.oncontextmenu = function(){return false}
-    </script>
+	</script>
+
 </head>
 <body>
 
@@ -53,8 +61,20 @@ if (isset($_SESSION['usuario'])){
 			<p class='primero'><span class='bienvenida'>¡Hola <span class='usuario'><?php echo $saludo['nombre'];?></span>!</span><a  href='../../cerrarsesion.php' class='cerrarsesion'><i class="fas fa-sign-out-alt"></i></a></p>
 			<h2>·· VEHÍCULOS ··</h2>
 			<?php 
+				if(isset($_SESSION['mensajito']))
+				{
+					if($_SESSION['mensajito']=="eliminado")
+					{
+						echo "<script>swal('¡Bien!', 'Se ha eliminado el vehiculo', 'success')</script>";		
+					}	
+					unset($_SESSION['mensajito']);
+				}
+
 				vertotalvehiculos($_SESSION['usuario']); 
 				vercadavehiculo($_SESSION['usuario']);
+
+				
+
 			?>
 		
 		</section>	

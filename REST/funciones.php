@@ -460,4 +460,33 @@ function infomulta($fechahora,$dni,$matricula)
         }
     }
 
+   function borrarvehiculo($matricula)
+   {
+        $con=conectar();
+        if (!$con)
+        {
+            return array("mensaje_error"=>"Imposible conectar. Error ".mysqli_connect_errno());
+        }
+        else
+        {
+            mysqli_set_charset($con,"utf8");
+            $consulta="delete from vehiculo where matricula='".$matricula."'";
+            $resultado=mysqli_query($con,$consulta);
+            
+            if(!$resultado)
+            {
+                $mensaje="Imposisble realizar la consulta. Error ".mysqli_errno($con);
+                mysqli_close($con);
+                return array("mensaje_error"=>$mensaje);
+            }
+            else
+            {
+                $mensajeexitoso="Se borró el vehiculo con matricula ".$matricula;
+                mysqli_close($con);
+                return array("mensajeborrado"=>$mensajeexitoso);
+            }
+        
+        
+        }
+   }
 ?>
