@@ -19,16 +19,16 @@ $(document).ready(function(){
 
     // Cuando le de al boton de mostrar, quitamos el atributo type y le cambiamos el icono y luego al reves igual
     $('#mostrar').click(function(){
-      if($(this).hasClass('far fa-eye-slash'))
+      if($(this).hasClass('fas fa-eye-slash'))
       {
         $('#clavep').removeAttr('type');
-        $('#mostrar').addClass('far fa-eye').removeClass('far fa-eye-slash');
+        $('#mostrar').addClass('fa-eye').removeClass('fa-eye-slash');
       }
-     
+ 
       else
       {
         $('#clavep').attr('type','password');
-        $('#mostrar').addClass('far fa-eye-slash').removeClass('far fa-eye');
+        $('#mostrar').addClass('fa-eye-slash').removeClass('fa-eye');
       }
        });
 })
