@@ -37,20 +37,24 @@ if (isset($_SESSION['usuario'])){
 					<span></span>     
 			</label>    
 			<ul id="menu">
-					<li><a id='seleccionado' href="index.php">Inicio</a></li>
-					<li><a href="vistas/agente/multas.php">Multas</a></li>
+			<?php
+				$saludo=obtener_usuario($_SESSION['usuario'],$_SESSION['clave']);
+			?>
+				<p class='bienvenida'>¡Hola <span class='usuario'><?php echo $saludo['nombre'];?></span>!</p>
+					<li><a id='seleccionado' href="index.php">INICIO</a></li>
+					<li><a href="#">VER PERFIL</a></li>
+					<li><a href="vistas/agente/multas.php">GESTIONAR MULTAS</a></li>
 			</ul>
+	
 		
 			<img src="img/logotipo.svg" alt="logo" />
+			<a href='cerrarsesion.php' class='cerrarsesion'><i class="fas fa-sign-out-alt"></i></a>
 		</header>
 	
 		<main class="epico">
 			<span class="botonsubir"><i class="fas fa-arrow-up"></i></span>
 			<section>
-				<?php
-					$saludo=obtener_usuario($_SESSION['usuario'],$_SESSION['clave']);
-				?>
-				<p class='primero'><span class='bienvenida'>¡Hola <span class='usuario'><?php echo $saludo['nombre'];?></span>!</span><a  href='cerrarsesion.php' class='cerrarsesion'><i class="fas fa-sign-out-alt"></i></a></p>
+				
 				
 				<aside id="a1">
 					<h2>Tu número de placa es</h2>

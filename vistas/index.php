@@ -81,7 +81,7 @@ if($intruso)
 
       <p class="clave">
         <label for="clavep" class="labelusuclave centro">
-          <i class="fas fa-lock"></i><span><i class="fa fa-eye" id="mostrar"></i></span>
+          <i class="fas fa-lock"></i><span><i class="far fa-eye-slash" id="mostrar"></i></span>
         </label>
         <input id="clavep" placeholder="Clave" type="password" name="clave" value=''>
         

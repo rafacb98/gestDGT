@@ -10,11 +10,16 @@ $(document).ready(function () {
       $('header').addClass('fija');
       $('header img').addClass('fija2');
       $('header ul#menu li a').addClass('fija3');
+      $('header ul#menu p').addClass('fija4');
+      $('header .cerrarsesion').addClass('fija5');
+      
     }
     else {
       $('header').removeClass('fija');
       $('header img').removeClass('fija2');
       $('header ul#menu li a').removeClass('fija3');
+      $('header ul#menu p').removeClass('fija4');
+      $('header .cerrarsesion').removeClass('fija5');
      
     }
   });
@@ -51,7 +56,7 @@ $(document).ready(function () {
       $("main").css({ "filter": "blur(0)", "transform": "translate(0)", "transition-duration": "1s" });
       $("footer").css({"filter": "blur(0)","transform":"translate(0)"});
       $("ul#menu li").css("display", "none");
-      
+     
      
     }
     // En caso de que le hayamos dado click, le añadimos el blur que dara eun efecto de opacidad a los elementos y los movemos
@@ -61,6 +66,7 @@ $(document).ready(function () {
       $("main").css({ "filter": "blur(0.3em)", "transform": "translate(250px)", "transition-duration": "1s" });
       $("footer").css({"filter": "blur(0.3em)","transform":"translate(250px)"});
       $("ul#menu li").css("display", "block");
+   
       
       
     }
