@@ -24,7 +24,7 @@ if (isset($_SESSION['usuario'])){
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<link rel="stylesheet" type="text/css" href="../../css/estilosvehiculos.css">
 	<script src="https://kit.fontawesome.com/4a9d5317b6.js" crossorigin="anonymous"></script>
-	<link rel="icon" href="../../img/logotipo.png">
+	<link rel="icon" href="../../img/logotipo.svg">
 	<link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
 	<script src='../../js/jquery-3.1.1.js'></script>
 	<script src="../../js/sweetalert.min.js"></script>
@@ -49,7 +49,7 @@ if (isset($_SESSION['usuario'])){
 				<li><a id='seleccionado' href="vehiculos.php">Vehiculos</a></li>
        </ul>
 	
-		<img src="../../img/logotipo.png" alt="logo" />
+		<img src="../../img/logotipo.svg" alt="logo" />
 	</header>
 
 	<main>

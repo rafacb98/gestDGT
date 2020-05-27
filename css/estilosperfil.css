@@ -14,8 +14,8 @@
 header{
   display:flex;  
   flex-flow:row nowrap;
-  background-color:#2A2A2C;
-  padding:1em;
+  background-color:#252526;
+  height:auto;
 }
 
 /* Menu hamburguesa */
@@ -80,8 +80,8 @@ header label#hamburguesa span:nth-child(3){
     margin:0;
     padding:20px 0;
     position:absolute;
-    top:9.2em;
-    background-color:#2A2A2C;
+    top:7.2em;
+    background-color:#252526;
     z-index:1;
   }
   
@@ -243,7 +243,7 @@ footer{
   padding:1em;
   text-align:center;
   font-weight:bold;
-  background-color:#2A2A2C;
+  background-color:#252526;
 
   color:white; 
  
@@ -317,10 +317,13 @@ section{
 /*-- CONTENIDO PARA ESCRITORIO --*/
 @media all and (min-width: 1000px) {
   /* Encabezado */
+  header{
+    height:8em;
+  }
   header img{
     margin-left:5%;  
-    width: 8vw;
-    height:16vh;
+    width: auto;
+    height: 100%;
   }
 
   header label#hamburguesa{

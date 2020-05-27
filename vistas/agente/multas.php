@@ -40,7 +40,7 @@ if (isset($_SESSION['usuario'])){
 	<link rel="stylesheet" type="text/css" href="../../css/estilosmultas.css">
 	<link rel="stylesheet" type="text/css" href="../../css/basictable.css">
 	<script src="https://kit.fontawesome.com/4a9d5317b6.js" crossorigin="anonymous"></script>
-	<link rel="icon" href="../../img/logotipo.png">
+	<link rel="icon" href="../../img/logotipo.svg">
 	<link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
 	<script src='../../js/jquery-3.1.1.js'></script>
 	<script src='../../js/jquery.basictable.js'></script>
@@ -65,7 +65,7 @@ if (isset($_SESSION['usuario'])){
 				<li><a id='seleccionado' href="multas.php">Multas</a></li>
        </ul>
 		
-		<img src="../../img/logotipo.png" alt="logo" />
+		<img src="../../img/logotipo.svg" alt="logo" />
 	</header>
 
 	<main class="epico">
