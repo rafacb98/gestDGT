@@ -68,7 +68,7 @@ require "../../funciones_servicios.php";
 	<link rel="stylesheet" type="text/css" href="../../css/estilosnuevamulta.css">
 	<script src="https://kit.fontawesome.com/4a9d5317b6.js" crossorigin="anonymous"></script>
 	<link rel="icon" href="../../img/logotipo.png">
-	<link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
 	<script src='../../js/jquery-3.1.1.js'></script>
 	<script src='../../js/jquery-input-file-text.js'></script>
 	<script src='../../js/scriptgeneral.js'></script>
