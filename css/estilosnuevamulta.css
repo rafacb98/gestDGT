@@ -37,7 +37,7 @@ header label#hamburguesa span{
   width:3em;
   height: 0.3em;
   background-color: white;
-  transition: 1s;
+  transition-duration: 0.3s;
 }
 
 header label#hamburguesa span:nth-child(1){
@@ -84,9 +84,13 @@ header label#hamburguesa span:nth-child(3){
     position:absolute;
     top:7.2em;
     background-color:#252526;
-    z-index:1;
+    z-index:1;display:flex;flex-direction: column;
   }
-  
+
+  ul p{
+    display:none;
+  }
+
   ul#menu li{
     list-style:none;
     display:none;
@@ -107,7 +111,10 @@ header label#hamburguesa span:nth-child(3){
 
 #ham:checked + #hamburguesa + ul#menu{
       width:250px;
-
+      
+}
+#ham:checked + #hamburguesa +ul p{
+  display:inline-block;
 }
 
 
@@ -142,18 +149,23 @@ display:none;
 
 .bienvenida{
   font-size: 22px;
-  flex:1;
-  color:#11538C;
-}
-
-.usuario{
-  color:red;
-  font-weight: bold;
-}
-
-.cerrarsesion{
-  font-size: 22px;
-}
+  padding:0.5em;
+   color:white;
+ }
+ 
+ .usuario{
+   color:rgb(218, 6, 6);
+   font-weight: bold;
+ }
+ 
+ .cerrarsesion{
+   font-size: 34px;
+   margin-top:1.3em;
+   margin-right:0.5em;
+   height:50%;
+   color:white;
+   
+ }
 
 
 
@@ -403,21 +415,24 @@ textarea {
 }
 
 header ul#menu li{
-  margin-bottom: 0.5em;
+ 
   display:block;
-  margin-left:6em;
-  margin-right:6em;
+  
+ 
 }
 
+
+
 header  ul#menu{
-    width: 100vw !important;
-    height: 7vh;
+   
+    height: 11.5vh;
     display:flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: flex-end;
-    top:2em;
-    left:-6em; 
+    margin-left:25em;
+    
+    top:1.2em;
+    
     background-color:rgba(42,42,44,0);
 }
 
@@ -443,11 +458,19 @@ header  ul#menu{
 }
 
 .bienvenida{
-  text-align: center;
-  font-size: 32px;
+  display: inline-block;
+margin-left: 15em;
+margin-top:0.2em;
+padding:0;
+  order:3;
+  font-size: 25px;
 }
+
 .cerrarsesion{
   font-size: 32px;
+
+height:1.4em;
+  color:white;
 }
 
 
@@ -472,11 +495,20 @@ header  ul#menu{
 
   .fija2 { 
     width:auto;
-    height:4em;
+    height:4.8em;
   }
 
   .fija3{
-    margin-top:-1.5em;
+    margin-top:-1.2em;
+  }
+
+  .fija4{
+    margin-top:-0.5em;
+    color:white;
+  }
+
+  .fija5{
+    margin-top:0.8em;
   }
 }
 

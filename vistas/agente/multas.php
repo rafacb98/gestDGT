@@ -45,7 +45,7 @@ if (isset($_SESSION['usuario'])){
 	<script src='../../js/jquery-3.1.1.js'></script>
 	<script src='../../js/jquery.basictable.js'></script>
 	<script src="../../js/sweetalert.min.js"></script>
-	<script src='../../js/scriptgeneral2.js'></script>
+	<script src='../../js/scriptgeneral.js'></script>
 	<script src='../../js/scriptmultas.js'></script>	
 	<script type="text/javascript" language="Javascript">
       document.oncontextmenu = function(){return false}
@@ -61,21 +61,23 @@ if (isset($_SESSION['usuario'])){
                <span></span>     
        </label>    
        <ul id="menu">
+	   <?php
+				$saludo=obtener_usuario($_SESSION['usuario'],$_SESSION['clave']);
+			?>
+				<p class='bienvenida'>¡Hola <span class='usuario'><?php echo $saludo['nombre'];?></span>!</p>
 	   			<li><a href="../..">Inicio</a></li>
 				<li><a id='seleccionado' href="multas.php">Multas</a></li>
        </ul>
 		
 		<img src="../../img/logotipo.svg" alt="logo" />
+		<a href='../../cerrarsesion.php' class='cerrarsesion'><i class="fas fa-sign-out-alt"></i></a>
 	</header>
 
 	<main class="epico">
 		<span class="botonsubir"><i class="fas fa-arrow-up"></i></span>
 		<section id="a">
-			<?php
-				$saludo=obtener_usuario($_SESSION['usuario'],$_SESSION['clave']);
-			?>
-			<p class='primero'><span class='bienvenida'>¡Hola <span class='usuario'><?php echo $saludo['nombre'];?></span>!</span><a  href='../../cerrarsesion.php' class='cerrarsesion'><i class="fas fa-sign-out-alt"></i></a></p>
-			<h2>·· GESTIÓN DE MULTAS ··</h2>
+			
+			<h2>GESTIÓN DE MULTAS</h2>
 		
 			<form action='nuevamulta.php' method='post'>
 				<button class='btnnueva' name='btnnuevamulta'><i class="fas fa-plus-circle"></i></button><span id='nuevam'>&nbsp;&nbsp;&nbsp;&nbsp;NUEVA MULTA</span>

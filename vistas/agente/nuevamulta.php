@@ -91,21 +91,23 @@ require "../../funciones_servicios.php";
                <span></span>     
        </label>    
        <ul id="menu">
+	   <?php
+				$saludo=obtener_usuario($_SESSION['usuario'],$_SESSION['clave']);
+			?>
+				<p class='bienvenida'>¡Hola <span class='usuario'><?php echo $saludo['nombre'];?></span>!</p>
 	   			<li><a href="../..">Inicio</a></li>
 				<li><a id='seleccionado' href="multas.php">Multas</a></li>
        </ul>
 		
 		<img src="../../img/logotipo.svg" alt="logo" />
+		<a href='../../cerrarsesion.php' class='cerrarsesion'><i class="fas fa-sign-out-alt"></i></a>
 	</header>
 
 	<main class="epico">
 		<span class="botonsubir"><i class="fas fa-arrow-up"></i></span>
 		<section id="a">
-			<?php
-				$saludo=obtener_usuario($_SESSION['usuario'],$_SESSION['clave']);
-			?>
-			<p class='primero'><span class='bienvenida'>¡Hola <span class='usuario'><?php echo $saludo['nombre'];?></span>!</span><a  href='../../cerrarsesion.php' class='cerrarsesion'><i class="fas fa-sign-out-alt"></i></a></p>
-			<h2>·· Nueva multa ··</h2>
+			
+			<h2>Nueva multa</h2>
 			
 			<form action='nuevamulta.php' method='post' enctype="multipart/form-data">
 				<div class="contenidolargo">

@@ -4,7 +4,6 @@
 /*-- CONTENIDO PARA MOVIL --*/
 /* Todo en general */
 
-
 *{
   box-sizing:border-box; 
   margin:0; 
@@ -133,41 +132,42 @@ header img {
 html {
   min-height:100%;
   position: relative;
- 
 }
 
 h2 span{
 display:none;
 }
 
-.primero{
-  
-  display:flex;
-  flex-direction: row;
-  flex-basis:100%; 
-}
+
 
 .bienvenida{
-  font-size: 22px;
-  padding:0.5em;
-   color:white;
- }
- 
- .usuario{
-   color:rgb(218, 6, 6);
-   font-weight: bold;
- }
- 
- .cerrarsesion{
-   font-size: 34px;
-   margin-top:1.3em;
-   margin-right:0.5em;
-   height:50%;
-   color:white;
-   
- }
+ font-size: 22px;
+ padding:0.5em;
+  color:white;
+}
+
+.usuario{
+  color:rgb(218, 6, 6);
+  font-weight: bold;
+}
+
+.cerrarsesion{
+  font-size: 34px;
+  margin-top:1.3em;
+  margin-right:0.5em;
+  height:50%;
+  color:white;
+  
+}
 
 
+
+#numeropuntos{
+  text-align: center;
+  color:black;
+  text-decoration: underline;
+  font-size: 25px;
+}
 
 
 
@@ -183,205 +183,57 @@ main {
   flex: 1;
 }
 
-h2{
-	text-align:center;
-	flex-basis:100%;
+section{
+  background-color: lightgray;
+  margin:1.5em 1.5em 1.5em 1.5em;
+  border-radius: 0.5em;
+}
+
+
+article{
+  display:flex;
+  flex-wrap:wrap;
+  flex-direction:column;
+  margin-top:2em;
+  text-align: justify;
+  background-color: white;
   padding:1em;
-}
-
-
-
-table {
-  background: white;
-  border-collapse: collapse;
-  margin: 1.25em 0 0;
-  width: 100%;
-  box-shadow: 0 0 1em black;
-}
-
-table img{
-  height:90px;
-}
-
-table tr,
-table th,
-table td {
-  border: none;
-  border-bottom: 1px solid #e4ebeb;
-  font-size: .875rem;
+  border-radius: 0.5em;
  
 }
 
-table th,
-table td {
-  padding: 10px 12px;
-  text-align: center;
-  font-size:15px;
+h2{
+	text-align:center;
+	flex-basis:100%;
+	padding:1em;
 }
 
-table th {
-  background: #11538C;
-  color: #ffffff;
-  text-transform: uppercase;
-}
-
-table tr td {
-  background: #eaf3f5;
-  color: #999999;
-}
-
-table tr:nth-of-type(2n+2) td {
-  background: #ffffff;
-}
-
-table.bt tfoot th,
-table.bt tfoot td,
-table.bt tbody td {
-  font-size: .8125rem;
-  padding: 0;
-}
-
-
-table.bt tfoot th:before,
-table.bt tfoot td:before,
-table.bt tbody td:before {
-  background: #11538C;
-  color: white;
-  margin-right: 10px;
-  padding: 2px 10px;
-  font-size:15px;
-}
-
-table.bt tfoot th .bt-content,
-table.bt tfoot td .bt-content,
-table.bt tbody td .bt-content {
-  display: inline-block;
-  padding: 2px 5px;
-  font-size:18px;
-}
-
-table.bt tfoot th:first-of-type:before,
-table.bt tfoot th:first-of-type .bt-content,
-table.bt tfoot td:first-of-type:before,
-table.bt tfoot td:first-of-type .bt-content,
-table.bt tbody td:first-of-type:before,
-table.bt tbody td:first-of-type .bt-content {
-  padding-top: 10px;
-}
-
-table.bt tfoot th:last-of-type:before,
-table.bt tfoot th:last-of-type .bt-content,
-table.bt tfoot td:last-of-type:before,
-table.bt tfoot td:last-of-type .bt-content,
-table.bt tbody td:last-of-type:before,
-table.bt tbody td:last-of-type .bt-content {
-  padding-bottom: 10px;
-}
-
-#opciones{
-  background-color:red;
-}
-
-#nuevam{
-  display:none;
-}
-
-form{
-  margin-left: auto;
-  margin-right: auto;
-  
-}
-
-.btnnueva{
-  box-shadow: 0 0 1em black;
-  margin-top:0.5em;
-  padding:0.5em;
-  border-radius: 0.8em;
-  font-size: 20px;
-  background-color:#11538C;
-  color:white;
-}
-
-.btnnueva:hover{
-  background-color: rgb(16, 74, 126);
-}
-
-.btnnueva:active{
-  cursor:pointer;
-  position:relative;
-  top:1px;
-}
-
-/* Sección de editar multa */
-.fondo{
-  background:rgba(0,0,0,.4);
-  cursor:pointer;
-  height:100%;
-  position:fixed;
+h3{
   text-align:center;
-  top:0;
-  left:0;
-  width:100%;
-  z-index:10000;
-}
-.fondo .helper{
-  display:inline-block;
-  height:100%;
-  vertical-align:middle;
-}
-.fondo > div {
-  background-color: #fff;
-  box-shadow: 10px 10px 60px #555;
-  display: inline-block;
-  height: auto;
-  max-width: 551px;
-  min-height: 100px;
-  vertical-align: middle;
-  width: 60%;
-  position: relative;
-  border-radius: 8px;
-  padding: 15px 5%;
-}
-.popupcerrar {
-  background-color: #fff;
-  border: 2px solid black;
-  border-radius: 50px;
-  cursor: pointer;
-  display: inline-block;
-  font-family: arial;
-  font-weight: bold;
-  position: absolute;
-  top: -20px;
-  right: -20px;
-  font-size: 25px;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-}
-.popupcerrar:hover {
-  background-color: red;
-}
-.edita {
-  cursor: pointer;
-  font-size: 20px;
-  margin: 20px;
-  display: inline-block;
-  font-weight: bold;
+	flex-basis:100%;
 }
 
-.btneditarestado{
-  box-shadow: 0 0 1em black;
-  margin-top:0.5em;
-  padding:0.5em;
+
+
+
+
+
+
+/* Aside con los puntos */
+aside{
+  background-color:white;
+  padding:1em;
+  flex-basis:50%;
   border-radius: 0.5em;
-  font-size: 20px;
-  background-color:red;
-  color:white;
+ 
 }
 
-button:disabled{
-  background-color:rgb(129, 113, 113);
+
+
+aside h2{
+  color:#11538C;
 }
+
 
 
 /* Pie de página */
@@ -390,10 +242,9 @@ footer{
   text-align:center;
   font-weight:bold;
   background-color:#252526;
-
   color:white; 
- 
 }
+
 
 footer ul{
   list-style-type: none;
@@ -401,6 +252,8 @@ footer ul{
   flex-wrap: wrap;
   justify-content: center;
 }
+
+
 footer ul li{
   margin-left:1em;
 }
@@ -409,15 +262,31 @@ footer ul li span{
   display:none;
 }
 
+
 #instagram,#twitter,#facebook{
   color:white;
 }
 
+#a{
+  margin-top:auto;
+  margin-bottom:auto;
+}
+
+
+.categorias{
+  background-color: #2A2A2C;
+  display:flex;
+  flex-flow:column;
+  align-items: center;
+ 
+}
+
+
 section{
+  padding:2em;
   display:flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding:2em;
 }
 
 
@@ -438,7 +307,6 @@ section{
     flex-wrap: wrap;
   }
 
-
   header img{
     width: auto;
   }
@@ -447,8 +315,19 @@ section{
     left:-13em;
   }
 
+  aside{
+    flex-grow:1.5;
   
+   
+  }
  
+    
+    .primero{
+      order:-2;
+    }
+
+ 
+
 }
 
 /*--------------------------------------------------------------------------------------------------------------------------*/
@@ -498,10 +377,7 @@ header  ul#menu{
   background-color: transparent;
   color: white !important;
 }
-
-#nuevam{
-  display:inline;
-}
+  
 
 .botonsubir {
 	display:none;
@@ -516,6 +392,7 @@ header  ul#menu{
   border-radius:2em;
   z-index:1;
 }
+
 
 .bienvenida{
   display: inline-block;
@@ -532,6 +409,35 @@ padding:0;
 height:1.4em;
   color:white;
 }
+
+section{
+  display:flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  
+}
+
+
+article {
+  width:49%;
+  padding:1em;
+  margin-left:0.5em;
+}
+
+aside{
+flex-basis:100%;
+ background-image:url("../img/logotipo_opacidad.svg");
+ background-position: center;
+ background-color: white;
+ background-size: 300px 200px;
+
+}
+
+.primero{
+  order:-2;
+  
+}
+
 
 
   /* Footer */
@@ -570,7 +476,7 @@ height:1.4em;
     margin-top:0.8em;
   }
 
-  
+ 
 }
 
 /*--------------------------------------------------------------------------------------------------------------------------*/

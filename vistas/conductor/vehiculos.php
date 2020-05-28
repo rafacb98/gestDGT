@@ -28,7 +28,7 @@ if (isset($_SESSION['usuario'])){
 	<link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
 	<script src='../../js/jquery-3.1.1.js'></script>
 	<script src="../../js/sweetalert.min.js"></script>
-	<script src='../../js/scriptgeneral2.js'></script>
+	<script src='../../js/scriptgeneral.js'></script>
 	<script type="text/javascript" language="Javascript">
       document.oncontextmenu = function(){return false}
 	</script>
@@ -44,22 +44,27 @@ if (isset($_SESSION['usuario'])){
                <span></span>     
        </label>    
        <ul id="menu">
-	   			<li><a href="../..">Inicio</a></li>
-				<li><a href="perfil.php">Perfil</a></li>
-				<li><a id='seleccionado' href="vehiculos.php">Vehiculos</a></li>
+	   <?php
+				$saludo=obtener_usuario($_SESSION['usuario'],$_SESSION['clave']);
+			?>
+
+	   			<p class='bienvenida'>¡Hola <span class='usuario'><?php echo $saludo['nombre'];?></span>!</p>
+	   			<li><a href="../..">INICIO</a></li>
+				<li><a href="puntos.php">VER PUNTOS</a></li>
+				<li><a href="perfil.php">VER PERFIL</a></li>
+				<li><a id='seleccionado' href="vehiculos.php">VER VEHICULOS</a></li>
        </ul>
 	
 		<img src="../../img/logotipo.svg" alt="logo" />
+		<a href='../../cerrarsesion.php' class='cerrarsesion'><i class="fas fa-sign-out-alt"></i></a>
 	</header>
 
 	<main>
 		<span class="botonsubir"><i class="fas fa-arrow-up"></i></span>
 		<section>
-			<?php
-				$saludo=obtener_usuario($_SESSION['usuario'],$_SESSION['clave']);
-			?>
-			<p class='primero'><span class='bienvenida'>¡Hola <span class='usuario'><?php echo $saludo['nombre'];?></span>!</span><a  href='../../cerrarsesion.php' class='cerrarsesion'><i class="fas fa-sign-out-alt"></i></a></p>
-			<h2>·· VEHÍCULOS ··</h2>
+			
+			
+			<h2>VEHÍCULOS</h2>
 			<?php 
 				if(isset($_SESSION['mensajito']))
 				{

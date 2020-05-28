@@ -12,11 +12,16 @@ $(document).ready(function () {
       $('header').addClass('fija');
       $('header img').addClass('fija2');
       $('header ul#menu li a').addClass('fija3');
+      $('header ul#menu p').addClass('fija4');
+      $('header .cerrarsesion').addClass('fija5');
+      
     }
     else {
       $('header').removeClass('fija');
       $('header img').removeClass('fija2');
       $('header ul#menu li a').removeClass('fija3');
+      $('header ul#menu p').removeClass('fija4');
+      $('header .cerrarsesion').removeClass('fija5');
      
     }
   });

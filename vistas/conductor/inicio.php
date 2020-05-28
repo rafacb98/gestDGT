@@ -35,8 +35,8 @@ if (isset($_SESSION['usuario'])){
 				$saludo=obtener_usuario($_SESSION['usuario'],$_SESSION['clave']);
 			?>
 				<p class='bienvenida'>¡Hola <span class='usuario'><?php echo $saludo['nombre'];?></span>!</p>
-				   <li><a id='seleccionado' href="index.php">INICIO</a></li>
-				   <li><a href="#">VER PUNTOS</a></li>
+				<li><a id='seleccionado' href="index.php">INICIO</a></li>
+				<li><a href="vistas/conductor/puntos.php">VER PUNTOS</a></li>
 				<li><a href="vistas/conductor/perfil.php">VER PERFIL</a></li>
 				<li><a href="vistas/conductor/vehiculos.php">VER VEHICULOS</a></li>
 				
@@ -57,12 +57,28 @@ if (isset($_SESSION['usuario'])){
 			
 			
 
-			<h2 id='novedades'>·· ÚLTIMAS NOTICIAS ··</h2>
-			<aside id="a1">
-				<h2>Tus puntos actuales son</h2>
-				<?php echo verpuntos($_SESSION['usuario']);?>
+			<h2 id='novedades'>ÚLTIMAS NOTICIAS</h2>
 			
-			</aside>
+			<article class="especial">
+				<img src="img/novedades.png" alt="novedad1"/>
+				<p>Lorem ipsum dolor sit amet consectetur adipiscing elit dapibus, ridiculus mattis montes condimentum eget nostra erat diam vulputate, convallis sagittis praesent scelerisque posuere elementum facilisis. Quisque nisi faucibus montes pellentesque tellus dictum fringilla tempor hendrerit, etiam integer quis vel orci vivamus duis nisl risus scelerisque, turpis tincidunt dictumst ridiculus dapibus non bibendum sollicitudin. Odio quam felis convallis aenean mi lacinia torquent curae donec cum, senectus sagittis molestie litora volutpat mattis euismod viverra pulvinar eget metus, fringilla orci nascetur eleifend pellentesque hac dapibus arcu aliquet.	
+			</article>
+			<article class="especial">
+				
+				<img src="img/novedades.png" alt="novedad2"/>
+				<p>Lorem ipsum dolor sit amet consectetur adipiscing elit dapibus, ridiculus mattis montes condimentum eget nostra erat diam vulputate, convallis sagittis praesent scelerisque posuere elementum facilisis. Quisque nisi faucibus montes pellentesque tellus dictum fringilla tempor hendrerit, etiam integer quis vel orci vivamus duis nisl risus scelerisque, turpis tincidunt dictumst ridiculus dapibus non bibendum sollicitudin. Odio quam felis convallis aenean mi lacinia torquent curae donec cum, senectus sagittis molestie litora volutpat mattis euismod viverra pulvinar eget metus, fringilla orci nascetur eleifend pellentesque hac dapibus arcu aliquet.
+			</article>
+			
+			<article class="especial">
+				
+				<img src="img/novedades.png" alt="novedad2"/>
+				<p>Lorem ipsum dolor sit amet consectetur adipiscing elit dapibus, ridiculus mattis montes condimentum eget nostra erat diam vulputate, convallis sagittis praesent scelerisque posuere elementum facilisis. Quisque nisi faucibus montes pellentesque tellus dictum fringilla tempor hendrerit, etiam integer quis vel orci vivamus duis nisl risus scelerisque, turpis tincidunt dictumst ridiculus dapibus non bibendum sollicitudin. Odio quam felis convallis aenean mi lacinia torquent curae donec cum, senectus sagittis molestie litora volutpat mattis euismod viverra pulvinar eget metus, fringilla orci nascetur eleifend pellentesque hac dapibus arcu aliquet.
+			</article>
+			<article class="especial">
+				
+				<img src="img/novedades.png" alt="novedad2"/>
+				<p>Lorem ipsum dolor sit amet consectetur adipiscing elit dapibus, ridiculus mattis montes condimentum eget nostra erat diam vulputate, convallis sagittis praesent scelerisque posuere elementum facilisis. Quisque nisi faucibus montes pellentesque tellus dictum fringilla tempor hendrerit, etiam integer quis vel orci vivamus duis nisl risus scelerisque, turpis tincidunt dictumst ridiculus dapibus non bibendum sollicitudin. Odio quam felis convallis aenean mi lacinia torquent curae donec cum, senectus sagittis molestie litora volutpat mattis euismod viverra pulvinar eget metus, fringilla orci nascetur eleifend pellentesque hac dapibus arcu aliquet.
+			</article>
 			<article class="especial">
 				<img src="img/novedades.png" alt="novedad1"/>
 				<p>Lorem ipsum dolor sit amet consectetur adipiscing elit dapibus, ridiculus mattis montes condimentum eget nostra erat diam vulputate, convallis sagittis praesent scelerisque posuere elementum facilisis. Quisque nisi faucibus montes pellentesque tellus dictum fringilla tempor hendrerit, etiam integer quis vel orci vivamus duis nisl risus scelerisque, turpis tincidunt dictumst ridiculus dapibus non bibendum sollicitudin. Odio quam felis convallis aenean mi lacinia torquent curae donec cum, senectus sagittis molestie litora volutpat mattis euismod viverra pulvinar eget metus, fringilla orci nascetur eleifend pellentesque hac dapibus arcu aliquet.	
