@@ -76,6 +76,11 @@ $app->delete('/borrarvehiculo/:matricula',function($matricula){
     echo json_encode(borrarvehiculo($matricula),JSON_FORCE_OBJECT);
 });
 
+$app->put('/actualizarclave/:dni',function ($dni) use ($app){
+    $datosClave=$app->request->put();
+    echo json_encode(actualizarclave($dni,$datosClave['clavenueva']),JSON_FORCE_OBJECT);
+});
+
 $app->run();
 ?>
 

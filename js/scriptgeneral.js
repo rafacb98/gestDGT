@@ -72,28 +72,49 @@ $(document).ready(function () {
     }
   });
 
- // De nuevo con ayuda de una variable booleana controlamos cuando hizo click
- var y=false;
- // Cuando haga click en los "mas info" apareceran los distintos tipos de carne
- $('#masinfo').click(function () {
-   if(y)
-   {
-     y=false;
-     $(this).css({"background-color":"#11538C"});
-     $(this).html("Más información");
-     $(".tiposdecarne p").fadeOut();
-   }
-   // Cuando haga otro click desaparecerá
-   else
-   {
-     y=true;
-     $(this).css({"background-color":"red","color":"white"});
-     $(this).html("Menos información");
-     $(".tiposdecarne p").fadeIn();
-   }
-   
 
- })
+
+ $('#mostrar1').click(function(){
+  if($(this).hasClass('fas fa-eye-slash'))
+  {
+    $('#claveantigua').removeAttr('type');
+    $('#mostrar1').addClass('fa-eye').removeClass('fa-eye-slash');
+  }
+
+  else
+  {
+    $('#claveantigua').attr('type','password');
+    $('#mostrar1').addClass('fa-eye-slash').removeClass('fa-eye');
+  }
+   });
+
+   $('#mostrar2').click(function(){
+    if($(this).hasClass('fas fa-eye-slash'))
+    {
+      $('#clavenueva').removeAttr('type');
+      $('#mostrar2').addClass('fa-eye').removeClass('fa-eye-slash');
+    }
+  
+    else
+    {
+      $('#clavenueva').attr('type','password');
+      $('#mostrar2').addClass('fa-eye-slash').removeClass('fa-eye');
+    }
+     });
+
+     $('#mostrar3').click(function(){
+      if($(this).hasClass('fas fa-eye-slash'))
+      {
+        $('#clavenueva2').removeAttr('type');
+        $('#mostrar3').addClass('fa-eye').removeClass('fa-eye-slash');
+      }
+    
+      else
+      {
+        $('#clavenueva2').attr('type','password');
+        $('#mostrar3').addClass('fa-eye-slash').removeClass('fa-eye');
+      }
+       });
 
 
  

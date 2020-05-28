@@ -4,7 +4,26 @@ session_start();
 require "../../funciones_servicios.php";
 
 if (isset($_SESSION['usuario'])){
+	$errorclaveantigua=true;
+	$errorclavenueva=true;
+	$errorclavenueva2=true;
+	$dni=obtener_usuario($_SESSION['usuario'],$_SESSION['clave']);
 
+	if(isset($_POST['btnactualizarperfil']))
+	{
+		$errorclaveantigua=$_POST['claveantigua']=="";
+		$errorclavenueva=($_POST['clavenueva']=="" || ($_POST['clavenueva']!=$_POST['clavenueva2']));
+		$errorclavenueva2=($_POST['clavenueva']=="" || ($_POST['clavenueva']!=$_POST['clavenueva2']));
+
+		$ningunerror=(!$errorclaveantigua&&!$errorclavenueva&&!$errorclavenueva2);
+
+		if($ningunerror)
+		{
+			$_SESSION['clave']=md5($_POST['clavenueva']);
+			actualizarclaveperfil($dni['dni'],$_POST['clavenueva']);
+		}
+
+	}
 	?>
 
 <!DOCTYPE html>
@@ -21,6 +40,7 @@ if (isset($_SESSION['usuario'])){
 	<link rel="icon" href="../../img/logotipo.svg">
 	<link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
 	<script src='../../js/jquery-3.1.1.js'></script>
+	<script src='../../js/sweetalert.min.js'></script>
 	<script src='../../js/scriptgeneral.js'></script>
 	<script type="text/javascript" language="Javascript">
       document.oncontextmenu = function(){return false}
@@ -39,7 +59,7 @@ if (isset($_SESSION['usuario'])){
 	   <?php
 				$saludo=obtener_usuario($_SESSION['usuario'],$_SESSION['clave']);
 			?>
-				<p class='bienvenida'>¡Hola <span class='usuario'><?php echo $saludo['nombre'];?></span>!</p>
+				<p class='bienvenida'>¡Hola <span class='usu'><?php echo $saludo['nombre'];?></span>!</p>
 	   			<li><a href="../..">INICIO</a></li>
 				<li><a href="puntos.php">VER PUNTOS</a></li>
 				<li><a id='seleccionado' href="perfil.php">VER PERFIL</a></li>
@@ -51,6 +71,19 @@ if (isset($_SESSION['usuario'])){
 	</header>
 
 	<main class="epico">
+		<?php
+			if(isset($_SESSION['mensajito']))
+			{
+				
+				if($_SESSION['mensajito']=="actualizado")
+				{
+					echo "<script>swal('¡Bien!', 'Se ha actualizado la clave', 'success')</script>";
+					
+				}	
+				unset($_SESSION['mensajito']);
+			}
+
+			?>
 		<span class="botonsubir"><i class="fas fa-arrow-up"></i></span>
 		<section>
 			
@@ -63,24 +96,73 @@ if (isset($_SESSION['usuario'])){
 				?>
 			</article>
 
-			<button id='masinfo'>Mas información</button>
+			
 
-			<article class='tiposdecarne'>	
-				<p><span class='tipo'>AM:</span> ciclomotores de dos o tres ruedas y cuatriciclos ligeros. La edad mínima para obtenerlo será de quince años cumplidos.</p>
-				<p><span class='tipo'>A1:</span> motocicletas con una cilindrada máxima de 125 cm³ y potencia máxima de 11 kW (algo menos de 15 cv). La edad mínima para obtenerlo será de dieciséis años cumplidos.</p>
-				<p><span class='tipo'>A2:</span> motocicletas con una potencia máxima de 35 kW (algo menos de 47 cv). La edad mínima para obtenerlo será de dieciocho años cumplidos.</p>
-				<p><span class='tipo'>A:</span> motocicletas y triciclos de motor. La edad mínima para obtenerlo será de veinte años cumplidos, veintiuno para el caso de triciclos.</p>
-				<p><span class='tipo'>B:</span> automóviles cuya masa máxima autorizada no exceda de 3.500 kg que estén diseñados y construidos para el transporte de no más de 8 pasajeros además del conductor; conjuntos de vehículos acoplados compuestos por un vehículo tractor de los que autoriza a conducir el permiso de la clase B y un remolque cuya masa máxima autorizada exceda de 750 kg, siempre que la masa máxima autorizada del conjunto no exceda de 4.250 kg, sin perjuicio de las disposiciones que las normas de aprobación de tipo establezcan para estos vehículos; triciclos y cuatriciclos de motor y la edad mínima para obtenerlo será de dieciocho años cumplidos.</p>
-				<p><span class='tipo'>B + E:</span> conjuntos de vehículos acoplados compuestos por un vehículo tractor de los que autoriza a conducir el permiso de la clase B y un remolque o semirremolque cuya masa máxima autorizada no exceda de 3500 kg. La edad mínima para obtenerlo será de dieciocho años cumplidos.</p>
-				<p><span class='tipo'>C1:</span> automóviles distintos de los que autoriza a conducir el permiso de las clases D1 o D, cuya masa máxima autorizada exceda de 3500 kg y no sobrepase los 7500 kg. La edad mínima para obtenerlo será de dieciocho años cumplidos.</p>
-				<p><span class='tipo'>C1 + E:</span> conjuntos de vehículos acoplados compuestos por un vehículo tractor de los que autoriza a conducir el permiso de la clase C1 y un remolque o semirremolque cuya masa máxima autorizada exceda de 750 kg, siempre que la masa máxima autorizada del conjunto así formado no exceda de 12.000 kg; conjuntos de vehículos acoplados compuestos por un vehículo tractor de los que autoriza a conducir el permiso de la clase B y un remolque o semirremolque cuya masa máxima autorizada exceda de 3.500 kg, siempre que la masa máxima autorizada del conjunto no exceda de 12.000 kg, sin perjuicio de las disposiciones que las normas de aprobación de tipo establezcan para estos vehículos; y la edad mínima para obtenerlo será de dieciocho años cumplidos.</p>
-				<p><span class='tipo'>C:</span> automóviles distintos de los que autoriza a conducir el permiso de las clases D1 o D, cuya masa máxima autorizada exceda de 3500 kg. La edad mínima para obtenerlo será de veintiún años cumplidos.
-				<p><span class='tipo'>C + E:</span> conjuntos de vehículos acoplados compuestos por un vehículo tractor de los que autoriza a conducir el permiso de la clase C y un remolque o semirremolque cuya masa máxima autorizada exceda de 750 kg. La edad mínima para obtenerlo será de veintiún años cumplidos.</p>
-				<p><span class='tipo'>D1:</span> automóviles diseñados y construidos para el transporte de no más de 16 pasajeros además del conductor y cuya longitud máxima no exceda de 8 metros. La edad mínima para obtenerlo será de veintiún años cumplidos.</p>
-				<p><span class='tipo'>D1 + E:</span> conjuntos de vehículos acoplados compuestos por un vehículo tractor de los que autoriza a conducir el permiso de la clase D1 y un remolque cuya masa máxima autorizada exceda de 750 kg. La edad mínima para obtenerlo será de veintiún años cumplidos.</p>
-				<p><span class='tipo'>D:</span> autoriza para conducir automóviles diseñados y construidos para el transporte de más de ocho pasajeros además del conductor. La edad mínima para obtenerlo será de veinticuatro años cumplidos.</p>
-				<p><span class='tipo'>D + E:</span> autoriza para conducir conjuntos de vehículos acoplados compuestos por un vehículo tractor de los que autoriza a conducir el permiso de la clase D y un remolque cuya masa máxima autorizada exceda de 750 kg. La edad mínima para obtenerlo será de veinticuatro años cumplidos.</p>
-			</article>
+			
+				<form class="login-form centro" method='post' action='#'>
+				<h3>¿Deseas cambiar tu clave?</h3>
+					<p>Introduzca su clave</p>
+					<p class="clave">
+						<label for="claveantigua" class="labelusuclave centro">
+						<i class="fas fa-lock"></i>
+						<span><i class="fas fa-eye-slash" id="mostrar1"></i></span>
+						</label>
+						<input id="claveantigua" placeholder="Clave" type="password" name="claveantigua">
+						<?php
+							if(isset($_POST["btnactualizarperfil"]) && $errorclaveantigua) 
+							{
+								if ($_POST["clavenueva"]=="")
+									echo "<p class='erroraniadir'>Por favor, rellene el campo</p>";
+								else
+									echo "<p class='erroraniadir'>Esta no es su clave, escribela de nuevo</p>";	
+							}
+
+						?>
+						
+					</p>
+					<p>Introduzca su clave nueva</p>
+					<p class="clave">
+						<label for="clavenueva" class="labelusuclave centro">
+						<i class="fas fa-lock"></i>
+						<span><i class="fas fa-eye-slash" id="mostrar2"></i></span>
+						</label>
+						<input id="clavenueva" placeholder="Clave" type="password" name="clavenueva">
+						<?php
+							if(isset($_POST["btnactualizarperfil"]) && $errorclavenueva) 
+							{
+								if ($_POST["clavenueva"]=="")
+									echo "<p class='erroraniadir'>Por favor, rellene el campo</p>";
+								else
+									echo "<p class='erroraniadir'>No coinciden las claves</p>";	
+							}
+
+						?>
+						
+					</p>
+					<p>Introduzca de nuevo su clave nueva</p>
+					<p class="clave">
+						<label for="clavenueva2" class="labelusuclave centro">
+						<i class="fas fa-lock"></i>
+						<span><i class="fas fa-eye-slash" id="mostrar3"></i></span>
+						</label>
+						<input id="clavenueva2" placeholder="Clave" type="password" name="clavenueva2">
+						<?php
+							if(isset($_POST["btnactualizarperfil"]) && $errorclavenueva2) 
+							{
+								if ($_POST["clavenueva2"]=="")
+									echo "<p class='erroraniadir'>Por favor, rellene el campo</p>";
+								else
+									echo "<p class='erroraniadir'>No coinciden las claves</p>";	
+							}
+
+						?>
+						
+					</p>
+					<button type='submit' id="btnactualizarperfil" class="centro" name="btnactualizarperfil">
+						Actualizar
+					</button>
+				</form>
+			
 				
 		</section>	
 	</main>

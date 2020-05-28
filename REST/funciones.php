@@ -489,4 +489,33 @@ function infomulta($fechahora,$dni,$matricula)
         
         }
    }
+
+   function actualizarclave ($dni,$clave)
+   {
+       $con=conectar();
+       if (!$con)
+       {
+           return array("mensaje_error"=>"Imposible conectar. Error ".mysqli_connect_errno());
+       }
+       else
+       {
+           mysqli_set_charset($con,"utf8");
+           $consulta="update usuario set clave='".md5($clave)."' where dni='" . $dni . "'";
+           $resultado=mysqli_query($con,$consulta);
+           
+           if(!$resultado)
+           {
+               $mensaje="Imposisble realizar la consulta. Error ".mysqli_errno($con);
+               mysqli_close($con);
+               return array("mensaje_error"=>$mensaje);
+           }
+           
+           else
+           {
+               mysqli_close($con);
+               return array("actualizado"=>"Se ha actualizado");
+           }
+       }
+   }
+
 ?>

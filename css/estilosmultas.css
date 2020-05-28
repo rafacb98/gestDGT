@@ -279,7 +279,7 @@ table.bt tbody td:last-of-type .bt-content {
 }
 
 #opciones{
-  background-color:red;
+  background-color:rgb(218, 6, 6);
 }
 
 #nuevam{
@@ -359,7 +359,7 @@ form{
   text-align: center;
 }
 .popupcerrar:hover {
-  background-color: red;
+  background-color: rgb(218, 6, 6);
 }
 .edita {
   cursor: pointer;
@@ -375,7 +375,7 @@ form{
   padding:0.5em;
   border-radius: 0.5em;
   font-size: 20px;
-  background-color:red;
+  background-color:rgb(218, 6, 6);
   color:white;
 }
 

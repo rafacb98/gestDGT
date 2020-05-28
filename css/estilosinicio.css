@@ -217,21 +217,6 @@ main section .especial p{
 }
 
 
-/* Aside con los puntos */
-aside{
-  padding:1em;
-  flex-basis:50%;
-  border:2px solid red;
-  margin-top:8%;
-  order:-1;
-}
-
-
-
-aside h2{
-  color:#11538C;
-}
-
 
 
 /* Pie de página */

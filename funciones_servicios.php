@@ -356,6 +356,26 @@ function quitarvehiculo($matricula)
            
     } 
 }
+
+function actualizarclaveperfil($dni,$clave)
+{
+    $datosClave['clavenueva']=$clave;
+        
+
+    $obj=consumir_servicio_REST(ruta."actualizarclave/".urlencode($dni),"PUT",$datosClave);
+    if (isset($obj->mensaje_error))
+    {
+        die($obj->mensaje_error);
+    }
+    else
+    {
+        $_SESSION['mensajito']="actualizado";
+        header("Location: ../conductor/perfil.php");
+        exit;
+
+                
+    } 
+}
  
 ?>
 

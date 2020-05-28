@@ -105,14 +105,14 @@
 }
 
   .errorvacio{
-    color:red;
+    color:rgb(218, 6, 6);
   }
 
   .errorsesion{
     color:white;
     flex-basis:100%;
     text-align: center;
-    background-color:red;
+    background-color:rgb(218, 6, 6);
     padding:1em;
     margin-bottom:1em;
     font-weight: bold;
