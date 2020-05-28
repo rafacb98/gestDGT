@@ -85,13 +85,13 @@ function verperfil($dni)
     }
     else
     { 
-        echo "<p>Nombre:<span class='datos'> ".$obj->dni->nombre."</span></p>";
-        echo "<p>Apellidos:<span class='datos'> ".$obj->dni->apellidos."</span></p>";
-        echo "<p>DNI:<span class='datos'> ".$obj->dni->dni."</span></p>";
-        echo "<p>Dirección:<span class='datos'> ".$obj->dni->direccion."</span></p>";
-        echo "<p>Teléfono:<span class='datos'> ".$obj->dni->telefono."</span></p>";
-        echo "<p>Nº de carné:<span class='datos'> ".$obj->dni->n_carne."</span></p>";
-        echo "<p class='espe'>Año expedición de carné:<span class='datos'> ".$obj->dni->anio_exp_carne."</span></p>";
+        echo "<p>Nombre:<span class='datos'><input type='text' readonly value='".$obj->dni->nombre."'/></span></p>";
+        echo "<p>Apellidos:<span class='datos'><input readonly type='text' value='".$obj->dni->apellidos."'/></span></p>";
+        echo "<p>DNI:<span class='datos'><input readonly type='text' value='".$obj->dni->dni."'/></span></p>";
+        echo "<p>Dirección:<span class='datos'><input type='text' readonly value='".$obj->dni->direccion."'/></span></p>";
+        echo "<p>Teléfono:<span class='datos'><input type='text' readonly value='".$obj->dni->telefono."'/></span></p>";
+        echo "<p>Nº de carné:<span class='datos'><input type='text' readonly value='".$obj->dni->n_carne."'/></span></p>";
+        echo "<p class='espe'>Año expedición de carné:<span class='datos'><input type='text' readonly value='".$obj->dni->anio_exp_carne."'/></span></p>";
         //echo "<p class='espe'>Tipo de carné:<span class='datos'> ".$obj->dni->descripcion."</span></p>";
         
            
@@ -110,7 +110,7 @@ function vercarnes($dni)
         echo "<p class='espe'>Tipo de carné:";
         foreach($obj->dni as $fila)
         {
-            echo "<span class='datos'> | ".$fila->descripcion." | </span>";
+            echo "<span class='datos'><input class='tipocar' readonly type='text' value='".$fila->descripcion."'/></span>";
         
         }
         echo "</p>";      

@@ -190,26 +190,34 @@ h2,h3{
 }
 
 article p{
-  font-weight: bold;
-  margin:0 auto;
+ 
+  
   font-size: 20px;
   margin-top:0.5em;
 }
 
-
+.datos>input[value]{
+  color:#11538C;
+}
 
 .datos{
   color:#11538C;
 }
 
 article{
+  border-radius: 0.2em;
  padding: 1em;
-  
+ border:1px dashed rgb(179, 179, 0);
+  background-color:rgb(245, 245, 167);
   display:flex;
   flex-direction: column;
   flex-wrap: wrap;
   flex-basis:100%;
   margin-top:0.5em;
+}
+
+.tipocar{
+  margin-top:0.2em;
 }
 
 
@@ -284,6 +292,10 @@ section{
 
 form{
   width:100%;
+  margin-top:2em;
+  padding:0.5em;
+  background:lightgray;
+  border-radius: 0.3em;
 }
 
 .centro{
@@ -315,7 +327,7 @@ form{
 .clave{
   display: flex;
   width: 100%;
-  
+
   margin: 5px;
   border: 2px solid transparent;
 }
@@ -335,7 +347,7 @@ input{
   color: #606060;
   border: none;
   border-radius:0px 5px 5px 0px;
-  background: rgba(0,0,0,0.1);
+  background: white;
   min-height:2em;
   width: 100%;
   padding: 10px;
@@ -348,7 +360,7 @@ form p{
 
 input:hover,
 input:focus{
-  background:rgba(0,0,0,0.15);
+
   outline: none;
 }
 
@@ -364,7 +376,7 @@ input:focus{
 .clave span {
   position: absolute;
   right: 5px;
-  top: 12px;
+  top: 4px;
   text-transform: uppercase;
   cursor: pointer;
   padding: 2px 10px;
@@ -414,13 +426,15 @@ button:active{
     flex-direction: row;
   }
 
+  
+
   .primero{
     order:-2;
   }
   
  article p{
-   margin:0;
-   width: 50%;
+  margin-left:0.4em;
+   width: 49%;
    margin-top:0.5em;
  }
 
@@ -512,15 +526,20 @@ height:1.4em;
 
 
 article{
-  background-color: aqua;
+  background-color: lightgray;
+  border:none;
+  border-radius: 0.3em;
 }
 
+
+
 article p{
- margin:0;
- width: 33%;
- text-align: center;
- margin-top:0.5em;
-}
+  width: 32%;
+ 
+  margin-left:0.5em;
+   
+   margin-top:0.5em;
+ }
 
 .espe{
   flex-grow:1;
