@@ -42,7 +42,7 @@ if (isset($_SESSION['usuario'])){
 			?>
 				<p class='bienvenida'>¡Hola <span class='usuario'><?php echo $saludo['nombre'];?></span>!</p>
 					<li><a id='seleccionado' href="index.php">INICIO</a></li>
-					<li><a href="#">VER PERFIL</a></li>
+					<li><a href="vistas/agente/perfil.php">VER PERFIL</a></li>
 					<li><a href="vistas/agente/multas.php">GESTIONAR MULTAS</a></li>
 			</ul>
 	

@@ -95,8 +95,9 @@ require "../../funciones_servicios.php";
 				$saludo=obtener_usuario($_SESSION['usuario'],$_SESSION['clave']);
 			?>
 				<p class='bienvenida'>¡Hola <span class='usuario'><?php echo $saludo['nombre'];?></span>!</p>
-	   			<li><a href="../..">Inicio</a></li>
-				<li><a id='seleccionado' href="multas.php">Multas</a></li>
+					<li><a href="../..">INICIO</a></li>
+					<li><a  href="perfil.php">VER PERFIL</a></li>
+					<li><a id='seleccionado' href="multas.php">GESTIONAR MULTAS</a></li>
        </ul>
 		
 		<img src="../../img/logotipo.svg" alt="logo" />
