@@ -11,6 +11,7 @@ require "../../funciones_servicios.php";
     $errorobservaciones=true;
 	$errordniconductor=true;
 	$errormatriculavehiculo=true;
+	$errorterminos=true;
     
 
 	if(isset($_POST['btnaniadirnuevamulta']))
@@ -21,9 +22,10 @@ require "../../funciones_servicios.php";
 		$errorobservaciones=$_POST['obs']=="";
 		$errordniconductor=($_POST['dniconductor']=="" || !validardni($_POST['dniconductor']));
 		$errormatriculavehiculo=$_POST['matricula']=="";
+		$errorterminos=empty($_POST['terminos']);
 		
 
-		$errorTotal=(!$errorfechayhora && !$errorprecio && !$errorobservaciones && !$errordniconductor && !$errormatriculavehiculo);
+		$errorTotal=(!$errorfechayhora && !$errorprecio && !$errorobservaciones && !$errordniconductor && !$errormatriculavehiculo && !$errorterminos);
 
 		if($errorTotal)
 		{
@@ -159,6 +161,11 @@ require "../../funciones_servicios.php";
 							<option value="finalizada">Finalizada</option>
 						</select>
 					</div>
+						
+					<div id=contenidocortoespecial>
+						<label for="foto">Foto</label>
+						<input for="foto" type="file" name="foto" />
+					</div>
 					<div class="textarea">
 						<label for="obs">Observaciones</label>
 						<textarea id="obs" type="text" name="obs"><?php if(isset($_POST["obs"])) echo $_POST["obs"];?></textarea>
@@ -166,13 +173,18 @@ require "../../funciones_servicios.php";
 						
                         if(isset($_POST["btnaniadirnuevamulta"]) && $_POST["obs"]=="") echo "<p class='erroraniadir'>Por favor, rellene el campo</p>";
 					?>
-					</div>	
-					<div id=contenidocortoespecial>
-						<label for="foto">Foto</label>
-						<input for="foto" type="file" name="foto" />
 					</div>
-					<button class='btnnueva' name='btnaniadirnuevamulta' type="submit">Añadir</button>
+					<div class="contenidoterminos">
+						
+						<label for="terminos"><input class='terminos' value='si' type="checkbox" name="terminos" id="terminos" />He leido y acepto la <a href='#'>política de privacidad</a> y los <a href='#'>términos y condiciones</a></label>
+						<?php
+						
+                        if(isset($_POST["btnaniadirnuevamulta"]) && empty($_POST['terminos'])) echo "<p class='erroraniadir'>Por favor, acepte los términos</p>";
+					?>
+					</div>
 					<button class='btnnueva2' name='btncancelarnuevamulta' type="submit" formaction='multas.php'>Cancelar</button>
+					<button class='btnnueva' name='btnaniadirnuevamulta' type="submit">Añadir</button>
+					
 				</div>
 			</form>	
 

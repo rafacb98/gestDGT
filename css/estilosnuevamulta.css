@@ -184,9 +184,9 @@ main {
 }
 
 h2{
-	text-align:center;
+	font-weight: 550;
 	flex-basis:100%;
-  padding:1em;
+ margin-bottom:1em;
 }
 
 
@@ -199,28 +199,29 @@ form{
 }
 
 .btnnueva2{
-  box-shadow: 0 0 1em black;
+  border-color:transparent;
+
   margin-top:0.5em;
   padding:0.5em;
-  border-radius: 0.8em;
+  border-radius: 0.3em;
   font-size: 20px;
   background-color:rgb(218, 6, 6);
   color:white;
   width:100%;
-  border-radius: 20px;
+  border-radius: 12px;
 	transition: 0.3s all ease;
 
 }
 
 .btnnueva{
-  box-shadow: 0 0 1em black;
+  border-color:transparent;
   margin-top:0.5em;
   padding:0.5em;
-  border-radius: 0.8em;
+  border-radius: 0.3em;
   font-size: 20px;
   background-color:#11538C;
   color:white;width:100%;
-  border-radius: 20px;
+  border-radius: 12px;
 	transition: 0.3s all ease;
 }
 
@@ -277,6 +278,9 @@ section{
   flex-direction: column;
   flex-wrap: wrap;
   padding:2em;
+  background-color:lightgray;
+  margin:1em 1em 1em 1em;
+  border-radius:0.5em;
 }
 
 
@@ -286,14 +290,13 @@ section{
 }
 
 form {
-	background: linear-gradient(to left top, rgb(198, 199, 201), #0DFF82);
-	background-repeat: no-repeat;
-	border-radius: 20px;
+	background-color: white;
+	border-radius: 0.5em;
 	-webkit-box-shadow: 5px 5px 20px 0px rgba(173,173,173,1);
 	-moz-box-shadow: 5px 5px 20px 0px rgba(173,173,173,1);
 	box-shadow: 5px 5px 20px 0px rgba(173,173,173,1);
   padding: 2.5em; 
-  width:90%;
+  width:100%;
 }
 
 label {
@@ -301,12 +304,12 @@ label {
 	margin-bottom: 5px;
 }
 
-input{
+input:not(.terminos){
 	padding: 10px 16px;
 	width: 100%;
 	outline: 0;
 	margin-bottom: 20px;
-	border-radius: 20px;
+	border-radius: 0.4em;
 	border: 0;
 	background-color: #ededed;
 	font-size: 14px;
@@ -315,17 +318,32 @@ input{
 	appearance:none;
 }
 
+
+
 select {
   appearance: none;
   padding: 10px 16px;
-  -webkit-border-radius: 150px;
-  -moz-border-radius: 150px;
-  border-radius: 150px;
+  -webkit-border-radius: 0.4em;
+  -moz-border-radius: 0.4em;
+  border-radius: 0.4em;
   border: 0;
   background-color: #104A7F;
   color: #ffffff;
   font-size: 18px;
 }
+
+#contenidocortoespecial{
+  margin-top: 20px;
+}
+
+.contenidoterminos{
+  width: 100%;
+}
+
+.contenidoterminos label input{
+  margin-right:0.8em;
+}
+
 
 select:focus {
   outline: none;
@@ -378,7 +396,10 @@ textarea {
   }
 
   #contenidocortoespecial {
-		width: 100%;
+    width: 45%;
+   
+      margin-top: 0;
+    
   }
  
   

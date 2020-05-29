@@ -180,12 +180,14 @@ main {
 h2{
 	text-align:center;
 	flex-basis:100%;
-	padding:1em;
+  padding:1em;
+  font-weight: 550;
 }
 
 h3{
   text-align:center;
-	flex-basis:100%;
+  flex-basis:100%;
+  font-weight: 550;
 }
 
 
