@@ -11,7 +11,8 @@ if (isset($_SESSION['usuario'])){
 
 	if(isset($_POST['btnactualizarperfil']))
 	{
-		$errorclaveantigua=$_POST['claveantigua']=="";
+		
+		$errorclaveantigua=($_POST['claveantigua']=="" || (md5($_POST['claveantigua'])!=$_SESSION['clave']));
 		$errorclavenueva=($_POST['clavenueva']=="" || ($_POST['clavenueva']!=$_POST['clavenueva2']));
 		$errorclavenueva2=($_POST['clavenueva']=="" || ($_POST['clavenueva']!=$_POST['clavenueva2']));
 
