@@ -108,7 +108,7 @@ if (isset($_SESSION['usuario'])){
 						<i class="fas fa-lock"></i>
 						<span><i class="fas fa-eye-slash" id="mostrar1"></i></span>
 						</label>
-						<input id="claveantigua" placeholder="Clave" type="password" name="claveantigua">
+						<input id="claveantigua" placeholder="Clave antigua" type="password" name="claveantigua">
 						<?php
 							if(isset($_POST["btnactualizarperfil"]) && $errorclaveantigua) 
 							{
@@ -127,7 +127,7 @@ if (isset($_SESSION['usuario'])){
 						<i class="fas fa-lock"></i>
 						<span><i class="fas fa-eye-slash" id="mostrar2"></i></span>
 						</label>
-						<input id="clavenueva" placeholder="Clave" type="password" name="clavenueva">
+						<input id="clavenueva" placeholder="Clave nueva" type="password" name="clavenueva">
 						<?php
 							if(isset($_POST["btnactualizarperfil"]) && $errorclavenueva) 
 							{
@@ -146,7 +146,7 @@ if (isset($_SESSION['usuario'])){
 						<i class="fas fa-lock"></i>
 						<span><i class="fas fa-eye-slash" id="mostrar3"></i></span>
 						</label>
-						<input id="clavenueva2" placeholder="Clave" type="password" name="clavenueva2">
+						<input id="clavenueva2" placeholder="Clave nueva" type="password" name="clavenueva2">
 						<?php
 							if(isset($_POST["btnactualizarperfil"]) && $errorclavenueva2) 
 							{

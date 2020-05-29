@@ -460,35 +460,7 @@ function infomulta($fechahora,$dni,$matricula)
         }
     }
 
-   function borrarvehiculo($matricula)
-   {
-        $con=conectar();
-        if (!$con)
-        {
-            return array("mensaje_error"=>"Imposible conectar. Error ".mysqli_connect_errno());
-        }
-        else
-        {
-            mysqli_set_charset($con,"utf8");
-            $consulta="delete from vehiculo where matricula='".$matricula."'";
-            $resultado=mysqli_query($con,$consulta);
-            
-            if(!$resultado)
-            {
-                $mensaje="Imposisble realizar la consulta. Error ".mysqli_errno($con);
-                mysqli_close($con);
-                return array("mensaje_error"=>$mensaje);
-            }
-            else
-            {
-                $mensajeexitoso="Se borró el vehiculo con matricula ".$matricula;
-                mysqli_close($con);
-                return array("mensajeborrado"=>$mensajeexitoso);
-            }
-        
-        
-        }
-   }
+
 
    function actualizarclave ($dni,$clave)
    {
@@ -517,5 +489,61 @@ function infomulta($fechahora,$dni,$matricula)
            }
        }
    }
+   
+   function multavehiculo($matricula,$dni)
+	{
+        $con=conectar();
 
+        if (!$con)
+        {
+            return array("mensaje_error"=>"Imposible conectar. Error ".mysqli_connect_errno());
+        }
+        else
+        {
+            mysqli_set_charset($con,"utf8");
+            $consulta = "select * from multa where dni_conductor='" . $dni . "' and matricula_vehiculo='".$matricula."'";
+            $resultado=mysqli_query($con,$consulta);
+    
+            if(!$resultado)
+            {
+                $mensaje="Imposisble realizar la consulta. Error ".mysqli_errno($con);
+                mysqli_close($con);
+                return array("mensaje_error"=>$consulta);
+            }
+            else
+            {
+                $multas=Array();
+                while ($fila=mysqli_fetch_assoc($resultado))
+                {
+                    $multas[]=$fila;
+                }
+    
+                mysqli_free_result($resultado);
+                mysqli_close($con);
+                return array("multas"=>$multas);
+            }
+        }
+    }
+    
+    function haymulta($matricula,$dni)
+	{
+		$con = conectar();
+
+    if (!$con) {
+        return array("mensaje_error" => "Imposible conectar. Error " . mysqli_connect_errno());
+    } else {
+        mysqli_set_charset($con, "utf8");
+        $consulta = "select * from multa where dni_conductor='" . $dni . "' and matricula_vehiculo='".$matricula."'";
+        $resultado = mysqli_query($con, $consulta);
+
+        if ($fila = mysqli_fetch_assoc($resultado)) {
+            mysqli_close($con);
+            return array("hay" => $fila);
+        } else {
+            mysqli_close($con);
+            return array("mensaje" => false);
+        }
+    }
+	}
+   
 ?>

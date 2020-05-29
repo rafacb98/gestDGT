@@ -59,7 +59,7 @@ if (isset($_SESSION['usuario'])){
 
 			<h2>PUNTOS</h2>
 			<aside id="a1">
-				<h2>Tus puntos actuales son</h2>
+				<h3>Tus puntos actuales son</h3>
 				<?php echo verpuntos($_SESSION['usuario']);?>
 			
 			</aside>

@@ -144,14 +144,15 @@ function vercadavehiculo($dni)
         foreach($obj->vehiculos as $fila)
         {
             echo "<article>";
-                echo "<p><span class='detalle'>Matricula: </span>".$fila->matricula." </p>";
-                echo "<p><span class='detalle'>Bastidor: </span>".$fila->bastidor. "</p>";
-                echo "<p><span class='detalle'>Marca: </span>".$fila->marca. "</p>";
-                echo "<p><span class='detalle'>Modelo: </span>".$fila->modelo. "</p>";
-                echo "<p><span class='detalle'>Año: </span>".$fila->anio. "</p>";
-                echo "<p><span class='detalle'>Tipo: </span>".$fila->tipo. "</p>";
-                echo "<form action='#verborrar' method='post'><button class='btneliminar' name='btneliminar' value='$fila->matricula' onclick='return confirm(\"¿Quieres quitar el vehículo con matricula: ".$fila->matricula."?\");'><i class='fas fa-minus-circle'></i>&nbsp;&nbsp;&nbsp;&nbsp;Quitar vehículo</button></form>";
+                echo "<p><span class='detalle'>Matricula: </span><input readonly type='text' value='".$fila->matricula."'/> </p>";
+                echo "<p><span class='detalle'>Bastidor: </span><input readonly type='text' value='".$fila->bastidor."'/></p>";
+                echo "<p><span class='detalle'>Marca: </span><input readonly type='text' value='".$fila->marca."'/></p>";
+                echo "<p><span class='detalle'>Modelo: </span><input readonly type='text' value='".$fila->modelo."'/></p>";
+                echo "<p><span class='detalle'>Año: </span><input readonly type='text' value='".$fila->anio."'/></p>";
+                echo "<p><span class='detalle'>Tipo: </span><input readonly type='text' value='".$fila->tipo."'/></p>";
+                echo "<form action='multaspendientes.php' method='post'><button class='btnvermulta' name='btnvermulta' value='$fila->matricula'>Ver multas</button></form>";
             echo "</article>";
+            
         }
           
     }
@@ -182,7 +183,7 @@ function todasmultas(){
             echo "<td>". $fila->estado . "</td>"; 
             echo "<td>". $fila->observaciones . "</td>"; 
             echo "<td><img src='../../img/fotos_multa/".$fila->foto."' /></td>"; 
-            echo "<td><form method='post' action='#botonpavereditar'><button class='edita btnnueva' name='btneditar' value='".$fila->fecha_y_hora."-".$fila->dni_conductor."-".$fila->matricula_vehiculo."'><i class='fas fa-user-edit'></i></button></form></td>"; 
+            echo "<td><form method='post' action='#botonpavereditar'><button class='edita btnnueva' name='btneditar' value='".$fila->fecha_y_hora."-".$fila->dni_conductor."-".$fila->matricula_vehiculo."'><i class='fas fa-pencil-alt'></i></button></form></td>"; 
             echo  '</tr>';
         }
           echo "</tbody>";
@@ -341,21 +342,7 @@ function multafinalizada($fechahora,$dni,$matricula,$estado)
     } 
 }
 
-function quitarvehiculo($matricula)
-{
-    $obj=consumir_servicio_REST(ruta."borrarvehiculo/".urlencode($matricula),"DELETE");
-    if (isset($obj->mensaje_error))
-    {
-        die($obj->mensaje_error);
-    }
-    else
-    {
-        $_SESSION['mensajito']="eliminado";
-        header("Location: ../conductor/vehiculos.php");
-        exit;
-           
-    } 
-}
+
 
 function actualizarclaveperfil($dni,$clave)
 {
@@ -376,6 +363,63 @@ function actualizarclaveperfil($dni,$clave)
                 
     } 
 }
+
+function vercadamultavehiculo($matricula,$dni)
+{
+    $obj=consumir_servicio_REST(ruta."multavehiculo/".urlencode($matricula)."/".urlencode($dni),"GET");
+    if (isset($obj->mensaje_error))
+    {
+        die($obj->mensaje_error);
+    }
+    else
+    { 
+        
+        foreach($obj->multas as $fila)
+        {
+            echo "<article>";
+                echo "<p><span class='detalle'>Fecha/Hora: </span><input readonly type='text' value='".$fila->fecha_y_hora."'/> </p>";
+                echo "<p><span class='detalle'>DNI: </span><input readonly type='text' value='".$fila->dni_conductor."'/></p>";
+                echo "<p><span class='detalle'>Matricula: </span><input readonly type='text' value='".$fila->matricula_vehiculo."'/></p>";
+                echo "<p><span class='detalle'>Precio: </span><input readonly type='text' value='".$fila->precio."'/></p>";
+                echo "<p><span class='detalle'>Estado: </span><input readonly type='text' value='".$fila->estado."'/></p>";
+                echo "<p id='obs'><span class='detalle'>Observaciones: </span><textarea readonly>".$fila->observaciones."</textarea></p>";
+                echo "<p id='fotovehiculomulta'><span id='detallevehiculomulta' class='detalle'>Foto: </span><img src='../../img/fotos_multa/".$fila->foto."' /></p>";
+                if ($fila->estado=="en tramite" || $fila->estado=="tramitada")
+                {
+                   
+                        echo "<button formaction='multaspendientes.php' class='btnpagar' name='btnpagar'>Pagar</button>";
+                 
+                }
+            echo "</article>";
+            
+        }
+          
+    }
+}
+
+function tienemulta($matricula,$dni)
+{
+    $obj=consumir_servicio_REST(ruta."haymulta/".urlencode($matricula)."/".urlencode($dni),"GET");
  
+    if(isset($obj->mensaje_error))
+    {
+        die($obj->mensaje_error);
+    }
+          
+      else if(isset($obj->mensaje))
+      {
+        return false;
+      }
+          
+      else 
+      {
+
+        return $obj->hay;
+      }
+    
+        
+    
+}
+
 ?>
 

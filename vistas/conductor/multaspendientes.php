@@ -15,7 +15,7 @@ if (isset($_SESSION['usuario'])){
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<title>Vehículos | GestDGT+</title>
+	<title>Multas pendientes | GestDGT+</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="author" content="Rafael Carrillo Bonilla">
 	<meta name="description" content="GestDGT+">
@@ -63,28 +63,27 @@ if (isset($_SESSION['usuario'])){
 		<section>
 			
 			
-			<h2>VEHÍCULOS</h2>
+			<h2>MULTAS PENDIENTES</h2>
 			<?php 
-				if(isset($_SESSION['mensajito']))
+				$obj=tienemulta($_POST['btnvermulta'],$saludo["dni"]);
+				if($obj==false)
 				{
-					if($_SESSION['mensajito']=="eliminado")
+					echo "<p id='nohay'>No se han encontrado multas pendientes.</p>";
+				}
+				else
+				{
+					if(isset($_POST['btnvermulta']))
 					{
-						echo "<script>swal('¡Bien!', 'Se ha eliminado el vehiculo', 'success')</script>";		
-					}	
-					unset($_SESSION['mensajito']);
+						vercadamultavehiculo($_POST['btnvermulta'],$saludo["dni"]);
+					}
 				}
-
-				vertotalvehiculos($_SESSION['usuario']); 
-				if(isset($_POST['btnvermulta']))
-				{
-					vercadamultavehiculo($_POST['btnvermulta'],$saludo["dni"]);
-				}
-				vercadavehiculo($_SESSION['usuario']);
-				
 				
 
 			?>
-		
+			<form class='formvolver' action='vehiculos.php' method='post'>
+				
+				<button class='btnvolvervehiculos' name='btnvolver'>Volver</button>
+			</form>
 		</section>	
 	</main>
 	

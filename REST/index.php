@@ -72,13 +72,19 @@ $app->put('/actualizarfinalizada/:fechahora/:dni/:matricula',function ($fechahor
     echo json_encode(actualizarfinalizada($fechahora,$dni,$matricula,$datosMulta['estado']),JSON_FORCE_OBJECT);
 });
 
-$app->delete('/borrarvehiculo/:matricula',function($matricula){
-    echo json_encode(borrarvehiculo($matricula),JSON_FORCE_OBJECT);
-});
+
 
 $app->put('/actualizarclave/:dni',function ($dni) use ($app){
     $datosClave=$app->request->put();
     echo json_encode(actualizarclave($dni,$datosClave['clavenueva']),JSON_FORCE_OBJECT);
+});
+
+$app->get('/multavehiculo/:matricula/:dni',function($matricula,$dni){
+    echo json_encode(multavehiculo($matricula,$dni),JSON_FORCE_OBJECT);
+});
+
+$app->get('/haymulta/:matricula/:dni',function($matricula,$dni){
+    echo json_encode(haymulta($matricula,$dni),JSON_FORCE_OBJECT);
 });
 
 $app->run();
