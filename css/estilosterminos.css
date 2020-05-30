@@ -19,7 +19,6 @@ header{
   height:auto;
 }
 
-
 /* Menu hamburguesa */
 header label#hamburguesa{
   position:relative;
@@ -123,8 +122,9 @@ header label#hamburguesa span:nth-child(3){
   color: white !important;
 }
 
+
 header img {
-  width: 8em;
+  width: auto;
   height: 18vh;
   z-index: 1;
   margin-right: auto; 
@@ -153,7 +153,7 @@ display:none;
    color:white;
  }
  
- .usuario{
+ .usu{
    color:rgb(218, 6, 6);
    font-weight: bold;
  }
@@ -183,64 +183,53 @@ main {
   flex: 1;
 }
 
-h2{
-	font-weight: 550;
+h2,h3{
+	text-align:center;
 	flex-basis:100%;
- margin-bottom:1em;
+  padding:1em;
+  font-weight: 550;
 }
 
-
-
-
-form{
-  margin-left: auto;
-  margin-right: auto;
-  
-}
-
-.btnnueva2{
-  border-color:transparent;
-
-  margin-top:1em;
-  padding:0.5em;
-  border-radius: 0.3em;
-  font-size: 20px;
-  background-color:rgb(218, 6, 6);
-  color:white;
-  width:100%;
-  border-radius: 12px;
-	transition: 0.3s all ease;
-
-}
-
-.btnnueva{
-  border-color:transparent;
-  margin-top:1em;
-  padding:0.5em;
-  border-radius: 0.3em;
-  font-size: 20px;
+h3{
   background-color:#11538C;
-  color:white;width:100%;
-  border-radius: 12px;
-	transition: 0.3s all ease;
-}
-
-.btnnueva:hover{
-  background-color: rgb(16, 74, 126);
-}
-
-.btnnueva:active{
-  cursor:pointer;
-  position:relative;
-  top:1px;
-}
-
-.erroraniadir{
   color:white;
-  background-color:rgb(218, 6, 6);
-  padding:0.5em;
-  margin-bottom:2em;
 }
+article p{
+ 
+
+  font-size: 20px;
+  margin-top:0.5em;
+}
+
+.datos>input[value]{
+  color:#11538C;
+}
+
+.datos{
+  color:#11538C;
+}
+
+article{
+  border-radius: 0.2em;
+ padding: 1em;
+background-color: white;
+  
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-basis:100%;
+  margin-top:2em;
+}
+
+section{
+  padding:2em;
+  background-color:lightgray;
+  margin:1.5em 1.5em 1.5em 1.5em;
+  border-radius:0.4em;
+}
+
+
+
 
 /* Pie de página */
 footer{
@@ -259,8 +248,6 @@ footer ul{
   flex-wrap: wrap;
   justify-content: center;
 }
-
-
 footer ul li{
   margin-left:1em;
 }
@@ -273,15 +260,6 @@ footer ul li span{
   color:white;
 }
 
-section{
-  display:flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  padding:2em;
-  background-color:lightgray;
-  margin:1em 1em 1em 1em;
-  border-radius:0.5em;
-}
 
 
 /* Botón de subir hacia arriba */
@@ -289,82 +267,7 @@ section{
   display:none;
 }
 
-form {
-	background-color: white;
-	border-radius: 0.5em;
-	-webkit-box-shadow: 5px 5px 20px 0px rgba(173,173,173,1);
-	-moz-box-shadow: 5px 5px 20px 0px rgba(173,173,173,1);
-	box-shadow: 5px 5px 20px 0px rgba(173,173,173,1);
-  padding: 2.5em; 
-  width:100%;
-}
 
-label {
-	display: block;
-	margin-bottom: 5px;
-}
-
-input:not(.terminos){
-	padding: 10px 16px;
-	width: 100%;
-	outline: 0;
-	margin-bottom: 20px;
-	border-radius: 0.4em;
-	border: 0;
-	background-color: #ededed;
-	font-size: 14px;
-	-webkit-appearance:none;
-	-moz-appearance:none;
-	appearance:none;
-}
-
-
-
-select {
-  appearance: none;
-  padding: 10px 16px;
-  -webkit-border-radius: 0.4em;
-  -moz-border-radius: 0.4em;
-  border-radius: 0.4em;
-  border: 0;
-  background-color: #104A7F;
-  color: #ffffff;
-  font-size: 18px;
-}
-
-#contenidocortoespecial{
-  margin-top: 20px;
-}
-
-.contenidoterminos{
-  width: 100%;
-}
-
-.contenidoterminos label input{
-  margin-right:0.8em;
-}
-
-
-select:focus {
-  outline: none;
-}
-
-.textarea {
-	width: 100%;
-}
-
-textarea {
-	padding: 10px;
-	width: 100%;
-	outline: 0;
-	margin-bottom: 20px;
-	border-radius: 20px;
-	border: 0;
-	background-color: #ededed;
-	font-size: 14px;
-  height: 100px;
-  resize:none;
-}
 
 
 
@@ -381,39 +284,29 @@ textarea {
   }
 
 
+  header img{
+    width: auto;
+  }
+
   header label#hamburguesa span{
-    left:-14em;
+    left:-13em;
   }
 
-  .contenidolargo {
-		display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-	}
-	
-	.contenidocorto {
-		width: 45%;
+  article{
+    flex-direction: row;
   }
 
-  #contenidocortoespecial {
-    width: 45%;
-   
-      margin-top: 0;
-    
+  
+
+  .primero{
+    order:-2;
   }
+  
  
-  
-  .btnnueva,.btnnueva2{
-    width:49%;
-  }
-  
+
+ 
  
 }
-
-
-
-
-
 
 /*--------------------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------------------*/
@@ -462,8 +355,7 @@ header  ul#menu{
   background-color: transparent;
   color: white !important;
 }
-
-
+  
 .botonsubir {
 	display:none;
 	padding:20px;
@@ -487,12 +379,16 @@ padding:0;
   font-size: 25px;
 }
 
+
+
 .cerrarsesion{
   font-size: 32px;
 
 height:1.4em;
   color:white;
 }
+
+
 
 
 
@@ -531,6 +427,13 @@ height:1.4em;
   .fija5{
     margin-top:0.8em;
   }
+
+
+
+
+
+
+
 }
 
 /*--------------------------------------------------------------------------------------------------------------------------*/

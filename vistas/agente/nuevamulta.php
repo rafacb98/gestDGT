@@ -98,8 +98,9 @@ require "../../funciones_servicios.php";
 			?>
 				<p class='bienvenida'>¡Hola <span class='usuario'><?php echo $saludo['nombre'];?></span>!</p>
 					<li><a href="../..">INICIO</a></li>
-					<li><a  href="perfil.php">VER PERFIL</a></li>
-					<li><a id='seleccionado' href="multas.php">GESTIONAR MULTAS</a></li>
+					<li><a href="perfil.php">VER PERFIL</a></li>
+					<li><a href="multas.php">GESTIONAR MULTAS</a></li>
+					<li><a id='seleccionado' href="nuevamulta.php">NUEVA MULTA</a></li>
        </ul>
 		
 		<img src="../../img/logotipo.svg" alt="logo" />
@@ -176,7 +177,7 @@ require "../../funciones_servicios.php";
 					</div>
 					<div class="contenidoterminos">
 						
-						<label for="terminos"><input class='terminos' value='si' type="checkbox" name="terminos" id="terminos" />He leido y acepto la <a href='#'>política de privacidad</a> y los <a href='#'>términos y condiciones</a></label>
+						<label for="terminos"><input class='terminos' value='si' type="checkbox" name="terminos" id="terminos" />He leido y acepto la <a href='terminosyprivacidad.php'>política de privacidad</a> y los <a href='terminosyprivacidad.php'>términos y condiciones</a></label>
 						<?php
 						
                         if(isset($_POST["btnaniadirnuevamulta"]) && empty($_POST['terminos'])) echo "<p class='erroraniadir'>Por favor, acepte los términos</p>";

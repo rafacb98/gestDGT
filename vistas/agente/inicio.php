@@ -44,6 +44,7 @@ if (isset($_SESSION['usuario'])){
 					<li><a id='seleccionado' href="index.php">INICIO</a></li>
 					<li><a href="vistas/agente/perfil.php">VER PERFIL</a></li>
 					<li><a href="vistas/agente/multas.php">GESTIONAR MULTAS</a></li>
+					<li><a href="vistas/agente/nuevamulta.php">NUEVA MULTA</a></li>
 			</ul>
 	
 		

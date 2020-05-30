@@ -68,6 +68,7 @@ if (isset($_SESSION['usuario'])){
 					<li><a href="../..">INICIO</a></li>
 					<li><a  href="perfil.php">VER PERFIL</a></li>
 					<li><a id='seleccionado' href="multas.php">GESTIONAR MULTAS</a></li>
+					<li><a href="nuevamulta.php">NUEVA MULTA</a></li>
        </ul>
 		
 		<img src="../../img/logotipo.svg" alt="logo" />
@@ -80,9 +81,6 @@ if (isset($_SESSION['usuario'])){
 			
 			<h2>GESTIÓN DE MULTAS</h2>
 		
-			<form action='nuevamulta.php' method='post'>
-				<button class='btnnueva' name='btnnuevamulta'><i class="fas fa-plus-circle"></i></button><span id='nuevam'>&nbsp;&nbsp;&nbsp;&nbsp;NUEVA MULTA</span>
-			</form>	
 
 			<?php 
 			if(isset($_SESSION['mensajito']))
