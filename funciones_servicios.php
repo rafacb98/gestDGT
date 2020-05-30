@@ -192,27 +192,24 @@ function todasmultas(){
     }
     else
     { 
-        echo "<table id='multas'>";
-        echo "<thead>";
-            echo "<tr><th>Fecha/Hora</th><th>DNI</th><th>Matrícula</th><th>Precio</th><th>Estado</th><th>Observaciones</th><th>Foto</th><th id='opciones'>Opciones</th></tr>";
-        echo "</thead>";
-        echo "<tbody>";
-      
+        
+
         foreach($obj->multas as $fila)
         {
-            echo "<tr>";
-            echo "<td>". $fila->fecha_y_hora . "</td>"; 
-            echo "<td>". $fila->dni_conductor . "</td>"; 
-            echo "<td>". $fila->matricula_vehiculo . "</td>"; 
-            echo "<td>". $fila->precio . "</td>"; 
-            echo "<td>". $fila->estado . "</td>"; 
-            echo "<td>". $fila->observaciones . "</td>"; 
-            echo "<td><img src='../../img/fotos_multa/".$fila->foto."' /></td>"; 
-            echo "<td><form method='post' action='#botonpavereditar'><button class='edita btnnueva' name='btneditar' value='".$fila->fecha_y_hora."-".$fila->dni_conductor."-".$fila->matricula_vehiculo."'><i class='fas fa-pencil-alt'></i></button></form></td>"; 
-            echo  '</tr>';
-        }
-          echo "</tbody>";
-          echo "</table>";
+            echo "<article class='especial'>";
+            echo "<img src='../../img/fotos_multa/".$fila->foto."' />";
+            echo "<div class='contenidomulta'>";
+            echo "<p>Fecha/Hora: <input readonly type='text' value='". $fila->fecha_y_hora . "'/></p>"; 
+            echo "<p>DNI: <input readonly type='text' value='". $fila->dni_conductor . "'/></p>"; 
+            echo "<p>Matricula: <input readonly type='text' value='". $fila->matricula_vehiculo . "'/></p>"; 
+            echo "<p>Precio: <input readonly type='text' value='". $fila->precio . "'/></p>"; 
+            echo "<p>Estado: <input readonly type='text' value='". $fila->estado . "'/></p>"; 
+            echo "<p>Observaciones: <textarea readonly> $fila->observaciones</textarea></p>"; 
+            echo "<form method='post' action='#botonpavereditar'><button class='edita btnnueva' name='btneditar' value='".$fila->fecha_y_hora."-".$fila->dni_conductor."-".$fila->matricula_vehiculo."'><i class='fas fa-pencil-alt'></i></button></form>"; 
+            echo "</div>";
+            echo "</article>";
+        }     
+          
           
     }
 }

@@ -61,42 +61,42 @@ if (isset($_SESSION['usuario'])){
 				<h2 id='novedades'>ÚLTIMAS NOTICIAS</h2>
 				
 				<article class="especial">
-					<img src="img/novedades.PNG" alt="polo1"/>
-					<p>Lorem ipsum dolor sit amet consectetur adipiscing elit dapibus, ridiculus mattis montes condimentum eget nostra erat diam vulputate, convallis sagittis praesent scelerisque posuere elementum facilisis. Quisque nisi faucibus montes pellentesque tellus dictum fringilla tempor hendrerit, etiam integer quis vel orci vivamus duis nisl risus scelerisque, turpis tincidunt dictumst ridiculus dapibus non bibendum sollicitudin. Odio quam felis convallis aenean mi lacinia torquent curae donec cum, senectus sagittis molestie litora volutpat mattis euismod viverra pulvinar eget metus, fringilla orci nascetur eleifend pellentesque hac dapibus arcu aliquet.	
+					<img src="img/novedades.png" alt="novedad1"/>
+					<p>Lorem ipsum dolor sit amet consectetur adipiscing elit dapibus, ridiculus mattis montes condimentum eget nostra erat diam vulputate, convallis sagittis praesent scelerisque posuere elementum facilisis. Quisque nisi faucibus montes pellentesque tellus dictum fringilla tempor hendrerit, etiam integer quis vel orci vivamus duis nisl risus scelerisque, turpis tincidunt dictumst ridiculus dapibus non bibendum sollicitudin. Odio quam felis convallis aenean mi lacinia torquent curae donec cum, senectus sagittis molestie litora volutpat mattis euismod viverra pulvinar eget metus, fringilla orci nascetur eleifend pellentesque hac dapibus arcu aliquet.</p>	
 				</article>
 				<article class="especial">
 					
-					<img src="img/novedades.PNG" alt="mercedes1"/>
-					<p>Lorem ipsum dolor sit amet consectetur adipiscing elit dapibus, ridiculus mattis montes condimentum eget nostra erat diam vulputate, convallis sagittis praesent scelerisque posuere elementum facilisis. Quisque nisi faucibus montes pellentesque tellus dictum fringilla tempor hendrerit, etiam integer quis vel orci vivamus duis nisl risus scelerisque, turpis tincidunt dictumst ridiculus dapibus non bibendum sollicitudin. Odio quam felis convallis aenean mi lacinia torquent curae donec cum, senectus sagittis molestie litora volutpat mattis euismod viverra pulvinar eget metus, fringilla orci nascetur eleifend pellentesque hac dapibus arcu aliquet.
+					<img src="img/novedades.png" alt="novedad2"/>
+					<p>Lorem ipsum dolor sit amet consectetur adipiscing elit dapibus, ridiculus mattis montes condimentum eget nostra erat diam vulputate, convallis sagittis praesent scelerisque posuere elementum facilisis. Quisque nisi faucibus montes pellentesque tellus dictum fringilla tempor hendrerit, etiam integer quis vel orci vivamus duis nisl risus scelerisque, turpis tincidunt dictumst ridiculus dapibus non bibendum sollicitudin. Odio quam felis convallis aenean mi lacinia torquent curae donec cum, senectus sagittis molestie litora volutpat mattis euismod viverra pulvinar eget metus, fringilla orci nascetur eleifend pellentesque hac dapibus arcu aliquet.</p>
 				</article>
 				<article class="especial">
 					
-					<img src="img/novedades.PNG" alt="mercedes1"/>
-					<p>Lorem ipsum dolor sit amet consectetur adipiscing elit dapibus, ridiculus mattis montes condimentum eget nostra erat diam vulputate, convallis sagittis praesent scelerisque posuere elementum facilisis. Quisque nisi faucibus montes pellentesque tellus dictum fringilla tempor hendrerit, etiam integer quis vel orci vivamus duis nisl risus scelerisque, turpis tincidunt dictumst ridiculus dapibus non bibendum sollicitudin. Odio quam felis convallis aenean mi lacinia torquent curae donec cum, senectus sagittis molestie litora volutpat mattis euismod viverra pulvinar eget metus, fringilla orci nascetur eleifend pellentesque hac dapibus arcu aliquet.
+					<img src="img/novedades.png" alt="novedad3"/>
+					<p>Lorem ipsum dolor sit amet consectetur adipiscing elit dapibus, ridiculus mattis montes condimentum eget nostra erat diam vulputate, convallis sagittis praesent scelerisque posuere elementum facilisis. Quisque nisi faucibus montes pellentesque tellus dictum fringilla tempor hendrerit, etiam integer quis vel orci vivamus duis nisl risus scelerisque, turpis tincidunt dictumst ridiculus dapibus non bibendum sollicitudin. Odio quam felis convallis aenean mi lacinia torquent curae donec cum, senectus sagittis molestie litora volutpat mattis euismod viverra pulvinar eget metus, fringilla orci nascetur eleifend pellentesque hac dapibus arcu aliquet.</p>
 				</article>
 				<article class="especial">
 					
-					<img src="img/novedades.PNG" alt="mercedes1"/>
-					<p>Lorem ipsum dolor sit amet consectetur adipiscing elit dapibus, ridiculus mattis montes condimentum eget nostra erat diam vulputate, convallis sagittis praesent scelerisque posuere elementum facilisis. Quisque nisi faucibus montes pellentesque tellus dictum fringilla tempor hendrerit, etiam integer quis vel orci vivamus duis nisl risus scelerisque, turpis tincidunt dictumst ridiculus dapibus non bibendum sollicitudin. Odio quam felis convallis aenean mi lacinia torquent curae donec cum, senectus sagittis molestie litora volutpat mattis euismod viverra pulvinar eget metus, fringilla orci nascetur eleifend pellentesque hac dapibus arcu aliquet.
+					<img src="img/novedades.png" alt="novedad4"/>
+					<p>Lorem ipsum dolor sit amet consectetur adipiscing elit dapibus, ridiculus mattis montes condimentum eget nostra erat diam vulputate, convallis sagittis praesent scelerisque posuere elementum facilisis. Quisque nisi faucibus montes pellentesque tellus dictum fringilla tempor hendrerit, etiam integer quis vel orci vivamus duis nisl risus scelerisque, turpis tincidunt dictumst ridiculus dapibus non bibendum sollicitudin. Odio quam felis convallis aenean mi lacinia torquent curae donec cum, senectus sagittis molestie litora volutpat mattis euismod viverra pulvinar eget metus, fringilla orci nascetur eleifend pellentesque hac dapibus arcu aliquet.</p>
 				</article>
 				<article class="especial">
-					<img src="img/novedades.PNG" alt="polo1"/>
-					<p>Lorem ipsum dolor sit amet consectetur adipiscing elit dapibus, ridiculus mattis montes condimentum eget nostra erat diam vulputate, convallis sagittis praesent scelerisque posuere elementum facilisis. Quisque nisi faucibus montes pellentesque tellus dictum fringilla tempor hendrerit, etiam integer quis vel orci vivamus duis nisl risus scelerisque, turpis tincidunt dictumst ridiculus dapibus non bibendum sollicitudin. Odio quam felis convallis aenean mi lacinia torquent curae donec cum, senectus sagittis molestie litora volutpat mattis euismod viverra pulvinar eget metus, fringilla orci nascetur eleifend pellentesque hac dapibus arcu aliquet.	
-				</article>
-				<article class="especial">
-					
-					<img src="img/novedades.PNG" alt="mercedes1"/>
-					<p>Lorem ipsum dolor sit amet consectetur adipiscing elit dapibus, ridiculus mattis montes condimentum eget nostra erat diam vulputate, convallis sagittis praesent scelerisque posuere elementum facilisis. Quisque nisi faucibus montes pellentesque tellus dictum fringilla tempor hendrerit, etiam integer quis vel orci vivamus duis nisl risus scelerisque, turpis tincidunt dictumst ridiculus dapibus non bibendum sollicitudin. Odio quam felis convallis aenean mi lacinia torquent curae donec cum, senectus sagittis molestie litora volutpat mattis euismod viverra pulvinar eget metus, fringilla orci nascetur eleifend pellentesque hac dapibus arcu aliquet.
+					<img src="img/novedades.png" alt="novedad5"/>
+					<p>Lorem ipsum dolor sit amet consectetur adipiscing elit dapibus, ridiculus mattis montes condimentum eget nostra erat diam vulputate, convallis sagittis praesent scelerisque posuere elementum facilisis. Quisque nisi faucibus montes pellentesque tellus dictum fringilla tempor hendrerit, etiam integer quis vel orci vivamus duis nisl risus scelerisque, turpis tincidunt dictumst ridiculus dapibus non bibendum sollicitudin. Odio quam felis convallis aenean mi lacinia torquent curae donec cum, senectus sagittis molestie litora volutpat mattis euismod viverra pulvinar eget metus, fringilla orci nascetur eleifend pellentesque hac dapibus arcu aliquet.</p>	
 				</article>
 				<article class="especial">
 					
-					<img src="img/novedades.PNG" alt="mercedes1"/>
-					<p>Lorem ipsum dolor sit amet consectetur adipiscing elit dapibus, ridiculus mattis montes condimentum eget nostra erat diam vulputate, convallis sagittis praesent scelerisque posuere elementum facilisis. Quisque nisi faucibus montes pellentesque tellus dictum fringilla tempor hendrerit, etiam integer quis vel orci vivamus duis nisl risus scelerisque, turpis tincidunt dictumst ridiculus dapibus non bibendum sollicitudin. Odio quam felis convallis aenean mi lacinia torquent curae donec cum, senectus sagittis molestie litora volutpat mattis euismod viverra pulvinar eget metus, fringilla orci nascetur eleifend pellentesque hac dapibus arcu aliquet.
+					<img src="img/novedades.png" alt="novedad6"/>
+					<p>Lorem ipsum dolor sit amet consectetur adipiscing elit dapibus, ridiculus mattis montes condimentum eget nostra erat diam vulputate, convallis sagittis praesent scelerisque posuere elementum facilisis. Quisque nisi faucibus montes pellentesque tellus dictum fringilla tempor hendrerit, etiam integer quis vel orci vivamus duis nisl risus scelerisque, turpis tincidunt dictumst ridiculus dapibus non bibendum sollicitudin. Odio quam felis convallis aenean mi lacinia torquent curae donec cum, senectus sagittis molestie litora volutpat mattis euismod viverra pulvinar eget metus, fringilla orci nascetur eleifend pellentesque hac dapibus arcu aliquet.</p>
 				</article>
 				<article class="especial">
 					
-					<img src="img/novedades.PNG" alt="mercedes1"/>
-					<p>Lorem ipsum dolor sit amet consectetur adipiscing elit dapibus, ridiculus mattis montes condimentum eget nostra erat diam vulputate, convallis sagittis praesent scelerisque posuere elementum facilisis. Quisque nisi faucibus montes pellentesque tellus dictum fringilla tempor hendrerit, etiam integer quis vel orci vivamus duis nisl risus scelerisque, turpis tincidunt dictumst ridiculus dapibus non bibendum sollicitudin. Odio quam felis convallis aenean mi lacinia torquent curae donec cum, senectus sagittis molestie litora volutpat mattis euismod viverra pulvinar eget metus, fringilla orci nascetur eleifend pellentesque hac dapibus arcu aliquet.
+					<img src="img/novedades.png" alt="novedad7"/>
+					<p>Lorem ipsum dolor sit amet consectetur adipiscing elit dapibus, ridiculus mattis montes condimentum eget nostra erat diam vulputate, convallis sagittis praesent scelerisque posuere elementum facilisis. Quisque nisi faucibus montes pellentesque tellus dictum fringilla tempor hendrerit, etiam integer quis vel orci vivamus duis nisl risus scelerisque, turpis tincidunt dictumst ridiculus dapibus non bibendum sollicitudin. Odio quam felis convallis aenean mi lacinia torquent curae donec cum, senectus sagittis molestie litora volutpat mattis euismod viverra pulvinar eget metus, fringilla orci nascetur eleifend pellentesque hac dapibus arcu aliquet.</p>
+				</article>
+				<article class="especial">
+					
+					<img src="img/novedades.png" alt="novedad8"/>
+					<p>Lorem ipsum dolor sit amet consectetur adipiscing elit dapibus, ridiculus mattis montes condimentum eget nostra erat diam vulputate, convallis sagittis praesent scelerisque posuere elementum facilisis. Quisque nisi faucibus montes pellentesque tellus dictum fringilla tempor hendrerit, etiam integer quis vel orci vivamus duis nisl risus scelerisque, turpis tincidunt dictumst ridiculus dapibus non bibendum sollicitudin. Odio quam felis convallis aenean mi lacinia torquent curae donec cum, senectus sagittis molestie litora volutpat mattis euismod viverra pulvinar eget metus, fringilla orci nascetur eleifend pellentesque hac dapibus arcu aliquet.</p>
 				</article>
 	
 				

@@ -194,7 +194,7 @@ h3{
 
 
 
-/* Articulos de página inicio, ventas y alquiler*/
+
 .especial{	
 	display:flex;
 	flex-wrap:wrap;
@@ -258,14 +258,6 @@ footer ul li span{
   margin-bottom:auto;
 }
 
-
-.categorias{
-  background-color: #2A2A2C;
-  display:flex;
-  flex-flow:column;
-  align-items: center;
- 
-}
 
 
 section{
