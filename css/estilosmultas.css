@@ -167,7 +167,9 @@ display:none;
    
  }
 
-
+ .cerrarsesion:hover{
+  color:rgb(218, 6, 6);
+ }
 
 
 
@@ -294,10 +296,11 @@ form{
 }
 
 .btnnueva{
-  box-shadow: 0 0 1em black;
+  border-color:transparent;
+  box-shadow: 0 0 0.3em black;
   margin-top:0.5em;
   padding:0.5em;
-  border-radius: 0.8em;
+  border-radius: 0.5em;
   font-size: 20px;
   background-color:#11538C;
   color:white;
@@ -371,6 +374,7 @@ form{
 }
 
 .btneditarestado{
+ 
   box-shadow: 0 0 1em black;
   margin-top:0.5em;
   padding:0.5em;
@@ -427,6 +431,9 @@ section{
   display:none;
 }
 
+.botonsubir:hover{
+  background: rgb(1, 57, 107); 
+}
 
 /*--------------------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------------------*/

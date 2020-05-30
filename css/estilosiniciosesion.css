@@ -119,6 +119,7 @@
   }
 
   #btnentrar{
+    border-color:transparent;
     background:#11538C;
     color: #eee;
     font-size: 1.5em;
@@ -129,7 +130,7 @@
     cursor: pointer;
     transition: background 0.5s;
     margin-top: 3%;
-    box-shadow: 0 0 1em black;
+    box-shadow: 0 0 0.2em black;
   }
   
   #btnentrar:hover{

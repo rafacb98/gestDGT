@@ -167,7 +167,9 @@ display:none;
    
  }
 
-
+ .cerrarsesion:hover{
+  color:rgb(218, 6, 6);
+ }
 
 
 
@@ -224,6 +226,7 @@ article{
 
 
 button{
+  border-color:transparent;
   margin-top:0.5em;
   width: 40%;
   margin-left: 30%;
@@ -236,11 +239,12 @@ button{
 }
 
 button:hover{
+  cursor:pointer;
   background-color: rgb(16, 74, 126);
 }
 
 button:active{
-  cursor:pointer;
+  
   position:relative;
   top:1px;
 }
@@ -282,6 +286,10 @@ section{
 /* Botón de subir hacia arriba */
 .botonsubir {
   display:none;
+}
+
+.botonsubir:hover{
+  background: rgb(1, 57, 107); 
 }
 
 .erroraniadir{

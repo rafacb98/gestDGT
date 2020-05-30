@@ -160,7 +160,9 @@ display:none;
   
 }
 
-
+.cerrarsesion:hover{
+  color:rgb(218, 6, 6);
+ }
 
 #numeropuntos{
   text-align: center;
@@ -295,6 +297,10 @@ section{
 /* Botón de subir hacia arriba */
 .botonsubir {
   display:none;
+}
+
+.botonsubir:hover{
+  background: rgb(1, 57, 107); 
 }
 
 
