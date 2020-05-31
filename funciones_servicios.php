@@ -205,7 +205,7 @@ function todasmultas(){
             echo "<p>Precio: <input readonly type='text' value='". $fila->precio . "'/></p>"; 
             echo "<p>Estado: <input readonly type='text' value='". $fila->estado . "'/></p>"; 
             echo "<p>Observaciones: <textarea readonly> $fila->observaciones</textarea></p>"; 
-            echo "<form method='post' action='#botonpavereditar'><button class='edita btnnueva' name='btneditar' value='".$fila->fecha_y_hora."-".$fila->dni_conductor."-".$fila->matricula_vehiculo."'><i class='fas fa-pencil-alt'></i></button></form>"; 
+            echo "<form method='post' action='editarmultas.php'><button class='edita btnnueva' name='btneditar' value='".$fila->fecha_y_hora."-".$fila->dni_conductor."-".$fila->matricula_vehiculo."'><i class='fas fa-pencil-alt'></i></button></form>"; 
             echo "</div>";
             echo "</article>";
         }     
@@ -441,6 +441,69 @@ function tienemulta($matricula,$dni)
     
         
     
+}
+
+function infovehiculomultado($matricula)
+{
+    $obj=consumir_servicio_REST(ruta."vehiculomultado/".urlencode($matricula),"GET");
+    if (isset($obj->mensaje_error))
+    {
+        die($obj->mensaje_error);
+    }
+    else
+    { 
+        echo "<p>Matricula:<input type='text' readonly value='".$obj->vehiculomultado->matricula."'/></p>";
+        echo "<p>Bastidor:<input readonly type='text' value='".$obj->vehiculomultado->bastidor."'/></p>";
+        echo "<p>Marca:<input readonly type='text' value='".$obj->vehiculomultado->marca."'/></p>";
+        echo "<p>Modelo:<input type='text' readonly value='".$obj->vehiculomultado->modelo."'/></p>";
+        echo "<p>Año:<input type='text' readonly value='".$obj->vehiculomultado->anio."'/></p>";
+        echo "<p>Tipo:<input type='text' readonly value='".$obj->vehiculomultado->tipo."'/></p>";
+        
+        
+           
+    }
+}
+
+function infoconductormultado($dni)
+{
+    $obj=consumir_servicio_REST(ruta."conductormultado/".urlencode($dni),"GET");
+    if (isset($obj->mensaje_error))
+    {
+        die($obj->mensaje_error);
+    }
+    else
+    { 
+        echo "<p>DNI:<input type='text' readonly value='".$obj->conductormultado->dni."'/></p>";
+        echo "<p>Nombre:<input readonly type='text' value='".$obj->conductormultado->nombre."'/></p>";
+        echo "<p>Apellidos:<input readonly type='text' value='".$obj->conductormultado->apellidos."'/></p>";
+        echo "<p>Direccion:<input type='text' readonly value='".$obj->conductormultado->direccion."'/></p>";
+        echo "<p>Teléfono:<input type='text' readonly value='".$obj->conductormultado->telefono."'/></p>";
+        echo "<p>Año expedicion carné:<input type='text' readonly value='".$obj->conductormultado->anio_exp_carne."'/></p>";
+        echo "<p>Número de carné:<input type='text' readonly value='".$obj->conductormultado->n_carne."'/></p>";
+        
+        
+           
+    }
+}
+
+function modificarestadomulta($fechahora,$dni,$matricula,$estado)
+{
+    $datosEstado['estadoeditar']=$estado;
+        
+
+    $obj=consumir_servicio_REST(ruta."actualizarestadomulta/".urlencode($fechahora)."/".urlencode($dni)."/".urlencode($matricula),"PUT",$datosEstado);
+    if (isset($obj->mensaje_error))
+    {
+        die($obj->mensaje_error);
+    }
+    else
+    {
+        $_SESSION['mensajito']="actualizado";
+        header("Location: ../agente/multas.php");
+        exit;
+
+                
+    } 
 }
 
 ?>

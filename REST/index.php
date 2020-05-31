@@ -87,6 +87,19 @@ $app->get('/haymulta/:matricula/:dni',function($matricula,$dni){
     echo json_encode(haymulta($matricula,$dni),JSON_FORCE_OBJECT);
 });
 
+$app->get('/vehiculomultado/:matricula', function ($matricula)  {
+    echo json_encode(vehiculomultado($matricula),JSON_FORCE_OBJECT);
+});
+
+$app->get('/conductormultado/:matricula', function ($matricula)  {
+    echo json_encode(conductormultado($matricula),JSON_FORCE_OBJECT);
+});
+
+$app->put('/actualizarestadomulta/:fechahora/:dni/:matricula',function ($fechahora,$dni,$matricula) use ($app){
+    $datosEstado=$app->request->put();
+    echo json_encode(actualizarestadomulta($fechahora,$dni,$matricula,$datosEstado['estadoeditar']),JSON_FORCE_OBJECT);
+});
+
 $app->run();
 ?>
 

@@ -546,4 +546,113 @@ function infomulta($fechahora,$dni,$matricula)
     }
 	}
    
+    function vehiculomultado($matricula)
+{
+    $con=conectar();
+
+    if (!$con)
+    {
+    return array("mensaje_error"=>"Imposible conectar. Error ".mysqli_connect_errno());
+    }
+    else
+    {
+        mysqli_set_charset($con,"utf8");
+        $consulta="select * from multa join vehiculo on multa.matricula_vehiculo=vehiculo.matricula and vehiculo.matricula='".$matricula."'";
+        $resultado=mysqli_query($con,$consulta);
+
+        if(!$resultado)
+        {
+            $mensaje="Imposisble realizar la consulta. Error ".mysqli_errno($con);
+            mysqli_close($con);
+            return array("mensaje_error"=>$mensaje);
+        }
+        else
+        {
+            if(mysqli_num_rows($resultado)>0)
+            {
+                $fila=mysqli_fetch_assoc($resultado);
+                mysqli_free_result($resultado);
+                mysqli_close($con);
+                return array("vehiculomultado"=>$fila);
+
+            }
+            else
+            {
+                mysqli_free_result($resultado);
+                mysqli_close($con);
+                return array("mensaje"=>"No existe el vehiculo con matricula ".$matricula);
+            }
+        }
+    }
+}
+
+
+function conductormultado($dni)
+{
+    $con=conectar();
+
+    if (!$con)
+    {
+    return array("mensaje_error"=>"Imposible conectar. Error ".mysqli_connect_errno());
+    }
+    else
+    {
+        mysqli_set_charset($con,"utf8");
+        $consulta="select * from multa join usuario on multa.dni_conductor=usuario.dni and usuario.dni='".$dni."'";
+        $resultado=mysqli_query($con,$consulta);
+
+        if(!$resultado)
+        {
+            $mensaje="Imposisble realizar la consulta. Error ".mysqli_errno($con);
+            mysqli_close($con);
+            return array("mensaje_error"=>$mensaje);
+        }
+        else
+        {
+            if(mysqli_num_rows($resultado)>0)
+            {
+                $fila=mysqli_fetch_assoc($resultado);
+                mysqli_free_result($resultado);
+                mysqli_close($con);
+                return array("conductormultado"=>$fila);
+
+            }
+            else
+            {
+                mysqli_free_result($resultado);
+                mysqli_close($con);
+                return array("mensaje"=>"No existe el conductor con dni ".$dni);
+            }
+        }
+    }
+}
+
+function actualizarestadomulta ($fechahora,$dni,$matricula,$estado)
+{
+    $con=conectar();
+    if (!$con)
+    {
+        return array("mensaje_error"=>"Imposible conectar. Error ".mysqli_connect_errno());
+    }
+    else
+    {
+        mysqli_set_charset($con,"utf8");
+        $consulta="update multa set estado='".$estado."' where fecha_y_hora='" . $fechahora . "' and dni_conductor='" . $dni . "' and matricula_vehiculo='".$matricula."'";
+        $resultado=mysqli_query($con,$consulta);
+        
+        if(!$resultado)
+        {
+            $mensaje="Imposisble realizar la consulta. Error ".mysqli_errno($con);
+            mysqli_close($con);
+            return array("mensaje_error"=>$mensaje);
+        }
+        
+        else
+        {
+            mysqli_close($con);
+            return array("actualizado"=>"Se ha actualizado");
+        }
+    }
+}
+
 ?>
