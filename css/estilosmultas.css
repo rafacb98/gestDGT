@@ -407,9 +407,9 @@ section{
  
   
   main section .especial img{
-  
-   height:350px;
-    flex-basis: 50%;
+    width:280px;
+   height:280px;
+    flex-basis: 20%;
     
   
   }
@@ -417,7 +417,7 @@ section{
   main section .especial .contenidomulta{
   
    
-    flex-basis: 50%;
+    flex-basis: 80%;
     
   
   }
@@ -507,13 +507,20 @@ header  ul#menu{
 main section .especial img{
   
   height:auto;
-   
+   flex-basis:50%;
    
  
  }
 
 
 
+ main section .especial .contenidomulta{
+  
+ 
+   flex-basis:50%;
+   
+ 
+ }
 
 
 
