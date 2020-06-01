@@ -76,7 +76,7 @@ if($intruso)
           <i class="fas fa-user"></i>
         </label>
         <input id="usuariop" placeholder="DNI"  type="text" name="usuario" value='<?php if(isset($_POST['usuario'])) echo $_POST['usuario'];?>'>
-        <?php if(isset($_POST['btnentrar'])&&$_POST['usuario']=="") echo "<p class='errorvacio'><i class='fas fa-exclamation-triangle'></i>&nbsp;&nbsp;&nbsp;&nbsp;Rellene el campo</p>";?>
+        <?php if(isset($_POST['btnentrar'])&&$_POST['usuario']=="") echo "<p class='errorvacio' id='errordni'><i class='fas fa-exclamation-triangle'></i>&nbsp;&nbsp;&nbsp;&nbsp;Rellene el campo</p>";?>
       </p>
 
       <p class="clave">
@@ -85,7 +85,7 @@ if($intruso)
         </label>
         <input id="clavep" placeholder="Clave" type="password" name="clave" value=''>
         
-        <?php if(isset($_POST['btnentrar'])&&$_POST['clave']=="") echo "<p class='errorvacio'><i class='fas fa-exclamation-triangle'></i>&nbsp;&nbsp;&nbsp;&nbsp;Rellene el campo</p>";?>
+        <?php if(isset($_POST['btnentrar'])&&$_POST['clave']=="") echo "<p class='errorvacio' id='errorclave'><i class='fas fa-exclamation-triangle'></i>&nbsp;&nbsp;&nbsp;&nbsp;Rellene el campo</p>";?>
       </p>
       <button type='submit' id="btnentrar" class="centro" name="btnentrar">
         Acceder
