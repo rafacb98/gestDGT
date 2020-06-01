@@ -43,7 +43,7 @@ if (isset($_SESSION['usuario'])){
     </ul>
 		
 	
-		<img src="img/logotipo.svg" alt="logo" />
+		<a class='enlace' href='index.php'><img src="img/logotipo.svg" alt="logo" /></a>
 		
 			<a href='cerrarsesion.php' class='cerrarsesion'><i class="fas fa-sign-out-alt"></i></a>
 	</header>

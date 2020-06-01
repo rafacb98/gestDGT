@@ -103,7 +103,7 @@ require "../../funciones_servicios.php";
 					<li><a id='seleccionado' href="nuevamulta.php">NUEVA MULTA</a></li>
        </ul>
 		
-		<img src="../../img/logotipo.svg" alt="logo" />
+	   <a class='enlace' href='../..'><img src="../../img/logotipo.svg" alt="logo" /></a>
 		<a href='../../cerrarsesion.php' class='cerrarsesion'><i class="fas fa-sign-out-alt"></i></a>
 	</header>
 

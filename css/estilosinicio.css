@@ -122,7 +122,7 @@ header label#hamburguesa span:nth-child(3){
 }
 
 
-header img {
+header .enlace img,header .enlace {
   width: auto;
   height: 18vh;
   z-index: 1;
@@ -289,7 +289,7 @@ section{
     flex-wrap: wrap;
   }
 
-  header img{
+  header .enlace img,header .enlace{
     width: auto;
   }
 
@@ -333,7 +333,7 @@ section{
   header{
     height:8em;
   }
-  header img{
+  header .enlace img,header .enlace{
     margin-left:5%;  
     width: auto;
     height: 100%;
