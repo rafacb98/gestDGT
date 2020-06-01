@@ -49,7 +49,6 @@ if (isset($_SESSION['usuario'])){
 
 	   			<p class='bienvenida'>¡Hola <span class='usuario'><?php echo $saludo['nombre'];?></span>!</p>
 	   			<li><a href="../..">INICIO</a></li>
-				<li><a href="puntos.php">VER PUNTOS</a></li>
 				<li><a href="perfil.php">VER PERFIL</a></li>
 				<li><a id='seleccionado' href="vehiculos.php">VER VEHICULOS</a></li>
        </ul>

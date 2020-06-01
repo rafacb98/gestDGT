@@ -116,6 +116,7 @@ header label#hamburguesa span:nth-child(3){
   display:inline-block;
 }
 
+
 #seleccionado {
   background-color: #11538C;
   color: white !important;
@@ -132,44 +133,43 @@ header .enlace img,header .enlace {
 html {
   min-height:100%;
   position: relative;
+ 
 }
 
 h2 span{
 display:none;
 }
 
-
+.primero{
+  
+  display:flex;
+  flex-direction: row;
+  flex-basis:100%; 
+}
 
 .bienvenida{
- font-size: 22px;
- padding:0.5em;
-  color:white;
-}
-
-.usuario{
-  color:white;
-  font-weight: bold;
-}
-
-.cerrarsesion{
-  font-size: 34px;
-  margin-top:1.3em;
-  margin-right:0.5em;
-  height:50%;
-  color:white;
-  
-}
-
-.cerrarsesion:hover{
-  color:rgb(218, 6, 6);
+  font-size: 22px;
+  padding:0.5em;
+   color:white;
+ }
+ 
+ .usu{
+   color:white;
+   font-weight: bold;
+ }
+ 
+ .cerrarsesion{
+   font-size: 34px;
+   margin-top:1.3em;
+   margin-right:0.5em;
+   height:50%;
+   color:white;
+   
  }
 
-#numeropuntos{
-  text-align: center;
-  color:black;
-  text-decoration: underline;
-  font-size: 25px;
-}
+ .cerrarsesion:hover{
+  color:rgb(218, 6, 6);
+ }
 
 
 
@@ -185,60 +185,69 @@ main {
   flex: 1;
 }
 
-section{
-  background-color: lightgray;
-  margin:1.5em 1.5em 1.5em 1.5em;
-  border-radius: 0.5em;
-}
-
-
-article{
-  display:flex;
-  flex-wrap:wrap;
-  flex-direction:column;
-  margin-top:2em;
-  text-align: justify;
-  background-color: white;
-  padding:1em;
-  border-radius: 0.5em;
- 
-}
-
-h2{
+h2,h3{
 	text-align:center;
 	flex-basis:100%;
   padding:1em;
   font-weight: 550;
 }
 
-h3{
-  text-align:center;
-  flex-basis:100%;
-  font-weight: 550;
-}
 
-
-
-
-
-
-
-/* Aside con los puntos */
-aside{
-  background-color:white;
-  padding:1em;
-  flex-basis:50%;
-  border-radius: 0.5em;
+article p{
  
+  
+  font-size: 20px;
+  margin-top:0.5em;
 }
 
-
-
-aside h3{
+.datos>input[value]{
   color:#11538C;
 }
 
+.datos{
+  color:#11538C;
+}
 
+article{
+  border-radius: 0.2em;
+ padding: 1em;
+ border:1px dashed rgb(179, 179, 0);
+  background-color:rgb(245, 245, 167);
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-basis:100%;
+  margin-top:0.5em;
+}
+
+.tipocar{
+  margin-top:0.2em;
+}
+
+
+button{
+  border-color:transparent;
+  margin-top:0.5em;
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+  padding:0.5em;
+  border-radius: 0.2em;
+  font-size: 20px;
+  background-color:#11538C;
+  color:white;
+}
+
+button:hover{
+  cursor:pointer;
+  background-color: rgb(16, 74, 126);
+}
+
+button:active{
+  
+  position:relative;
+  top:1px;
+}
 
 /* Pie de página */
 footer{
@@ -246,9 +255,10 @@ footer{
   text-align:center;
   font-weight:bold;
   background-color:#252526;
-  color:white; 
-}
 
+  color:white; 
+ 
+}
 
 footer ul{
   list-style-type: none;
@@ -256,8 +266,6 @@ footer ul{
   flex-wrap: wrap;
   justify-content: center;
 }
-
-
 footer ul li{
   margin-left:1em;
 }
@@ -266,31 +274,12 @@ footer ul li span{
   display:none;
 }
 
-
 #instagram,#twitter,#facebook{
   color:white;
 }
 
-#a{
-  margin-top:auto;
-  margin-bottom:auto;
-}
-
-
-.categorias{
-  background-color: #2A2A2C;
-  display:flex;
-  flex-flow:column;
-  align-items: center;
- 
-}
-
-
 section{
   padding:2em;
-  display:flex;
-  flex-direction: column;
-  flex-wrap: wrap;
 }
 
 
@@ -301,6 +290,125 @@ section{
 
 .botonsubir:hover{
   background: rgb(1, 57, 107); 
+}
+
+.erroraniadir{
+  color:white;
+  background-color:rgb(218, 6, 6);
+  padding:0.5em;
+  margin-bottom:2em;
+  width:100%;
+}
+
+form{
+  width:100%;
+  margin-top:2em;
+  padding:0.5em;
+  background:lightgray;
+  border-radius: 0.3em;
+}
+
+.centro{
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+}
+
+.login{
+  min-width: 20em;
+  min-height: 10em;
+  width: 20em;
+  border-radius: 10px;
+  box-shadow: 0 0 1em black;
+  padding:1em;
+  background: white;
+}
+
+
+
+.login-form{
+  
+  height: auto; 
+ 
+}
+
+.usuario,
+.clave{
+  display: flex;
+  width: 100%;
+
+  margin: 5px;
+  border: 2px solid transparent;
+}
+
+.labelusuclave{
+  background:rgba(0,0,0,0.2);
+  color:#606060;
+  width: 4em;
+  border-radius: 5px 0px 0px 5px;
+  font-size: 1.5em;
+  align-items: center;
+}
+
+input{
+  font-size:1em;
+  font-weight: bold;
+  color: #606060;
+  border: none;
+  border-radius:0px 5px 5px 0px;
+  background: white;
+  min-height:2em;
+  width: 100%;
+  padding: 10px;
+  transition: background 0.3s;
+}
+
+form p{
+  text-align: center;
+}
+
+input:hover,
+input:focus{
+
+  outline: none;
+}
+
+::placeholder{
+  color: #11538C;
+  font-size: 1em;
+  opacity: 1;
+}
+
+.clave{
+  position:relative;
+}
+.clave span {
+  position: absolute;
+  right: 5px;
+  top: 4px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 2px 10px;
+  background:rgba(0,0,0,0);
+}
+
+.errorvacio{
+  color:rgb(218, 6, 6);
+}
+
+
+
+
+
+#btnactualizarperfil:hover{
+  background: rgb(1, 57, 107);  
+}
+
+button:active{
+  cursor:pointer;
+  position:relative;
+  top:1px;
 }
 
 
@@ -315,6 +423,7 @@ section{
     flex-wrap: wrap;
   }
 
+
   header .enlace img,header .enlace{
     width: auto;
   }
@@ -323,19 +432,24 @@ section{
     left:-13em;
   }
 
-  aside{
-    flex-grow:1.5;
-  
-   
+  article{
+    flex-direction: row;
   }
- 
-    
-    .primero{
-      order:-2;
-    }
+
+  
+
+  .primero{
+    order:-2;
+  }
+  
+ article p{
+  margin-left:0.4em;
+   width: 49%;
+   margin-top:0.5em;
+ }
 
  
-
+ 
 }
 
 /*--------------------------------------------------------------------------------------------------------------------------*/
@@ -386,7 +500,6 @@ header  ul#menu{
   color: white !important;
 }
   
-
 .botonsubir {
 	display:none;
 	padding:20px;
@@ -401,15 +514,16 @@ header  ul#menu{
   z-index:1;
 }
 
-
 .bienvenida{
   display: inline-block;
-margin-left: 15em;
+  margin-left: 15em;
 margin-top:0.2em;
 padding:0;
   order:3;
   font-size: 25px;
 }
+
+
 
 .cerrarsesion{
   font-size: 32px;
@@ -418,33 +532,42 @@ height:1.4em;
   color:white;
 }
 
-section{
-  display:flex;
-  flex-direction: row;
-  flex-wrap:wrap;
-  
+
+
+
+article{
+  background-color: lightgray;
+  border:none;
+  border-radius: 0.3em;
 }
 
 
-article {
-  width:49%;
-  padding:1em;
+
+article p{
+  width: 32%;
+ 
+  margin-left:0.5em;
+   
+   margin-top:0.5em;
+ }
+
+.espe{
+  flex-grow:1;
+}
+
+.tiposdecarne{
+  background-color: transparent;
+  flex-direction: row;
+  flex-wrap: wrap;
+ 
+}
+
+.tiposdecarne p{
+  flex-basis: 49%;
+  text-align: left;
   margin-left:0.5em;
 }
 
-aside{
-flex-basis:100%;
- background-image:url("../img/logotipo_opacidad.svg");
- background-position: center;
- background-color: white;
- background-size: 300px 200px;
-
-}
-
-.primero{
-  order:-2;
-  
-}
 
 
 
@@ -484,7 +607,26 @@ flex-basis:100%;
     margin-top:0.8em;
   }
 
- 
+
+
+
+.usuario,.clave{
+   
+  position:relative;
+  width:35%;
+  
+}
+
+.erroraniadir{
+  position:relative;
+  width:35%;
+
+}
+
+
+
+
+
 }
 
 /*--------------------------------------------------------------------------------------------------------------------------*/

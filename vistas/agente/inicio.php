@@ -15,7 +15,7 @@ if (isset($_SESSION['usuario'])){
 		<meta name="description" content="GestDGT+">
 		<meta name="lang" content="es-ES" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-		<link rel="stylesheet" type="text/css" href="css/estilosinicio.css">
+		<link rel="stylesheet" type="text/css" href="css/estilosinicio2.css">
 		<script src="https://kit.fontawesome.com/4a9d5317b6.js" crossorigin="anonymous"></script>
 		<link rel="icon" href="img/logotipo.svg">
 		<link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">

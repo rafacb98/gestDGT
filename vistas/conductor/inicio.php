@@ -20,6 +20,7 @@ if (isset($_SESSION['usuario'])){
 	<script type="text/javascript" language="Javascript">
       document.oncontextmenu = function(){return false}
 	</script>
+	
 </head>
 <body>
 
@@ -36,7 +37,6 @@ if (isset($_SESSION['usuario'])){
 			?>
 				<p class='bienvenida'>¡Hola <span class='usuario'><?php echo $saludo['nombre'];?></span>!</p>
 				<li><a id='seleccionado' href="index.php">INICIO</a></li>
-				<li><a href="vistas/conductor/puntos.php">VER PUNTOS</a></li>
 				<li><a href="vistas/conductor/perfil.php">VER PERFIL</a></li>
 				<li><a href="vistas/conductor/vehiculos.php">VER VEHICULOS</a></li>
 				
@@ -53,9 +53,27 @@ if (isset($_SESSION['usuario'])){
 		<span class="botonsubir"><i class="fas fa-arrow-up"></i></span>
 		<section>
 			
+			<aside>
+				<p>Consulte sus puntos aquí</p>
+				<button id='verpuntos' class='btnverpuntos'>Ver puntos</button>
+			</aside>
 			
-			
-			
+			<div class="fondo_transparente">
+        		<div class="modal">
+            		<div class="modal_cerrar">
+                		<span>X</span>
+            		</div>
+            		<div class="modal_titulo">Puntos</div>
+					<div class="modal_mensaje">
+						
+						<p class='circulo'><?php echo verpuntos($_SESSION['usuario']);?></p>
+					</div>
+					<div class="modal_botones">
+						<a href="" class="boton">ACEPTAR</a>
+					</div>
+        		</div>
+    		</div>   
+		
 
 			<h2 id='novedades'>ÚLTIMAS NOTICIAS</h2>
 			

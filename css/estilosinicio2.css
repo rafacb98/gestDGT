@@ -6,7 +6,7 @@
 
 *{
   box-sizing:border-box; 
-  margin:0;
+  margin:0; 
   padding:0;
   font-family: 'Manrope', sans-serif;
 }
@@ -116,7 +116,6 @@ header label#hamburguesa span:nth-child(3){
   display:inline-block;
 }
 
-
 #seleccionado {
   background-color: #11538C;
   color: white !important;
@@ -133,44 +132,37 @@ header .enlace img,header .enlace {
 html {
   min-height:100%;
   position: relative;
- 
 }
 
 h2 span{
 display:none;
 }
 
-.primero{
-  
-  display:flex;
-  flex-direction: row;
-  flex-basis:100%; 
-}
+
 
 .bienvenida{
-  font-size: 22px;
-  padding:0.5em;
-   color:white;
- }
- 
- .usuario{
-   color:white;
-   font-weight: bold;
- }
- 
- .cerrarsesion{
-   font-size: 34px;
-   margin-top:1.3em;
-   margin-right:0.5em;
-   height:50%;
-   color:white;
-   
- }
- 
- .cerrarsesion:hover{
+ font-size: 22px;
+ padding:0.5em;
+  color:white;
+}
+
+.usuario{
+  color:white;
+  font-weight: bold;
+}
+
+.cerrarsesion{
+  font-size: 34px;
+  margin-top:1.3em;
+  margin-right:0.5em;
+  height:50%;
+  color:white;
+  
+}
+
+.cerrarsesion:hover{
   color:rgb(218, 6, 6);
  }
-
 
 
 
@@ -197,127 +189,38 @@ h2{
 h3{
   text-align:center;
   flex-basis:100%;
-  text-decoration: underline;
   font-weight: 550;
 }
 
 
 
-article img{
-  height:auto;
-  width:150px;
-}
 
-article textarea{
-  resize: none;
-}
-article{
-  display:flex;
-  flex-wrap:wrap;
-  flex-direction: column;
-  
-  border-top-left-radius: 1em;
-  border-bottom-left-radius: 1em;
-  border-top-right-radius: 0.5em;
-  border-bottom-right-radius: 0.5em;
-  border-left:4px solid #11538C;
-  padding: 1em;
-  box-shadow: 0 0 0.3em black;
-  display:flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  flex-basis:100%;
-margin-top:1em;
-  background-color: white;
-  
- }
-
- article p{
-  flex-grow:1;
-  font-size: 20px;
+.especial{	
+	display:flex;
+	flex-wrap:wrap;
+	flex-basis:25%;
+  flex-flow:column;
+  padding:1em;
   margin-top:0.5em;
-}
-input,textarea{
-  border: none;
-  color:#11538C;
-  font-size:1em;
-  border-radius:0px 5px 5px 0px;
-  background: rgb(241, 237, 237);
-  min-height:2em;
-  width: 100%;
-  padding: 10px;
- 
-}
-form{
-  margin-left: auto;
-  margin-right: auto;
- 
+  height:100%;
 }
 
-button:active{
-
-  position:relative;
-  top:1px;
-}
-
-button:hover{
+main section .especial img{
+  width:100%;
+  height:100%;
+  max-width: 100%;
+  max-height: 100%; 
+  padding:0.5em;
   
-  cursor:pointer;
 }
 
-.btnvermulta:hover,.btnpagar:hover{
-  background-color: rgb(16, 74, 126);
-  cursor:pointer;
-}
-
-.btnvolvervehiculos:hover{
-  background-color:rgb(182, 10, 10);
-  cursor:pointer;
-}
-
-.btnvermulta{
-  margin-top:0.5em;
+main section .especial p{
   padding:0.5em;
-  border-radius: 0.2em;
-  font-size: 20px;
-  background-color:#11538C;
-  color:white;
-  border:none;
+  text-align:justify;
 }
 
-.btnvolvervehiculos{
-  border:none;
-  margin-top:1em;
-  padding:0.5em;
-  border-radius: 0.2em;
-  font-size: 20px;
-  background-color:rgb(218, 6, 6);
-  color:white;
-  width:100%;
-}
 
-.btnpagar{
-  border:none;
-  margin-top:2em;
-  padding:0.5em;
-  border-radius: 0.2em;
-  font-size: 20px;
-  background-color:#11538C;
-  color:white;
-  width:100%;
-}
 
-#fotovehiculomulta{
-  display:flex;
-  flex-wrap:wrap;
-  flex-direction: column;
-}
-
-#nohay{
-  text-align: center;
-  width:100%;
-  font-size:22px;
-}
 
 /* Pie de página */
 footer{
@@ -350,14 +253,18 @@ footer ul li span{
   color:white;
 }
 
+#a{
+  margin-top:auto;
+  margin-bottom:auto;
+}
 
 
 
 section{
-  margin:1.5em 1.5em 1.5em 1.5em;
-  border-radius: 0.5em;
   padding:2em;
-  background-color: lightgray;
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 
@@ -382,29 +289,37 @@ section{
     flex-wrap: wrap;
   }
 
-
   header .enlace img,header .enlace{
     width: auto;
   }
 
-  article{
+  header label#hamburguesa span{
+    left:-13em;
+  }
+
+  aside{
+    flex-grow:1.5;
+    order:-1;
+    margin-top:4%;
+  }
+ 
+    
+    .primero{
+      order:-2;
+    }
+
+  .especial{  
+    flex-basis: 100%;
     flex-direction: row;
   }
 
-  
-  .primero{
-    order:-2;
+  .especial p{
+    flex-basis:50%;
   }
-  
- 
- article p{
-  margin-left:0.4em;
-   width: 48%;
-   margin-top:0.5em;
- }
-
- 
-  
+  .especial img{
+    flex-basis:50%;
+    order:1;
+  }
 
 }
 
@@ -414,7 +329,6 @@ section{
 
 /*-- CONTENIDO PARA ESCRITORIO --*/
 @media all and (min-width: 1000px) {
-
   /* Encabezado */
   header{
     height:8em;
@@ -424,7 +338,7 @@ section{
     width: auto;
     height: 100%;
   }
- 
+
   header label#hamburguesa{
     display:none;
 }
@@ -457,6 +371,7 @@ header  ul#menu{
   color: white !important;
 }
   
+
 .botonsubir {
 	display:none;
 	padding:20px;
@@ -471,9 +386,10 @@ header  ul#menu{
   z-index:1;
 }
 
+
 .bienvenida{
   display: inline-block;
-  margin-left: 21em;
+margin-left: 15em;
 margin-top:0.2em;
 padding:0;
   order:3;
@@ -487,40 +403,40 @@ height:1.4em;
   color:white;
 }
 
-
-
-article p{
-  width: 32%;
- 
-  margin-left:0.5em;
-   
-   margin-top:0.5em;
- }
-
- .btnpagar{
-  border:none;
-
-  padding:0.5em;
-  border-radius: 0.2em;
-  font-size: 20px;
-  background-color:#11538C;
-  color:white;
-  width:100%;
-  margin-left:40%;
-  margin-right:40%;
+section{
+  display:flex;
+  flex-direction: row;
+  flex-wrap:wrap;
 }
-#fotovehiculomulta{
-margin-left:44%;
+
+.especial{
+  flex-basis:25%;
+  flex-direction: column;
 
 }
 
-#obs{
-  flex-basis:100%;
+.especial img{
+  order:-1;
 }
+
+
+
+aside{
+ order:-1;
+ background-image:url("../img/logotipo_opacidad.svg");
+ background-position: center;
+ margin-top:3%;
+
+}
+
+.primero{
+  order:-2;
+  
+}
+
+
 
   /* Footer */
-
- 
   footer ul{
     justify-content: space-around;
   }
@@ -529,6 +445,7 @@ margin-left:44%;
     display:inline;
   }
   
+
   .fija { 
     position: fixed; 
     width: 100%;
@@ -555,6 +472,7 @@ margin-left:44%;
     margin-top:0.8em;
   }
 
+ 
 }
 
 /*--------------------------------------------------------------------------------------------------------------------------*/

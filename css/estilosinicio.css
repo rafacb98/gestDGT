@@ -192,6 +192,138 @@ h3{
   font-weight: 550;
 }
 
+aside{
+  background-color:lightgray;
+  padding:1em;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  border-radius:0.5em;
+  flex-basis:100%;
+}
+
+.btnverpuntos{
+  margin-top:0.5em;
+    padding:0.5em;
+    border-radius: 0.2em;
+    font-size: 20px;
+    background-color:#11538C;
+    color:white;
+    border:none;
+  }
+  
+  .btnverpuntos:hover,.btnverpuntos:hover{
+    background-color: rgb(16, 74, 126);
+    cursor:pointer;
+  }
+  
+  button:active{
+    position: relative;
+    top:1px;
+  }
+
+  .fondo_transparente{
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.226);
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    display: none;
+}
+.modal{
+    background: linear-gradient(0deg,white 70%, #11538C 30%);
+    width: 400px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 0.5em;
+
+}
+
+.modal_cerrar{
+    background: white;
+    position: absolute;
+    right: -20px;
+    color: black;
+    top: -20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.modal_cerrar:hover{
+  background: rgb(218, 6, 6);
+  
+  color: white;
+  
+}
+
+.modal_titulo{
+    color: white;
+    font-size: 30px;
+    background-color:#11538C;
+}
+.modal_mensaje{            
+   padding: 10px 30px;
+   background-color:white;
+}
+
+.modal_botones{      
+    width: 100%;    
+   border-top:whitesmoke 1px;
+   padding-top: 20px;
+   display: flex;
+   justify-content: space-evenly;
+}
+
+.boton{
+    background: white;
+    padding: 8px 30px;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.4em;
+    background-color:#11538C;
+}
+
+.boton:hover{
+  background-color: rgb(16, 74, 126);
+   
+}
+
+.modal_mensaje {
+  margin-top:2em;
+  width: 25%;
+  height:33%;
+  border-radius: 50%;
+  line-height: 0;
+  background: lightgray;
+  position: relative;
+}
+.modal_mensaje:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+.circulo {
+  position: absolute;
+  bottom: 50%;
+  width: 100%;
+  left:44%;
+  font-size:1.2em;
+
+}
 
 
 
@@ -297,11 +429,7 @@ section{
     left:-13em;
   }
 
-  aside{
-    flex-grow:1.5;
-    order:-1;
-    margin-top:4%;
-  }
+  
  
     
     .primero{
@@ -389,7 +517,7 @@ header  ul#menu{
 
 .bienvenida{
   display: inline-block;
-margin-left: 15em;
+margin-left: 21em;
 margin-top:0.2em;
 padding:0;
   order:3;
@@ -409,6 +537,8 @@ section{
   flex-wrap:wrap;
 }
 
+
+
 .especial{
   flex-basis:25%;
   flex-direction: column;
@@ -422,11 +552,15 @@ section{
 
 
 aside{
- order:-1;
- background-image:url("../img/logotipo_opacidad.svg");
- background-position: center;
- margin-top:3%;
+ 
+ flex-basis:100%;
+ flex-direction: row;
 
+}
+
+aside p{
+  margin-top:1.2em;
+  margin-right:0.4em;
 }
 
 .primero{

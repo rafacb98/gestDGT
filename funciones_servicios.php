@@ -58,7 +58,7 @@ function verpuntos($dni)
     }
     else
     {
-        echo "<p id='numeropuntos'>".$obj->dni->puntos."</p>";        
+        echo $obj->dni->puntos;        
     }
 }
 
