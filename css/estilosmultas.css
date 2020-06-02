@@ -327,6 +327,18 @@ legend {
  
   }
 
+  select {
+    appearance: none;
+    padding: 10px 16px;
+    -webkit-border-radius: 0.4em;
+    -moz-border-radius: 0.4em;
+    border-radius: 0.4em;
+    border: 0;
+    background-color: #104A7F;
+    color: #ffffff;
+    font-size: 18px;
+  }
+
 /* Pie de página */
 footer{
   padding:1em;

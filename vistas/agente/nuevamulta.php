@@ -156,10 +156,10 @@ require "../../funciones_servicios.php";
 					<div class="contenidocorto">
 						<label for="estado">Estado</label>
 						<select name="estado" id="estado">
-							<option value="en tramite">En trámite</option>
-							<option value="tramitada">Tramitada</option>
-							<option value="pagada">Pagada</option>
-							<option value="finalizada">Finalizada</option>
+							<option value="En tramite">En trámite</option>
+							<option value="Tramitada">Tramitada</option>
+							<option value="Pagada">Pagada</option>
+							<option value="Finalizada">Finalizada</option>
 						</select>
 					</div>
 						

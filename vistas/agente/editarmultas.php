@@ -106,8 +106,8 @@ if (isset($_SESSION['usuario'])){
 							<fieldset>
 								<legend>Datos de la multa</legend>
 								<p>Fecha/Hora: <input readonly type='text' value=<?php echo $hora."/".$fecha;?> /></p>
-								<p>Matricula: <input readonly type='text' value=<?php echo $obj->matricula_vehiculo;?> /></p>
-								<p>DNI: <input readonly type='text' value=<?php echo $obj->dni_conductor;?> /></p>
+								<p>Observaciones: <textarea readonly><?php echo $obj->observaciones;?></textarea></p>
+								<p>Precio: <input readonly type='text' value=<?php echo $obj->precio;?> /></p>
 								<p>Estado: <select name='estadoeditar'>
 								<option value='En tramite' <?php //if (isset($_POST['emultas']) && $_POST['emultas']==$obj->estado) echo "selected";?>>En tramite</option>
 								<option value='Tramitada' <?php //if (isset($_POST['emultas']) && $_POST['emultas']==$obj->estado) echo "selected";?>>Tramitada</option>
