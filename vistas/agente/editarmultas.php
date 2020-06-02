@@ -109,10 +109,10 @@ if (isset($_SESSION['usuario'])){
 								<p>Matricula: <input readonly type='text' value=<?php echo $obj->matricula_vehiculo;?> /></p>
 								<p>DNI: <input readonly type='text' value=<?php echo $obj->dni_conductor;?> /></p>
 								<p>Estado: <select name='estadoeditar'>
-								<option value='en tramite' <?php //if (isset($_POST['emultas']) && $_POST['emultas']==$obj->estado) echo "selected";?>>en tramite</option>
-								<option value='tramitada' <?php //if (isset($_POST['emultas']) && $_POST['emultas']==$obj->estado) echo "selected";?>>tramitada</option>
-								<option value='pagada' <?php //if (isset($_POST['emultas']) && $_POST['emultas']==$obj->estado) echo "selected";?>>pagada</option>
-								<option value='finalizada' <?php //if (isset($_POST['emultas']) && $_POST['emultas']==$obj->estado) echo "selected";?>>finalizada</option>
+								<option value='En tramite' <?php //if (isset($_POST['emultas']) && $_POST['emultas']==$obj->estado) echo "selected";?>>En tramite</option>
+								<option value='Tramitada' <?php //if (isset($_POST['emultas']) && $_POST['emultas']==$obj->estado) echo "selected";?>>Tramitada</option>
+								<option value='Pagada' <?php //if (isset($_POST['emultas']) && $_POST['emultas']==$obj->estado) echo "selected";?>>Pagada</option>
+								<option value='Finalizada' <?php //if (isset($_POST['emultas']) && $_POST['emultas']==$obj->estado) echo "selected";?>>Finalizada</option>
 								
 								</select></p>
 								<?php
