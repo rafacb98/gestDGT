@@ -529,7 +529,10 @@ height:1.4em;
     display:inline;
   }
   
-
+  .social li:hover{
+    transform:scale(1.4);
+  }
+  
   .fija { 
     position: fixed; 
     width: 100%;

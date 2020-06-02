@@ -385,6 +385,8 @@ footer ul li span{
   color:white;
 }
 
+
+
 .enlacesocial{
   text-decoration: none;
   color:white;
@@ -583,6 +585,10 @@ aside p{
 
   footer ul li span{
     display:inline;
+  }
+
+  .social li:hover{
+    transform:scale(1.4);
   }
   
 
