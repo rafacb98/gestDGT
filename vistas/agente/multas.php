@@ -57,9 +57,13 @@ if (isset($_SESSION['usuario'])){
 	<main class="epico">
 		<span class="botonsubir"><i class="fas fa-arrow-up"></i></span>
 		<section id="a">
-			
-			<h2>GESTIÓN DE MULTAS</h2>
-		
+
+		<div class="formulario">
+			<input class="campobusqueda" placeholder="Introduzca que desea buscar..." type="text" name="caja_busqueda" id="caja_busqueda"></input>
+			<button type="submit" class="botonbuscar"><i class="fa fa-search"></i></button>	
+		</div>
+
+		<div id="datos"></div>
 
 			<?php 
 			if(isset($_SESSION['mensajito']))
@@ -78,27 +82,16 @@ if (isset($_SESSION['usuario'])){
 				unset($_SESSION['mensajito']);
 			}
 			
-				
-
-		
-			todasmultas(); 
+			//todasmultas(); 
 
 			?>
 			
 			<?php
 			if(isset($_POST['btneditar']))
-			{
-				
-					
+			{	
 					header("Location: editarmultas.php");
-					exit;
-			
-
-		
-				
+					exit;	
 			}
-
-			
 			?>
 			
 			
@@ -118,7 +111,6 @@ if (isset($_SESSION['usuario'])){
 <?php
 }else{	
 	header('Location: ../../index.php');
-	 die();
-	
+	 die();	
 }
 	 ?>

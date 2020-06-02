@@ -1,24 +1,29 @@
 $(document).ready(function() {
+	$(buscar_datos());
 
-	$(window).on('load',function () {
-		$(".edita").click(function(){
-		   $('.fondo').show();
+	function buscar_datos(consulta){
+		$.ajax({
+			url: 'http://localhost/gestDGT/vistas/agente/buscar.php' ,
+			type: 'POST' ,
+			dataType: 'html',
+			data: {consulta: consulta},
+		})
+		.done(function(respuesta){
+			$("#datos").html(respuesta);
+		})
+		.fail(function(){
+			console.log("error");
 		});
-		$('.fondo').click(function(){
-			$('.fondo').hide();
-		});
-		$('.popupcerrar').click(function(){
-			$('.fondo').hide();
-		});
+	}
+
+
+	$(document).on('keyup','#caja_busqueda', function(){
+		var valor = $(this).val();
+		if (valor != "") {
+			buscar_datos(valor);
+		}else{
+			buscar_datos();
+		}
 	});
 
-	$(document).keydown(function(e) { 
-		if (e.keyCode == 27) { 
-			$(".fondo").fadeOut(500);
-		} 
- 	});
-
-
-	
-	  
 });

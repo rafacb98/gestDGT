@@ -197,7 +197,7 @@ h2{
 	display:flex;
 	flex-wrap:wrap;
 	flex-basis:25%;
-  flex-flow:column;
+  flex-direction: column;
   padding:1em;
   margin-top:0.5em;
   height:100%;
@@ -216,6 +216,39 @@ main section .especial img{
 main section .especial p{
   padding:0.5em;
   text-align:justify;
+}
+
+.formulario{
+ 
+    width: 100%;
+    position: relative;
+    display: flex;
+  
+}
+
+::placeholder{
+  color:#11538C;
+}
+
+.campobusqueda{
+  border: 3px solid #11538C;
+  border-radius: 5px 0 0 5px;
+}
+
+.botonbuscar {
+  width: 40px;
+  height: 48px;
+  border: 1px solid #11538C;
+  background: #11538C;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.sinresultados{
+  text-align: center;
 }
 
 input,textarea,select{
@@ -429,7 +462,7 @@ section{
   main section .especial .contenidomulta{
   
    
-    flex-basis: 80%;
+    flex-basis: 50%;
     
   
   }
