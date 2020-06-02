@@ -17,6 +17,7 @@ if (isset($_SESSION['usuario'])){
 	<link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
 	<script src='js/jquery-3.1.1.js'></script>
 	<script src='js/scriptgeneral.js'></script>
+	
 	<script type="text/javascript" language="Javascript">
       document.oncontextmenu = function(){return false}
 	</script>
@@ -128,7 +129,7 @@ if (isset($_SESSION['usuario'])){
 					
 			</ul>
 	</footer>
-	
+	<script src='js/scriptverpuntos.js'></script>
 </body>
 </html>
 <?php

@@ -116,18 +116,15 @@ $(document).ready(function () {
       }
        });
 
-
-       document.getElementById("verpuntos").addEventListener("click",function(){
-        document.getElementsByClassName("fondo_transparente")[0].style.display="block" 
-        
-       
-       
-        return false
-     })
-     document.getElementsByClassName("modal_cerrar")[0].addEventListener("click",function(){
-         document.getElementsByClassName("fondo_transparente")[0].style.display="none" 
+    
+        $(document).keydown(function(e) { 
+          if (e.keyCode == 27) { 
+            $(".fondo_transparente").fadeOut(500);
+          } 
+         });
       
-     })
+    
+      
 
 
 });
