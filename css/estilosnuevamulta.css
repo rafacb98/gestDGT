@@ -288,6 +288,11 @@ footer ul li span{
   color:white;
 }
 
+.enlacesocial{
+  text-decoration: none;
+  color:white;
+}
+
 section{
   display:flex;
   flex-direction: column;
