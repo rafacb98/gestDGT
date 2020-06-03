@@ -17,13 +17,14 @@ header{
   flex-flow:row nowrap;
   background-color:#252526;
   height:auto;
+  justify-content:space-between;
 }
 
 
 /* Menu hamburguesa */
 header label#hamburguesa{
   position:relative;
-  margin-left: auto;
+  margin-left: 1.5em;
   cursor:pointer;
   align-self: center;
   width:3em;
@@ -32,7 +33,7 @@ header label#hamburguesa{
 
 header label#hamburguesa span{
   position:absolute;
-  left:-5em;
+  margin-left:1.5em;
   display:block;
   width:3em;
   height: 0.3em;
@@ -127,7 +128,6 @@ header .enlace img,header .enlace {
   width: 8em;
   height: 18vh;
   z-index: 1;
-  margin-right: auto; 
 }
 
 html {
@@ -405,9 +405,7 @@ textarea {
   }
 
 
-  header label#hamburguesa span{
-    left:-14em;
-  }
+ 
 
   .contenidolargo {
 		display: flex;
