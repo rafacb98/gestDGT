@@ -94,74 +94,16 @@ if (isset($_SESSION['usuario'])){
 					verperfil($_SESSION['usuario']);
 					vercarnes($_SESSION['usuario']);
 				?>
+				
 			</article>
 
+		
+
+        
+
+				
 			
-
-			
-				<form class="login-form centro" method='post' action='#'>
-				<h3>¿Deseas cambiar tu clave?</h3>
-					<p>Introduzca su clave</p>
-					<p class="clave">
-						<label for="claveantigua" class="labelusuclave centro">
-						<i class="fas fa-lock"></i>
-						<span><i class="fas fa-eye-slash" id="mostrar1"></i></span>
-						</label>
-						<input id="claveantigua" placeholder="Clave antigua" type="password" name="claveantigua">
-						<?php
-							if(isset($_POST["btnactualizarperfil"]) && $errorclaveantigua) 
-							{
-								if ($_POST["clavenueva"]=="")
-									echo "<p class='erroraniadir'>Por favor, rellene el campo</p>";
-								else
-									echo "<p class='erroraniadir'>Esta no es su clave, escribela de nuevo</p>";	
-							}
-
-						?>
-						
-					</p>
-					<p>Introduzca su clave nueva</p>
-					<p class="clave">
-						<label for="clavenueva" class="labelusuclave centro">
-						<i class="fas fa-lock"></i>
-						<span><i class="fas fa-eye-slash" id="mostrar2"></i></span>
-						</label>
-						<input id="clavenueva" placeholder="Clave nueva" type="password" name="clavenueva">
-						<?php
-							if(isset($_POST["btnactualizarperfil"]) && $errorclavenueva) 
-							{
-								if ($_POST["clavenueva"]=="")
-									echo "<p class='erroraniadir'>Por favor, rellene el campo</p>";
-								else
-									echo "<p class='erroraniadir'>No coinciden las claves</p>";	
-							}
-
-						?>
-						
-					</p>
-					<p>Introduzca de nuevo su clave nueva</p>
-					<p class="clave">
-						<label for="clavenueva2" class="labelusuclave centro">
-						<i class="fas fa-lock"></i>
-						<span><i class="fas fa-eye-slash" id="mostrar3"></i></span>
-						</label>
-						<input id="clavenueva2" placeholder="Clave nueva" type="password" name="clavenueva2">
-						<?php
-							if(isset($_POST["btnactualizarperfil"]) && $errorclavenueva2) 
-							{
-								if ($_POST["clavenueva2"]=="")
-									echo "<p class='erroraniadir'>Por favor, rellene el campo</p>";
-								else
-									echo "<p class='erroraniadir'>No coinciden las claves</p>";	
-							}
-
-						?>
-						
-					</p>
-					<button type='submit' id="btnactualizarperfil" class="centro" name="btnactualizarperfil">
-						Actualizar
-					</button>
-				</form>
+				
 			
 				
 		</section>	

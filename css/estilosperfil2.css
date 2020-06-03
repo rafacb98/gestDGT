@@ -311,8 +311,7 @@ section{
 
 form{
   width:100%;
-  margin-top:2em;
-  padding:0.5em;
+
   background:lightgray;
   border-radius: 0.3em;
 }
@@ -406,7 +405,25 @@ input:focus{
   color:rgb(218, 6, 6);
 }
 
+.editarclave{
+  margin-top:2em;
+  padding:3.5em 3.5em;
+}
 
+#btnactualizarperfil{
+  width:100%;
+}
+#btnvolver{
+
+ width:100%;
+  background:rgb(218, 6, 6);
+  color:white;
+}
+
+#btnvolver:hover{
+  
+  background-color:rgb(182, 10, 10);
+}
 
 
 
@@ -581,7 +598,13 @@ article p{
   margin-left:0.5em;
 }
 
+#btnactualizarperfil{
+  width:36%;
+}
+#btnvolver{
 
+ width:36%;
+}
 
 
   /* Footer */
