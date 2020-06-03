@@ -213,10 +213,10 @@ article p{
 }
 
 article{
-  border-radius: 0.2em;
+  border-radius: 0.3em;
  padding: 1em;
- border:1px dashed rgb(179, 179, 0);
-  background-color:rgb(245, 245, 167);
+ 
+  background-color:lightgray;
   display:flex;
   flex-direction: column;
   flex-wrap: wrap;
