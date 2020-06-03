@@ -57,7 +57,7 @@ if (isset($_SESSION['usuario'])){
        </ul>
 		
 	   <a class='enlace' href='../..'><img src="../../img/logotipo.svg" alt="logo" /></a>
-		<a href='../../cerrarsesion.php' class='cerrarsesion'><i class="fas fa-sign-out-alt"></i></a>
+		<a href='../../cerrarsesion.php' class='cerrarsesion'><p class='cerrarsesionescritorio'>Cerrar sesión</p><i class="fas fa-sign-out-alt"></i></a>
 	</header>
 
 	<main class="epico">

@@ -167,6 +167,10 @@ display:none;
    
  }
 
+ .cerrarsesionescritorio{
+  display:none;
+}
+
  .cerrarsesion:hover{
   color:rgb(218, 6, 6);
  }
@@ -517,22 +521,29 @@ header  ul#menu{
   z-index:1;
 }
 
+
 .bienvenida{
   display: inline-block;
-  margin-left: 21em;
+margin-left: 18em;
 margin-top:0.2em;
 padding:0;
   order:3;
   font-size: 25px;
 }
 
-
-
 .cerrarsesion{
   font-size: 32px;
 
 height:1.4em;
   color:white;
+}
+
+.cerrarsesionescritorio{
+  position: relative;
+  top:-0.2em;
+  font-size:20px;
+  margin-right:1em;
+display:inline-block;
 }
 
 
