@@ -376,6 +376,10 @@ legend {
     font-size: 18px;
   }
 
+  .campobusqueda:focus,.botonbuscar:focus{
+    outline: none;
+  }
+
 /* Pie de página */
 footer{
   padding:1em;
