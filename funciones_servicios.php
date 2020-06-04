@@ -137,11 +137,11 @@ function vercarnes($dni)
           
         
         }
-        echo "</p>";  
+        echo "<form class='formnuevocarne' action='nuevocarne.php' method='post'><button id='aniadircarne'><i class='fas fa-plus'></i>&nbsp;&nbsp;&nbsp;Añadir carné</button></form></p>";  
         echo "<form class='editarclave' action='editarclave.php' method='post'>";
-       
-       echo "<button><i class='fas fa-pencil-alt'></i></button>";
-       echo "<button formaction='nuevocarne.php'>Añadir carné</button>";
+      
+       echo "<button>Cambiar contraseña&nbsp;&nbsp;&nbsp;<i class='fas fa-lock'></i></button>";
+      
       echo "</form>";   
     }
 }

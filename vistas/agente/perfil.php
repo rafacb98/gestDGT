@@ -95,7 +95,7 @@ if (isset($_SESSION['usuario'])){
 					verperfil2($_SESSION['usuario']);
 					echo "<form class='editarclave' action='editarclave.php' method='post'>";
        
-					echo "<button><i class='fas fa-pencil-alt'></i></button>";
+					echo "<button>Cambiar contraseña&nbsp;&nbsp;&nbsp;<i class='fas fa-lock'></i></button>";
 				   echo "</form>"; 
 				?>
 			</article>

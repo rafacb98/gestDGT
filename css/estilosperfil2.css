@@ -205,7 +205,7 @@ article p{
 }
 
 .datos>input[value]{
-  color:#11538C;
+  color:rgb(112, 109, 109);
 }
 
 .datos{
@@ -233,8 +233,8 @@ button{
   border-color:transparent;
   margin-top:0.5em;
   width: 40%;
-  margin-left: 30%;
-  margin-right: 30%;
+
+
   padding:0.5em;
   border-radius: 0.2em;
   font-size: 20px;
@@ -365,7 +365,7 @@ input{
   color: #606060;
   border: none;
   border-radius:0px 5px 5px 0px;
-  background: white;
+  background: rgb(241, 237, 237);
   min-height:2em;
   width: 100%;
   padding: 10px;
@@ -407,7 +407,15 @@ input:focus{
 
 .editarclave{
   margin-top:2em;
-  padding:3.5em 3.5em;
+ 
+}
+
+.editarclave button{
+  width:100%;
+}
+
+#aniadircarne{
+  background-color: green;
 }
 
 #btnactualizarperfil{
