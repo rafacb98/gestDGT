@@ -100,6 +100,14 @@ $app->put('/actualizarestadomulta/:fechahora/:dni/:matricula',function ($fechaho
     echo json_encode(actualizarestadomulta($fechahora,$dni,$matricula,$datosEstado['estadoeditar']),JSON_FORCE_OBJECT);
 });
 
+$app->get('/nuevotipocarne', function ()  {
+    echo json_encode(nuevotipocarne(),JSON_FORCE_OBJECT);
+});
+
+$app->post('/insertarnuevotipocarne', function () {
+    echo json_encode(insertarnuevotipocarne($_POST['dni'],$_POST['nuevotipocarne']),JSON_FORCE_OBJECT);
+});
+
 $app->run();
 ?>
 

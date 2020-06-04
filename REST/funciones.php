@@ -655,4 +655,69 @@ function actualizarestadomulta ($fechahora,$dni,$matricula,$estado)
     }
 }
 
+function nuevotipocarne()
+{
+    $con=conectar();
+
+    if (!$con)
+    {
+        return array("mensaje_error"=>"Imposible conectar. Error ".mysqli_connect_errno());
+    }
+    else
+    {
+        mysqli_set_charset($con,"utf8");
+        $consulta="select * from tipo_carne where id not in (select id_tipo_carne from detalle_tipo_carne)";
+        $resultado=mysqli_query($con,$consulta);
+
+        if(!$resultado)
+        {
+            $mensaje="Imposisble realizar la consulta. Error ".mysqli_errno($con);
+            mysqli_close($con);
+            return array("mensaje_error"=>$consulta);
+        }
+        else
+        {
+            $tipocarne=Array();
+            while ($fila=mysqli_fetch_assoc($resultado))
+            {
+                $tipocarne[]=$fila;
+            }
+
+            mysqli_free_result($resultado);
+            mysqli_close($con);
+            return array("tipocarne"=>$tipocarne);
+        }
+    }
+}
+
+function insertarnuevotipocarne($dni,$id_tipo_carne)
+{
+    $con=conectar();
+
+    if(!$con)
+    {
+        return array("mensaje_error"=>"Imposible conectar. Error ".mysqli_connect_errno());
+    }
+    else
+    {
+        mysqli_set_charset($con,"utf8");
+        $consulta="insert into detalle_tipo_carne (dni_conductor,id_tipo_carne) values ('".$dni."','".$id_tipo_carne."')";
+
+        $resultado=mysqli_query($con,$consulta);
+
+        if(!$resultado)
+        {
+            $mensaje="Imposible realizar la consulta. Error ".mysqli_error($con);
+            mysqli_close($con);
+            return array("mensaje_error"=>$mensaje);
+        }
+        else
+        {
+            mysqli_close($con);
+            return array("mensaje"=>"Se ha insertado ".$id_tipo_carne. " correctamente");
+        }
+    }
+
+}
+
 ?>

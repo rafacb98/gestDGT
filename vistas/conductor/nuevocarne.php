@@ -5,15 +5,23 @@ require "../../funciones_servicios.php";
 
 if (isset($_SESSION['usuario'])){
 	
-	
+	$dni=obtener_usuario($_SESSION['usuario'],$_SESSION['clave']);
 
-	
+	if(isset($_POST['btnaniadircarne']))
+	{
+		
+		
+			
+			insertarnuevocarne($dni['dni'],$_POST['nuevotipocarne']);
+		
+
+	}
 	?>
 
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<title>Perfil | GestDGT+</title>
+	<title>Nuevo carné | GestDGT+</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="author" content="Rafael Carrillo Bonilla">
 	<meta name="description" content="GestDGT+">
@@ -54,42 +62,36 @@ if (isset($_SESSION['usuario'])){
 	</header>
 
 	<main class="epico">
-		<?php
-			if(isset($_SESSION['mensajito']))
-			{
-				
-				if($_SESSION['mensajito']=="actualizado")
-				{
-					echo "<script>swal('¡Bien!', 'Se ha actualizado la clave', 'success')</script>";
-					
-				}	
-				if($_SESSION['mensajito']=="insertado")
-				{
-					echo "<script>swal('¡Bien!', 'Se ha añadido un nuevo carné', 'success')</script>";
-					
-				}
-				unset($_SESSION['mensajito']);
-			}
-
-			?>
+		
 		<span class="botonsubir"><i class="fas fa-arrow-up"></i></span>
 		<section>
 			
 			
-			<h2>INFORMACIÓN PERSONAL</h2>
+			<h2>NUEVO CARNÉ</h2>
 			<article>
-				<?php
-					verperfil($_SESSION['usuario']);
-					vercarnes($_SESSION['usuario']);
-				?>
-				
+            <form class="login-form centro" method='post' action='#'>
+		
+					<p>Seleccione su tipo de carné</p>
+					<p class="clave">
+						
+						<select class='nuevotipocarne' name='nuevotipocarne'>
+							<?php vertiposcarne();?>
+						</select>
+						<input type='hidden' name='dni' value='<?php echo $saludo['dni']?>'/>
+						
+					</p>
+					
+                    <button formaction='perfil.php' type='submit' id="btnvolver" class="centro" name="btnvolver">
+						Volver
+					</button>
+					<button type='submit' id="btnactualizarperfil" class="centro" name="btnaniadircarne">
+						Añadir
+					</button>
+				</form>
 			</article>
 
-		
-
-        
-
-				
+			
+			
 			
 				
 			

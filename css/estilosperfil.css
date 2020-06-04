@@ -430,6 +430,20 @@ input:focus{
   background: rgb(1, 57, 107);  
 }
 
+.nuevotipocarne{
+  margin:0 auto;
+  width:30%;
+  appearance: none;
+  padding: 10px 16px;
+  -webkit-border-radius: 0.4em;
+  -moz-border-radius: 0.4em;
+  border-radius: 0.4em;
+  border: 0;
+  background-color: #104A7F;
+  color: #ffffff;
+  font-size: 18px;
+}
+
 button:active{
   cursor:pointer;
   position:relative;
@@ -604,6 +618,11 @@ article p{
 #btnvolver{
 
  width:36%;
+}
+
+.nuevotipocarne{
+  width:55%;
+  
 }
 
   /* Footer */

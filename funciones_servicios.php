@@ -141,6 +141,7 @@ function vercarnes($dni)
         echo "<form class='editarclave' action='editarclave.php' method='post'>";
        
        echo "<button><i class='fas fa-pencil-alt'></i></button>";
+       echo "<button formaction='nuevocarne.php'>Añadir carné</button>";
       echo "</form>";   
     }
 }
@@ -507,6 +508,50 @@ function modificarestadomulta($fechahora,$dni,$matricula,$estado)
 
                 
     } 
+}
+
+function vertiposcarne(){
+    $obj=consumir_servicio_REST(ruta."nuevotipocarne","GET");
+    if (isset($obj->mensaje_error))
+    {
+        die($obj->mensaje_error);
+    }
+    else
+    { 
+        
+
+        foreach($obj->tipocarne as $fila)
+        {
+            
+            echo "<option value='".$fila->id."'>".$fila->descripcion."</option>";
+           
+        }     
+          
+          
+    }
+}
+
+
+function insertarnuevocarne($dni,$id_tipo_carne){
+    $datosCarne['dni']=$dni;
+    $datosCarne['nuevotipocarne']=$id_tipo_carne;
+   
+
+    $obj=consumir_servicio_REST(ruta."insertarnuevotipocarne","POST",$datosCarne);
+    
+    if (isset($obj->mensaje_error))
+    {
+        die($obj->mensaje_error);
+    }
+
+    else
+    {
+        $_SESSION['mensajito']="insertado";
+        header("Location: ../conductor/perfil.php");
+        exit;
+    }
+
+
 }
 
 ?>
