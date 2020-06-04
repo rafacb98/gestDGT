@@ -26,7 +26,7 @@ require "../../funciones_servicios.php";
 		
 
 		$errorTotal=(!$errorfechayhora && !$errorprecio && !$errorobservaciones && !$errordniconductor && !$errormatriculavehiculo && !$errorterminos);
-
+	
 		if($errorTotal)
 		{
 			if(isset($_FILES['foto']['name']) && $_FILES['foto']['name']!="") 
@@ -34,7 +34,8 @@ require "../../funciones_servicios.php";
 				$arr=explode(".",$_FILES['foto']['name']);
 				$extension=end($arr);
 				$fechahora=str_replace(":","_",$_POST['fechahora']);
-				$nombre_unico=$_POST['dniconductor']."_".$_POST['matricula']."_".$fechahora;
+				$fechahora2=str_replace("/","_",$fechahora);
+				$nombre_unico=$_POST['dniconductor']."_".$_POST['matricula']."_".$fechahora2;
 				$nombrecompleto=$nombre_unico.".".$extension;
 				@$var=move_uploaded_file($_FILES['foto']['tmp_name'],"../../img/fotos_multa/".$nombrecompleto);
 				
@@ -68,6 +69,7 @@ require "../../funciones_servicios.php";
 	<meta name="lang" content="es-ES" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<link rel="stylesheet" type="text/css" href="../../css/estilosnuevamulta.css">
+	<link rel="stylesheet" type="text/css" href="../../css/jquery.datetimepicker.css">
 	<script src="https://kit.fontawesome.com/4a9d5317b6.js" crossorigin="anonymous"></script>
 	<link rel="icon" href="../../img/logotipo.svg">
 	<link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
@@ -75,6 +77,7 @@ require "../../funciones_servicios.php";
 	<script src='../../js/jquery-input-file-text.js'></script>
 	<script src='../../js/scriptgeneral.js'></script>
 	<script src='../../js/scriptnuevamulta.js'></script>
+	<script src='../../js/jquery.datetimepicker.full.js'></script>
 	<script type="text/javascript" language="Javascript">
       document.oncontextmenu = function(){return false}
     </script>
@@ -125,7 +128,7 @@ require "../../funciones_servicios.php";
 					</div>
 					<div class="contenidocorto">
 						<label for="dniconductor">DNI Conductor</label>
-						<input for="dniconductor" type="text" name="dniconductor" value="<?php if(isset($_POST["dniconductor"])) echo $_POST["dniconductor"];?>"/>
+						<input id="dniconductor" type="text" name="dniconductor" value="<?php if(isset($_POST["dniconductor"])) echo $_POST["dniconductor"];?>"/>
 						<?php
 						if(isset($_POST["btnaniadirnuevamulta"]) && $errordniconductor) 
 						{
@@ -139,7 +142,7 @@ require "../../funciones_servicios.php";
 					</div>
 					<div class="contenidocorto">
 						<label for="fechahora">Fecha/Hora</label>
-						<input for="fechahora" type="datetime-local" name="fechahora" value="<?php if(isset($_POST["fechahora"])) echo $_POST["fechahora"];?>"/>
+						<input id="fechahora" type="text" name="fechahora" value="<?php if(isset($_POST["fechahora"])) echo $_POST["fechahora"];?>"/>
 						<?php
 						
                         if(isset($_POST["btnaniadirnuevamulta"]) && $_POST["fechahora"]=="") echo "<p class='erroraniadir'>Por favor, rellene el campo</p>";
@@ -147,7 +150,7 @@ require "../../funciones_servicios.php";
 					</div>
 					<div class="contenidocorto">
 						<label for="precio">Precio</label>
-						<input for="precio" type="number" name="precio" value="<?php if(isset($_POST["precio"])) echo $_POST["precio"];?>"/>
+						<input id="precio" type="number" name="precio" value="<?php if(isset($_POST["precio"])) echo $_POST["precio"];?>"/>
 						<?php
 						
                         if(isset($_POST["btnaniadirnuevamulta"]) && $_POST["precio"]=="") echo "<p><p class='erroraniadir'>Por favor, rellene el campo</p></p>";
@@ -165,7 +168,7 @@ require "../../funciones_servicios.php";
 						
 					<div id=contenidocortoespecial>
 						<label for="foto">Foto</label>
-						<input for="foto" type="file" name="foto" />
+						<input id="foto" type="file" name="foto" />
 					</div>
 					<div class="textarea">
 						<label for="obs">Observaciones</label>
