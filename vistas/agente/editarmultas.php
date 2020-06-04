@@ -109,10 +109,10 @@ if (isset($_SESSION['usuario'])){
 								<p>Observaciones: <textarea readonly><?php echo $obj->observaciones;?></textarea></p>
 								<p>Precio: <input readonly type='text' value=<?php echo $obj->precio;?> /></p>
 								<p>Estado: <select name='estadoeditar'>
-								<option value='En tramite' <?php //if (isset($_POST['emultas']) && $_POST['emultas']==$obj->estado) echo "selected";?>>En tramite</option>
-								<option value='Tramitada' <?php //if (isset($_POST['emultas']) && $_POST['emultas']==$obj->estado) echo "selected";?>>Tramitada</option>
-								<option value='Pagada' <?php //if (isset($_POST['emultas']) && $_POST['emultas']==$obj->estado) echo "selected";?>>Pagada</option>
-								<option value='Finalizada' <?php //if (isset($_POST['emultas']) && $_POST['emultas']==$obj->estado) echo "selected";?>>Finalizada</option>
+								<option value='En tramite' <?php if ($obj->estado=='En tramite') echo "selected";?>>En tramite</option>
+								<option value='Tramitada' <?php if ($obj->estado=='Tramitada') echo "selected";?>>Tramitada</option>
+								<option value='Pagada' <?php if ($obj->estado=='Pagada') echo "selected";?>>Pagada</option>
+								<option value='Finalizada' <?php if ($obj->estado=='Finalizada') echo "selected";?>>Finalizada</option>
 								
 								</select></p>
 								<?php
