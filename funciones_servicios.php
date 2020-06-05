@@ -146,6 +146,8 @@ function vercarnes($dni)
     }
 }
 
+
+
 function vertotalvehiculos($dni)
 {
     $obj=consumir_servicio_REST(ruta."totalvehiculos/".urlencode($dni),"GET");
@@ -384,6 +386,26 @@ function actualizarclaveperfil($dni,$clave)
     {
         $_SESSION['mensajito']="actualizado";
         header("Location: ../conductor/perfil.php");
+        exit;
+
+                
+    } 
+}
+
+function actualizarclaveperfil2($dni,$clave)
+{
+    $datosClave['clavenueva']=$clave;
+        
+
+    $obj=consumir_servicio_REST(ruta."actualizarclave/".urlencode($dni),"PUT",$datosClave);
+    if (isset($obj->mensaje_error))
+    {
+        die($obj->mensaje_error);
+    }
+    else
+    {
+        $_SESSION['mensajito']="actualizado";
+        header("Location: ../agente/perfil.php");
         exit;
 
                 

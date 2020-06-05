@@ -21,7 +21,7 @@ if (isset($_SESSION['usuario'])){
 		if($ningunerror)
 		{
 			$_SESSION['clave']=md5($_POST['clavenueva']);
-			actualizarclaveperfil($dni['dni'],$_POST['clavenueva']);
+			actualizarclaveperfil2($dni['dni'],$_POST['clavenueva']);
 		}
 
 	}

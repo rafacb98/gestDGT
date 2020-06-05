@@ -4,27 +4,9 @@ session_start();
 require "../../funciones_servicios.php";
 
 if (isset($_SESSION['usuario'])){
-	$errorclaveantigua=true;
-	$errorclavenueva=true;
-	$errorclavenueva2=true;
-	$dni=obtener_usuario($_SESSION['usuario'],$_SESSION['clave']);
+	
 
-	if(isset($_POST['btnactualizarperfil']))
-	{
-		
-		$errorclaveantigua=($_POST['claveantigua']=="" || (md5($_POST['claveantigua'])!=$_SESSION['clave']));
-		$errorclavenueva=($_POST['clavenueva']=="" || ($_POST['clavenueva']!=$_POST['clavenueva2']));
-		$errorclavenueva2=($_POST['clavenueva']=="" || ($_POST['clavenueva']!=$_POST['clavenueva2']));
-
-		$ningunerror=(!$errorclaveantigua&&!$errorclavenueva&&!$errorclavenueva2);
-
-		if($ningunerror)
-		{
-			$_SESSION['clave']=md5($_POST['clavenueva']);
-			actualizarclaveperfil($dni['dni'],$_POST['clavenueva']);
-		}
-
-	}
+	
 	?>
 
 <!DOCTYPE html>
