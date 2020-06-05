@@ -405,6 +405,10 @@ footer ul li span{
   display:none;
 }
 
+footer p{
+  margin-top:0.5em;
+}
+
 #instagram,#twitter,#facebook{
   color:white;
 }

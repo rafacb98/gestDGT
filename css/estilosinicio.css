@@ -385,6 +385,9 @@ footer ul li span{
   display:none;
 }
 
+footer p{
+  margin-top:0.5em;
+}
 
 #instagram,#twitter,#facebook{
   color:white;
@@ -600,6 +603,8 @@ aside p{
   .social li:hover{
     transform:scale(1.4);
   }
+
+ 
   
 
   .fija { 
