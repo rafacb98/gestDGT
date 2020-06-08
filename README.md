@@ -1,6 +1,6 @@
 # GestDGT+
 
-![](https://imgur.com/jiNkLME.png)
+![](https://i.imgur.com/SnCzPDP.png)
 
 ----
 
@@ -12,5 +12,4 @@
                 
 ----
                     
-
-Desarrollado por Rafael Carrillo Bonilla | &copy; 2019-2020
+&copy; 2019-2020 | Rafael Carrillo Bonilla | Todos los derechos reservados
