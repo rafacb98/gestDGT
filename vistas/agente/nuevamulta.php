@@ -80,6 +80,8 @@ require "../../funciones_servicios.php";
 	<script src='../../js/jquery.datetimepicker.full.js'></script>
 	<script type="text/javascript" language="Javascript">
       document.oncontextmenu = function(){return false}
+
+	
     </script>
 
 	
@@ -120,7 +122,7 @@ require "../../funciones_servicios.php";
 				<div class="contenidolargo">
 					<div class="contenidocorto">
 						<label for="matricula">Matricula</label>
-						<input id="matricula" type="text" name="matricula" value="<?php if(isset($_POST["matricula"])) echo $_POST["matricula"];?>"/>
+						<input title="El formato es 1234ABC" pattern="[0-9]{4}[A-Z]{3}" id="matricula" type="text" name="matricula" value="<?php if(isset($_POST["matricula"])) echo $_POST["matricula"];?>"/>
 						<?php
 						
                         if(isset($_POST["btnaniadirnuevamulta"]) && $_POST["matricula"]=="") echo "<p class='erroraniadir'>Por favor, rellene el campo</p>";
@@ -128,14 +130,21 @@ require "../../funciones_servicios.php";
 					</div>
 					<div class="contenidocorto">
 						<label for="dniconductor">DNI Conductor</label>
-						<input id="dniconductor" type="text" name="dniconductor" value="<?php if(isset($_POST["dniconductor"])) echo $_POST["dniconductor"];?>"/>
+						<input  title="El formato es 12345678A" pattern="(([X-Z]{1})([-]?)(\d{7})([-]?)([A-Z]{1}))|((\d{8})([-]?)([A-Z]{1}))" id="dniconductor" type="text" name="dniconductor" value="<?php if(isset($_POST["dniconductor"])) echo $_POST["dniconductor"];?>"/>
 						<?php
 						if(isset($_POST["btnaniadirnuevamulta"]) && $errordniconductor) 
 						{
 							if ($_POST["dniconductor"]=="")
 								echo "<p class='erroraniadir'>Por favor, rellene el campo</p>";
 							else
-								echo "<p class='erroraniadir'>Por favor, introduzca un DNI válido</p>";	
+							{
+								
+									echo "<p class='erroraniadir'>Por favor, introduzca un DNI válido</p>";
+								
+							}
+								
+							
+								
 						}
 				
 					?>
@@ -168,7 +177,9 @@ require "../../funciones_servicios.php";
 						
 					<div id=contenidocortoespecial>
 						<label for="foto">Foto</label>
-						<input id="foto" type="file" name="foto" />
+						<input id="foto" type="file" name="foto" accept=".png, .jpg, .jpeg" />
+						
+						
 					</div>
 					<div class="textarea">
 						<label for="obs">Observaciones</label>
