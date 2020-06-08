@@ -408,7 +408,9 @@ footer ul li span{
 footer p{
   margin-top:0.5em;
 }
-
+.w3{
+  margin-top:0.4em;
+}
 #instagram,#twitter,#facebook{
   color:white;
 }

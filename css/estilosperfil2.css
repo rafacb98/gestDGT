@@ -418,6 +418,10 @@ input:focus{
   background-color: green;
 }
 
+.espacio{
+  display:none;
+}
+
 #btnactualizarperfil{
   width:100%;
 }
@@ -448,7 +452,9 @@ button:active{
 footer p{
   margin-top:0.5em;
 }
-
+.w3{
+  margin-top:0.4em;
+}
 
 /*--------------------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------------------*/
@@ -615,7 +621,10 @@ article p{
  width:36%;
 }
 
-
+.espacio{
+  display:inline-block;
+  padding:1.4em;
+}
   /* Footer */
 
   footer ul{

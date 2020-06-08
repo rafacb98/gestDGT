@@ -129,6 +129,9 @@ if (isset($_SESSION['usuario'])){
 					
 			</ul>
 			<p>© 2019-2020 | Rafael Carrillo Bonilla | Todos los derechos reservados</p>
+			<a href="http://www.w3.org/WAI/WCAG1AA-Conformance" title="Explicación del Nivel Doble-A de Conformidad">
+			<img class='w3' height="32" width="88" src="http://www.w3.org/WAI/wcag1AA" alt="Icono de conformidad con el Nivel Doble-A, de las Directrices de Accesibilidad para el Contenido Web 1.0 del W3C-WAI"></a>
+			
 	</footer>
 	<script src='js/scriptverpuntos.js'></script>
 </body>
