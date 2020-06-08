@@ -61,43 +61,45 @@ if (isset($_SESSION['usuario'])){
 				<h2 id='novedades'>ÚLTIMAS NOTICIAS</h2>
 				
 				<article class="especial">
-					<img src="img/novedades.png" alt="novedad1"/>
-					<p>Lorem ipsum dolor sit amet consectetur adipiscing elit dapibus, ridiculus mattis montes condimentum eget nostra erat diam vulputate, convallis sagittis praesent scelerisque posuere elementum facilisis. Quisque nisi faucibus montes pellentesque tellus dictum fringilla tempor hendrerit, etiam integer quis vel orci vivamus duis nisl risus scelerisque, turpis tincidunt dictumst ridiculus dapibus non bibendum sollicitudin. Odio quam felis convallis aenean mi lacinia torquent curae donec cum, senectus sagittis molestie litora volutpat mattis euismod viverra pulvinar eget metus, fringilla orci nascetur eleifend pellentesque hac dapibus arcu aliquet.</p>	
-				</article>
-				<article class="especial">
-					
-					<img src="img/novedades.png" alt="novedad2"/>
-					<p>Lorem ipsum dolor sit amet consectetur adipiscing elit dapibus, ridiculus mattis montes condimentum eget nostra erat diam vulputate, convallis sagittis praesent scelerisque posuere elementum facilisis. Quisque nisi faucibus montes pellentesque tellus dictum fringilla tempor hendrerit, etiam integer quis vel orci vivamus duis nisl risus scelerisque, turpis tincidunt dictumst ridiculus dapibus non bibendum sollicitudin. Odio quam felis convallis aenean mi lacinia torquent curae donec cum, senectus sagittis molestie litora volutpat mattis euismod viverra pulvinar eget metus, fringilla orci nascetur eleifend pellentesque hac dapibus arcu aliquet.</p>
-				</article>
-				<article class="especial">
-					
-					<img src="img/novedades.png" alt="novedad3"/>
-					<p>Lorem ipsum dolor sit amet consectetur adipiscing elit dapibus, ridiculus mattis montes condimentum eget nostra erat diam vulputate, convallis sagittis praesent scelerisque posuere elementum facilisis. Quisque nisi faucibus montes pellentesque tellus dictum fringilla tempor hendrerit, etiam integer quis vel orci vivamus duis nisl risus scelerisque, turpis tincidunt dictumst ridiculus dapibus non bibendum sollicitudin. Odio quam felis convallis aenean mi lacinia torquent curae donec cum, senectus sagittis molestie litora volutpat mattis euismod viverra pulvinar eget metus, fringilla orci nascetur eleifend pellentesque hac dapibus arcu aliquet.</p>
-				</article>
-				<article class="especial">
-					
-					<img src="img/novedades.png" alt="novedad4"/>
-					<p>Lorem ipsum dolor sit amet consectetur adipiscing elit dapibus, ridiculus mattis montes condimentum eget nostra erat diam vulputate, convallis sagittis praesent scelerisque posuere elementum facilisis. Quisque nisi faucibus montes pellentesque tellus dictum fringilla tempor hendrerit, etiam integer quis vel orci vivamus duis nisl risus scelerisque, turpis tincidunt dictumst ridiculus dapibus non bibendum sollicitudin. Odio quam felis convallis aenean mi lacinia torquent curae donec cum, senectus sagittis molestie litora volutpat mattis euismod viverra pulvinar eget metus, fringilla orci nascetur eleifend pellentesque hac dapibus arcu aliquet.</p>
-				</article>
-				<article class="especial">
-					<img src="img/novedades.png" alt="novedad5"/>
-					<p>Lorem ipsum dolor sit amet consectetur adipiscing elit dapibus, ridiculus mattis montes condimentum eget nostra erat diam vulputate, convallis sagittis praesent scelerisque posuere elementum facilisis. Quisque nisi faucibus montes pellentesque tellus dictum fringilla tempor hendrerit, etiam integer quis vel orci vivamus duis nisl risus scelerisque, turpis tincidunt dictumst ridiculus dapibus non bibendum sollicitudin. Odio quam felis convallis aenean mi lacinia torquent curae donec cum, senectus sagittis molestie litora volutpat mattis euismod viverra pulvinar eget metus, fringilla orci nascetur eleifend pellentesque hac dapibus arcu aliquet.</p>	
-				</article>
-				<article class="especial">
-					
-					<img src="img/novedades.png" alt="novedad6"/>
-					<p>Lorem ipsum dolor sit amet consectetur adipiscing elit dapibus, ridiculus mattis montes condimentum eget nostra erat diam vulputate, convallis sagittis praesent scelerisque posuere elementum facilisis. Quisque nisi faucibus montes pellentesque tellus dictum fringilla tempor hendrerit, etiam integer quis vel orci vivamus duis nisl risus scelerisque, turpis tincidunt dictumst ridiculus dapibus non bibendum sollicitudin. Odio quam felis convallis aenean mi lacinia torquent curae donec cum, senectus sagittis molestie litora volutpat mattis euismod viverra pulvinar eget metus, fringilla orci nascetur eleifend pellentesque hac dapibus arcu aliquet.</p>
-				</article>
-				<article class="especial">
-					
-					<img src="img/novedades.png" alt="novedad7"/>
-					<p>Lorem ipsum dolor sit amet consectetur adipiscing elit dapibus, ridiculus mattis montes condimentum eget nostra erat diam vulputate, convallis sagittis praesent scelerisque posuere elementum facilisis. Quisque nisi faucibus montes pellentesque tellus dictum fringilla tempor hendrerit, etiam integer quis vel orci vivamus duis nisl risus scelerisque, turpis tincidunt dictumst ridiculus dapibus non bibendum sollicitudin. Odio quam felis convallis aenean mi lacinia torquent curae donec cum, senectus sagittis molestie litora volutpat mattis euismod viverra pulvinar eget metus, fringilla orci nascetur eleifend pellentesque hac dapibus arcu aliquet.</p>
-				</article>
-				<article class="especial">
-					
-					<img src="img/novedades.png" alt="novedad8"/>
-					<p>Lorem ipsum dolor sit amet consectetur adipiscing elit dapibus, ridiculus mattis montes condimentum eget nostra erat diam vulputate, convallis sagittis praesent scelerisque posuere elementum facilisis. Quisque nisi faucibus montes pellentesque tellus dictum fringilla tempor hendrerit, etiam integer quis vel orci vivamus duis nisl risus scelerisque, turpis tincidunt dictumst ridiculus dapibus non bibendum sollicitudin. Odio quam felis convallis aenean mi lacinia torquent curae donec cum, senectus sagittis molestie litora volutpat mattis euismod viverra pulvinar eget metus, fringilla orci nascetur eleifend pellentesque hac dapibus arcu aliquet.</p>
-				</article>
+				<img src="img/novedades.png" alt="novedad1"/>
+				<p>La Dirección General de Tráfico procederá a reabrir las Jefaturas Provinciales y Locales de Tráfico en aquellas provincias que entren en la fase II de la desescalada regulada por el Gobierno en el Plan para la transición hacia la nueva normalidad, prevista para el próximo lunes 25 de mayo en numerosas provincias.</p>	
+			</article>
+			<article class="especial">
+				
+				<img src="img/novedades.png" alt="novedad2"/>
+				<p>La apertura el próximo lunes 11 de mayo de la mayoría de los centros de reconocimiento de conductores, lleva a la Dirección General de Tráfico a recordar a los ciudadanos que los permisos de conducción que hayan caducado durante el estado de alarma mantienen su vigencia durante dicho periodo y hasta 60 días hábiles después de finalizado el mismo.</p>	
+			</article>
+			
+			<article class="especial">
+				
+				<img src="img/novedades.png" alt="novedad3"/>
+				<p>La Dirección General de Tráfico procederá a reabrir las Jefaturas Provinciales y Locales de Tráfico en aquellas provincias que entren en la fase II de la desescalada regulada por el Gobierno en el Plan para la transición hacia la nueva normalidad, prevista para el próximo lunes 25 de mayo en numerosas provincias.</p>	
+			</article>
+			<article class="especial">
+				
+				<img src="img/novedades.png" alt="novedad4"/>
+				<p>La apertura el próximo lunes 11 de mayo de la mayoría de los centros de reconocimiento de conductores, lleva a la Dirección General de Tráfico a recordar a los ciudadanos que los permisos de conducción que hayan caducado durante el estado de alarma mantienen su vigencia durante dicho periodo y hasta 60 días hábiles después de finalizado el mismo.</p>		
+			</article>
+			<article class="especial">
+				<img src="img/novedades.png" alt="novedad5"/>
+				<p>La Dirección General de Tráfico procederá a reabrir las Jefaturas Provinciales y Locales de Tráfico en aquellas provincias que entren en la fase II de la desescalada regulada por el Gobierno en el Plan para la transición hacia la nueva normalidad, prevista para el próximo lunes 25 de mayo en numerosas provincias.</p>	
+			</article>
+			<article class="especial">
+				
+				<img src="img/novedades.png" alt="novedad6"/>
+				<p>La apertura el próximo lunes 11 de mayo de la mayoría de los centros de reconocimiento de conductores, lleva a la Dirección General de Tráfico a recordar a los ciudadanos que los permisos de conducción que hayan caducado durante el estado de alarma mantienen su vigencia durante dicho periodo y hasta 60 días hábiles después de finalizado el mismo.</p>		
+			</article>
+			
+			<article class="especial">
+				
+				<img src="img/novedades.png" alt="novedad7"/>
+				<p>La Dirección General de Tráfico procederá a reabrir las Jefaturas Provinciales y Locales de Tráfico en aquellas provincias que entren en la fase II de la desescalada regulada por el Gobierno en el Plan para la transición hacia la nueva normalidad, prevista para el próximo lunes 25 de mayo en numerosas provincias.</p>	
+			</article>
+			<article class="especial">
+				
+				<img src="img/novedades.png" alt="novedad8"/>
+				<p>La apertura el próximo lunes 11 de mayo de la mayoría de los centros de reconocimiento de conductores, lleva a la Dirección General de Tráfico a recordar a los ciudadanos que los permisos de conducción que hayan caducado durante el estado de alarma mantienen su vigencia durante dicho periodo y hasta 60 días hábiles después de finalizado el mismo.</p>		
+			</article>
 	
 				
 					
