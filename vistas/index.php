@@ -67,7 +67,7 @@ if($intruso)
                  session_unset();
   ?>
     <p>
-      <img class="logo" src='img/logotipo.svg'/>
+      <img class="logo" src='img/logotipo.svg' alt="logo"/>
     </p>
  
     <form class="login-form centro" method='post' action='index.php'>
