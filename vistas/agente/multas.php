@@ -82,7 +82,6 @@ if (isset($_SESSION['usuario'])){
 				unset($_SESSION['mensajito']);
 			}
 			
-			//todasmultas(); 
 
 			?>
 			

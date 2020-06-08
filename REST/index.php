@@ -39,9 +39,6 @@ $app->get('/vehiculosusu/:id',function($id){
     echo json_encode(vehiculosusu($id),JSON_FORCE_OBJECT);
 });
 
-$app->get('/multas', function ()  {
-    echo json_encode(multas(),JSON_FORCE_OBJECT);
-});
 
 
 $app->post('/nuevamultasinfoto', function () {
@@ -54,22 +51,6 @@ $app->post('/nuevamultaconfoto', function () {
 
 $app->get('/infomulta/:fechahora/:dni/:matricula',function($fechahora,$dni,$matricula){
     echo json_encode(infomulta($fechahora,$dni,$matricula),JSON_FORCE_OBJECT);
-});
-
-
-$app->put('/actualizartramitada/:fechahora/:dni/:matricula',function ($fechahora,$dni,$matricula) use ($app){
-    $datosMulta=$app->request->put();
-    echo json_encode(actualizartramitada($fechahora,$dni,$matricula,$datosMulta['estado']),JSON_FORCE_OBJECT);
-});
-
-$app->put('/actualizarpagada/:fechahora/:dni/:matricula',function ($fechahora,$dni,$matricula) use ($app){
-    $datosMulta=$app->request->put();
-    echo json_encode(actualizarpagada($fechahora,$dni,$matricula,$datosMulta['estado']),JSON_FORCE_OBJECT);
-});
-
-$app->put('/actualizarfinalizada/:fechahora/:dni/:matricula',function ($fechahora,$dni,$matricula) use ($app){
-    $datosMulta=$app->request->put();
-    echo json_encode(actualizarfinalizada($fechahora,$dni,$matricula,$datosMulta['estado']),JSON_FORCE_OBJECT);
 });
 
 

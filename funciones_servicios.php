@@ -85,14 +85,14 @@ function verperfil($dni)
     }
     else
     { 
-        echo "<p>Nombre:<span class='datos'><input type='text' readonly value='".$obj->dni->nombre."'/></span></p>";
-        echo "<p>Apellidos:<span class='datos'><input readonly type='text' value='".$obj->dni->apellidos."'/></span></p>";
-        echo "<p>DNI:<span class='datos'><input readonly type='text' value='".$obj->dni->dni."'/></span></p>";
-        echo "<p>Dirección:<span class='datos'><input type='text' readonly value='".$obj->dni->direccion."'/></span></p>";
-        echo "<p>Teléfono:<span class='datos'><input type='text' readonly value='".$obj->dni->telefono."'/></span></p>";
-        echo "<p>Número de carné:<span class='datos'><input type='text' readonly value='".$obj->dni->n_carne."'/></span></p>";
-        echo "<p class='espe'>Año expedición de carné:<span class='datos'><input type='text' readonly value='".$obj->dni->anio_exp_carne."'/></span></p>";
-        //echo "<p class='espe'>Tipo de carné:<span class='datos'> ".$obj->dni->descripcion."</span></p>";
+        echo "<p><label for='nombre'>Nombre:<span class='datos'><input id='nombre' name='nombre' type='text' readonly value='".$obj->dni->nombre."'/></span></p>";
+        echo "<p><label for='apellidos'>Apellidos:<span class='datos'><input id='apellidos' name='apellidos' readonly type='text' value='".$obj->dni->apellidos."'/></span></p>";
+        echo "<p><label for='dni'>DNI:<span class='datos'><input id='dni' name='dni' readonly type='text' value='".$obj->dni->dni."'/></span></p>";
+        echo "<p><label for='direccion'>Dirección:<span class='datos'><input id='direccion' name='direccion' type='text' readonly value='".$obj->dni->direccion."'/></span></p>";
+        echo "<p><label for='telefono'>Teléfono:<span class='datos'><input id='telefono' name='telefono' type='text' readonly value='".$obj->dni->telefono."'/></span></p>";
+        echo "<p><label for='ncarne'>Número de carné:<span class='datos'><input id='ncarne' name='ncarne' type='text' readonly value='".$obj->dni->n_carne."'/></span></p>";
+        echo "<p class='espe'><label for='anioexp'>Año expedición de carné:<span class='datos'><input id='anioexp' name='anioexp' type='text' readonly value='".$obj->dni->anio_exp_carne."'/></span></p>";
+       
         
            
     }
@@ -107,14 +107,12 @@ function verperfil2($dni)
     }
     else
     { 
-        echo "<p>Nombre:<span class='datos'><input type='text' readonly value='".$obj->dni->nombre."'/></span></p>";
-        echo "<p>Apellidos:<span class='datos'><input readonly type='text' value='".$obj->dni->apellidos."'/></span></p>";
-        echo "<p>Número de placa:<span class='datos'><input readonly type='text' value='".$obj->dni->n_placa."'/></span></p>";
-        echo "<p>DNI:<span class='datos'><input readonly type='text' value='".$obj->dni->dni."'/></span></p>";
-        echo "<p>Dirección:<span class='datos'><input type='text' readonly value='".$obj->dni->direccion."'/></span></p>";
-        echo "<p>Teléfono:<span class='datos'><input type='text' readonly value='".$obj->dni->telefono."'/></span></p>";
-        
-        //echo "<p class='espe'>Tipo de carné:<span class='datos'> ".$obj->dni->descripcion."</span></p>";
+        echo "<p><label for='nombre'>Nombre:</label><span class='datos'><input id='nombre' name='nombre' type='text' readonly value='".$obj->dni->nombre."'/></span></p>";
+        echo "<p><label for='apellidos'>Apellidos:<span class='datos'><input id='apellidos' name='apellidos' readonly type='text' value='".$obj->dni->apellidos."'/></span></p>";
+        echo "<p><label for='nplaca'>Número de placa:<span class='datos'><input id='nplaca' name='nplaca' readonly type='text' value='".$obj->dni->n_placa."'/></span></p>";
+        echo "<p><label for='dni'>DNI:<span class='datos'><input id='dni' readonly name='dni' type='text' value='".$obj->dni->dni."'/></span></p>";
+        echo "<p><label for='direccion'>Dirección:<span class='datos'><input id='direccion' name='direccion' type='text' readonly value='".$obj->dni->direccion."'/></span></p>";
+        echo "<p><label for='telefono'>Teléfono:<span class='datos'><input id='telefono' name='telefono' type='text' readonly value='".$obj->dni->telefono."'/></span></p>";
         
            
     }
@@ -133,7 +131,7 @@ function vercarnes($dni)
         foreach($obj->dni as $fila)
         {
             
-                echo "<span class='datos'><input class='tipocar' readonly type='text' value='".$fila->descripcion."'/></span>";
+                echo "<span class='datos'><input name='tipocarne' class='tipocar' readonly type='text' value='".$fila->descripcion."'/></span>";
           
         
         }
@@ -190,35 +188,7 @@ function vercadavehiculo($dni)
 }
 
 
-function todasmultas(){
-    $obj=consumir_servicio_REST(ruta."multas","GET");
-    if (isset($obj->mensaje_error))
-    {
-        die($obj->mensaje_error);
-    }
-    else
-    { 
-        
 
-        foreach($obj->multas as $fila)
-        {
-            echo "<article class='especial'>";
-            echo "<img src='../../img/fotos_multa/".$fila->foto."' />";
-            echo "<div class='contenidomulta'>";
-            echo "<p>Fecha/Hora: <input readonly type='text' value='". $fila->fecha_y_hora . "'/></p>"; 
-            echo "<p>DNI: <input readonly type='text' value='". $fila->dni_conductor . "'/></p>"; 
-            echo "<p>Matricula: <input readonly type='text' value='". $fila->matricula_vehiculo . "'/></p>"; 
-            echo "<p>Precio: <input readonly type='text' value='". $fila->precio . "'/></p>"; 
-            echo "<p>Estado: <input readonly type='text' value='". $fila->estado . "'/></p>"; 
-            echo "<p>Observaciones: <textarea readonly> $fila->observaciones</textarea></p>"; 
-            echo "<form method='post' action='editarmultas.php'><button class='edita btnnueva' name='btneditar' value='".$fila->fecha_y_hora."-".$fila->dni_conductor."-".$fila->matricula_vehiculo."'><i class='fas fa-pencil-alt'></i></button></form>"; 
-            echo "</div>";
-            echo "</article>";
-        }     
-          
-          
-    }
-}
 
 function multasinfoto($fechayhora,$precio,$estado,$observaciones,$dniconductor,$matriculavehiculo)
 {
@@ -310,65 +280,7 @@ function verinfomulta($fechahora,$dni,$matricula)
 
 
 
-function multatramitada($fechahora,$dni,$matricula,$estado)
-{
-    $datosMulta['estado']=$estado;
-        
 
-    $obj=consumir_servicio_REST(ruta."actualizartramitada/".urlencode($fechahora)."/".urlencode($dni)."/".urlencode($matricula),"PUT",$datosMulta);
-    if (isset($obj->mensaje_error))
-    {
-        die($obj->mensaje_error);
-    }
-    else
-    {
-        $_SESSION['mensajito']="actualizado";
-        header("Location: ../agente/multas.php");
-        exit;
-
-                
-    } 
-}
-
-function multapagada($fechahora,$dni,$matricula,$estado)
-{
-    $datosMulta['estado']=$estado;
-        
-
-    $obj=consumir_servicio_REST(ruta."actualizarpagada/".urlencode($fechahora)."/".urlencode($dni)."/".urlencode($matricula),"PUT",$datosMulta);
-    if (isset($obj->mensaje_error))
-    {
-        die($obj->mensaje_error);
-    }
-    else
-    {
-        $_SESSION['mensajito']="actualizado";
-        header("Location: ../agente/multas.php");
-        exit;
-
-                
-    } 
-}
-
-function multafinalizada($fechahora,$dni,$matricula,$estado)
-{
-    $datosMulta['estado']=$estado;
-        
-
-    $obj=consumir_servicio_REST(ruta."actualizarfinalizada/".urlencode($fechahora)."/".urlencode($dni)."/".urlencode($matricula),"PUT",$datosMulta);
-    if (isset($obj->mensaje_error))
-    {
-        die($obj->mensaje_error);
-    }
-    else
-    {
-        $_SESSION['mensajito']="actualizado";
-        header("Location: ../agente/multas.php");
-        exit;
-
-                
-    } 
-}
 
 
 
@@ -425,13 +337,13 @@ function vercadamultavehiculo($matricula,$dni)
         foreach($obj->multas as $fila)
         {
             echo "<article>";
-                echo "<p><span class='detalle'>Fecha/Hora: </span><input readonly type='text' value='".$fila->fecha_y_hora."'/> </p>";
-                echo "<p><span class='detalle'>DNI: </span><input readonly type='text' value='".$fila->dni_conductor."'/></p>";
-                echo "<p><span class='detalle'>Matricula: </span><input readonly type='text' value='".$fila->matricula_vehiculo."'/></p>";
-                echo "<p><span class='detalle'>Precio: </span><input readonly type='text' value='".$fila->precio."'/></p>";
-                echo "<p><span class='detalle'>Estado: </span><input readonly type='text' value='".$fila->estado."'/></p>";
-                echo "<p id='obs'><span class='detalle'>Observaciones: </span><textarea readonly>".$fila->observaciones."</textarea></p>";
-                echo "<p id='fotovehiculomulta'><span id='detallevehiculomulta' class='detalle'>Foto: </span><img src='../../img/fotos_multa/".$fila->foto."' /></p>";
+            echo "<p><label for='fechahora'><span class='detalle'>Fecha/Hora: </span></label><input id='fechahora' name='fechahora' readonly type='text' value='".$fila->fecha_y_hora."'/> </p>";
+            echo "<p><span class='detalle'><label for='dni'>DNI:</label> </span><input id='dni' name='dni' readonly type='text' value='".$fila->dni_conductor."'/></p>";
+            echo "<p><span class='detalle'><label for='matricula'>Matricula:</label> </span><input id='matricula' name='matricula' readonly type='text' value='".$fila->matricula_vehiculo."'/></p>";
+            echo "<p><span class='detalle'><label for='precio'>Precio:</label> </span><input id='precio' name='precio' readonly type='text' value='".$fila->precio."'/></p>";
+            echo "<p><span class='detalle'><label for='estado'>Estado:</label> </span><input id='estado' name='estado' readonly type='text' value='".$fila->estado."'/></p>";
+            echo "<p id='obs'><span class='detalle'><label for='obse'>Observaciones:</label> </span><textarea id='obse' name='obse' readonly>".$fila->observaciones."</textarea></p>";
+            echo "<p id='fotovehiculomulta'><span id='detallevehiculomulta' class='detalle'><label for='foto'>Foto:</label> </span><img id='foto' alt='foto' src='../../img/fotos_multa/".$fila->foto."' /></p>";
                 if ($fila->estado=="en tramite" || $fila->estado=="tramitada")
                 {
                    
