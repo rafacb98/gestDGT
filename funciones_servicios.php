@@ -203,7 +203,10 @@ function multasinfoto($fechayhora,$precio,$estado,$observaciones,$dniconductor,$
     
     if (isset($obj->mensaje_error))
     {
-        die($obj->mensaje_error);
+        //die($obj->mensaje_error);
+        $_SESSION['mensajito']="noinsertado";
+        header("Location: ../agente/multas.php");
+        exit;
     }
 
     else
@@ -229,7 +232,10 @@ function multaconfoto($fechayhora,$precio,$estado,$observaciones,$foto,$dnicondu
    
     if (isset($obj->mensaje_error))
     {
-        die($obj->mensaje_error);
+        //die($obj->mensaje_error);
+        $_SESSION['mensajito']="noinsertado";
+        header("Location: ../agente/multas.php");
+        exit;
     }
 
     else

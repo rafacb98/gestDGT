@@ -78,6 +78,11 @@ if (isset($_SESSION['usuario'])){
 					echo "<script>swal('¡Bien!', 'Se ha actualizado el estado de la multa', 'success')</script>";
 					
 				}	
+				if($_SESSION['mensajito']=="noinsertado")
+				{
+					echo "<script>swal('¡Lo sentimos!', 'No se puedo insertar la multa porque el DNI o vehículo no se encuentran registrados', 'error')</script>";
+					
+				}	
 					
 				unset($_SESSION['mensajito']);
 			}
