@@ -61,45 +61,46 @@ if (isset($_SESSION['usuario'])){
 				<h2 id='novedades'>ÚLTIMAS NOTICIAS</h2>
 				
 				<article class="especial">
-				<img src="img/novedades.png" alt="novedad1"/>
+				<img src="img/novedad1.jpg" alt="novedad1"/>
 				<p>La Dirección General de Tráfico procederá a reabrir las Jefaturas Provinciales y Locales de Tráfico en aquellas provincias que entren en la fase II de la desescalada regulada por el Gobierno en el Plan para la transición hacia la nueva normalidad, prevista para el próximo lunes 25 de mayo en numerosas provincias.</p>	
 			</article>
 			<article class="especial">
 				
-				<img src="img/novedades.png" alt="novedad2"/>
+				<img src="img/novedad2.jpg" alt="novedad2"/>
 				<p>La apertura el próximo lunes 11 de mayo de la mayoría de los centros de reconocimiento de conductores, lleva a la Dirección General de Tráfico a recordar a los ciudadanos que los permisos de conducción que hayan caducado durante el estado de alarma mantienen su vigencia durante dicho periodo y hasta 60 días hábiles después de finalizado el mismo.</p>	
 			</article>
 			
 			<article class="especial">
 				
-				<img src="img/novedades.png" alt="novedad3"/>
+				<img src="img/novedad3.jpg" alt="novedad3"/>
+				<p>El Gobierno acaba de anunciar que dará una ayuda de 500 euros para la compra de bicicletas convencionales, eléctricas y patinetes y similares. El motivo, hacer frente a la crisis del coronavirus e incentivar una movilidad segura.</p>	
+			</article>
+			<article class="especial">
+				
+				<img src="img/novedad4.jpg" alt="novedad4"/>
+				<p>Cumplir años tiene como contrapartida una merma en las capacidades para conducir: rigidez en los músculos y articulaciones; reflejos más lentos; dificultades para ver de noche y mayor peligro ante deslumbramientos; problemas de audición...</p>		
+			</article>
+			<article class="especial">
+				<img src="img/novedad2.jpg" alt="novedad5"/>
 				<p>La Dirección General de Tráfico procederá a reabrir las Jefaturas Provinciales y Locales de Tráfico en aquellas provincias que entren en la fase II de la desescalada regulada por el Gobierno en el Plan para la transición hacia la nueva normalidad, prevista para el próximo lunes 25 de mayo en numerosas provincias.</p>	
 			</article>
 			<article class="especial">
 				
-				<img src="img/novedades.png" alt="novedad4"/>
-				<p>La apertura el próximo lunes 11 de mayo de la mayoría de los centros de reconocimiento de conductores, lleva a la Dirección General de Tráfico a recordar a los ciudadanos que los permisos de conducción que hayan caducado durante el estado de alarma mantienen su vigencia durante dicho periodo y hasta 60 días hábiles después de finalizado el mismo.</p>		
-			</article>
-			<article class="especial">
-				<img src="img/novedades.png" alt="novedad5"/>
-				<p>La Dirección General de Tráfico procederá a reabrir las Jefaturas Provinciales y Locales de Tráfico en aquellas provincias que entren en la fase II de la desescalada regulada por el Gobierno en el Plan para la transición hacia la nueva normalidad, prevista para el próximo lunes 25 de mayo en numerosas provincias.</p>	
-			</article>
-			<article class="especial">
-				
-				<img src="img/novedades.png" alt="novedad6"/>
+				<img src="img/novedad4.jpg" alt="novedad6"/>
 				<p>La apertura el próximo lunes 11 de mayo de la mayoría de los centros de reconocimiento de conductores, lleva a la Dirección General de Tráfico a recordar a los ciudadanos que los permisos de conducción que hayan caducado durante el estado de alarma mantienen su vigencia durante dicho periodo y hasta 60 días hábiles después de finalizado el mismo.</p>		
 			</article>
 			
 			<article class="especial">
 				
-				<img src="img/novedades.png" alt="novedad7"/>
-				<p>La Dirección General de Tráfico procederá a reabrir las Jefaturas Provinciales y Locales de Tráfico en aquellas provincias que entren en la fase II de la desescalada regulada por el Gobierno en el Plan para la transición hacia la nueva normalidad, prevista para el próximo lunes 25 de mayo en numerosas provincias.</p>	
+				<img src="img/novedad1.jpg" alt="novedad7"/>
+				<p>El Gobierno acaba de anunciar que dará una ayuda de 500 euros para la compra de bicicletas convencionales, eléctricas y patinetes y similares. El motivo, hacer frente a la crisis del coronavirus e incentivar una movilidad segura.</p>	
 			</article>
 			<article class="especial">
 				
-				<img src="img/novedades.png" alt="novedad8"/>
-				<p>La apertura el próximo lunes 11 de mayo de la mayoría de los centros de reconocimiento de conductores, lleva a la Dirección General de Tráfico a recordar a los ciudadanos que los permisos de conducción que hayan caducado durante el estado de alarma mantienen su vigencia durante dicho periodo y hasta 60 días hábiles después de finalizado el mismo.</p>		
+				<img src="img/novedad3.jpg" alt="novedad8"/>
+				<p>Cumplir años tiene como contrapartida una merma en las capacidades para conducir: rigidez en los músculos y articulaciones; reflejos más lentos; dificultades para ver de noche y mayor peligro ante deslumbramientos; problemas de audición...</p>		
 			</article>
+		
 	
 				
 					
