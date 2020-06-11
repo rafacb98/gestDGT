@@ -205,7 +205,7 @@ function multasinfoto($fechayhora,$precio,$estado,$observaciones,$dniconductor,$
     {
         //die($obj->mensaje_error);
         $_SESSION['mensajito']="noinsertado";
-        header("Location: ../agente/multas.php");
+        header("Location: ../agente/nuevamulta.php");
         exit;
     }
 
@@ -234,7 +234,7 @@ function multaconfoto($fechayhora,$precio,$estado,$observaciones,$foto,$dnicondu
     {
         //die($obj->mensaje_error);
         $_SESSION['mensajito']="noinsertado";
-        header("Location: ../agente/multas.php");
+        header("Location: ../agente/nuevamulta.php");
         exit;
     }
 

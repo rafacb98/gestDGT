@@ -75,6 +75,7 @@ require "../../funciones_servicios.php";
 	<link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
 	<script src='../../js/jquery-3.1.1.js'></script>
 	<script src='../../js/jquery-input-file-text.js'></script>
+	<script src="../../js/sweetalert.min.js"></script>
 	<script src='../../js/scriptgeneral.js'></script>
 	<script src='../../js/scriptnuevamulta.js'></script>
 	<script src='../../js/jquery.datetimepicker.full.js'></script>
@@ -113,6 +114,22 @@ require "../../funciones_servicios.php";
 	</header>
 
 	<main class="epico">
+	<?php 
+			if(isset($_SESSION['mensajito']))
+			{
+				
+				if($_SESSION['mensajito']=="noinsertado")
+				{
+					echo "<script>swal('¡Lo sentimos!', 'No se puedo insertar la multa porque el DNI o vehículo no se encuentran registrados', 'error')</script>";
+					
+				}	
+					
+				unset($_SESSION['mensajito']);
+			}
+			
+
+			?>
+			
 		<span class="botonsubir"><i class="fas fa-arrow-up"></i></span>
 		<section id="a">
 			
