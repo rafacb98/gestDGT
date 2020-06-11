@@ -80,7 +80,7 @@ if (isset($_SESSION['usuario'])){
 
 						<form action='editarmultas.php' method='post'>
 							<fieldset>
-								<legend>Datos del infractor</legend>
+								<legend>Datos del vehículo</legend>
 								<?php
 									infovehiculomultado($matricula);
 
@@ -91,7 +91,7 @@ if (isset($_SESSION['usuario'])){
 						
 						<form action='editarmultas.php' method='post'>
 							<fieldset>
-								<legend>Datos del vehiculo</legend>
+								<legend>Datos del infractor</legend>
 								<?php
 									infoconductormultado($dni);
 
